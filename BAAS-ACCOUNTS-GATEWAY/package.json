@@ -1,0 +1,23 @@
+{
+  "name": "BAAS-ACCOUNTS-GATEWAY",
+  "description": "Express Gateway Instance Bootstraped from Command Line",
+  "repository": {},
+  "license": "UNLICENSED",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "docker-delete-image": "docker rmi dmsgateway-image",
+    "docker-build-image": "docker build -t dmsgateway-image .",
+    "docker-stop-container": "docker stop dmsgateway-container",
+    "docker-delete-container": "docker rm dmsgateway-container",
+    "docker-start-old-container": "docker start dmsgateway-container",
+    "docker-start-new-container": "docker run -d -p %npm_config_DOCKER_PORT%:%npm_config_DOCKER_PORT% --net dmsnetwork --name dmsgateway-container dmsgateway-image",
+    "pm2-stop": "pm2 stop dmsgateway",
+    "pm2-delete": "pm2 delete dmsgateway",
+    "pm2-start": "pm2 start server.js --name dmsgateway --watch"
+  },
+  "dependencies": {
+    "express-gateway": "^1.16.11"
+  }
+}

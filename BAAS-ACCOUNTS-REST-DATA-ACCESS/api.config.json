@@ -1,0 +1,4946 @@
+{
+    "accounts.api.rest.dataaccess.appsettingnetterm.create.v1": {
+        "ID": 1,
+        "Name": "CREATE APPSETTINGNETTERM",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettingnetterm",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettingnetterm.read.v1": {
+        "ID": 2,
+        "Name": "READ MULTIPLE APPSETTINGNETTERMS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettingnetterms",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettingnetterm.readone.v1": {
+        "ID": 3,
+        "Name": "READ ONE  APPSETTINGNETTERMID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettingnetterm/:appsettingnettermid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettingnetterm.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettingnetterms/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettingnetterm.update.v1": {
+        "ID": 5,
+        "Name": "UPDATE MULTIPLE APPSETTINGNETTERMS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettingnetterms",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettingnetterm.deleteone.v1": {
+        "ID": 6,
+        "Name": "DELETE ONE APPSETTINGNETTERM",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettingnetterm/:appsettingnettermid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettingdatatype.create.v1": {
+        "ID": 7,
+        "Name": "CREATE APPSETTINGDATATYPE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettingdatatype",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettingdatatype.read.v1": {
+        "ID": 8,
+        "Name": "READ MULTIPLE APPSETTINGDATATYPES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettingdatatypes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettingdatatype.readone.v1": {
+        "ID": 9,
+        "Name": "READ ONE  APPSETTINGDATATYPEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettingdatatype/:appsettingdatatypeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettingdatatype.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettingdatatypes/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettingdatatype.update.v1": {
+        "ID": 11,
+        "Name": "UPDATE MULTIPLE APPSETTINGDATATYPES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettingdatatypes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettingdatatype.deleteone.v1": {
+        "ID": 12,
+        "Name": "DELETE ONE APPSETTINGDATATYPE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettingdatatype/:appsettingdatatypeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettinguomtype.create.v1": {
+        "ID": 13,
+        "Name": "CREATE APPSETTINGUOMTYPE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettinguomtype",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettinguomtype.read.v1": {
+        "ID": 14,
+        "Name": "READ MULTIPLE APPSETTINGUOMTYPES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettinguomtypes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettinguomtype.readone.v1": {
+        "ID": 15,
+        "Name": "READ ONE  APPSETTINGUOMTYPEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettinguomtype/:appsettinguomtypeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettinguomtype.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettinguomtypes/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettinguomtype.update.v1": {
+        "ID": 17,
+        "Name": "UPDATE MULTIPLE APPSETTINGUOMTYPES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettinguomtypes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettinguomtype.deleteone.v1": {
+        "ID": 18,
+        "Name": "DELETE ONE APPSETTINGUOMTYPE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettinguomtype/:appsettinguomtypeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettinguom.create.v1": {
+        "ID": 19,
+        "Name": "CREATE APPSETTINGUOM",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettinguom",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettinguom.read.v1": {
+        "ID": 20,
+        "Name": "READ MULTIPLE APPSETTINGUOMS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettinguoms",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettinguom.readone.v1": {
+        "ID": 21,
+        "Name": "READ ONE  APPSETTINGUOMID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettinguom/:appsettinguomid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettinguom.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettinguoms/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettinguom.update.v1": {
+        "ID": 23,
+        "Name": "UPDATE MULTIPLE APPSETTINGUOMS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettinguoms",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.appsettinguom.deleteone.v1": {
+        "ID": 24,
+        "Name": "DELETE ONE APPSETTINGUOM",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/appsetting/v1/appsettinguom/:appsettinguomid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.approvalstatus.create.v1": {
+        "ID": 25,
+        "Name": "CREATE APPROVALSTATUS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/approval/v1/approvalstatus",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.approvalstatus.read.v1": {
+        "ID": 26,
+        "Name": "READ MULTIPLE APPROVALSTATUSES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/approval/v1/approvalstatuses",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.approvalstatus.readone.v1": {
+        "ID": 27,
+        "Name": "READ ONE  APPROVALSTATUSID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/approval/v1/approvalstatus/:approvalstatusid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.approvalstatus.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/approval/v1/approvalstatuses/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.approvalstatus.update.v1": {
+        "ID": 29,
+        "Name": "UPDATE MULTIPLE APPROVALSTATUSES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/approval/v1/approvalstatuses",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.approvalstatus.deleteone.v1": {
+        "ID": 30,
+        "Name": "DELETE ONE APPROVALSTATUS",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/approval/v1/approvalstatus/:approvalstatusid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.asset.create.v1": {
+        "ID": 31,
+        "Name": "CREATE ASSET",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/asset",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.asset.read.v1": {
+        "ID": 32,
+        "Name": "READ MULTIPLE ASSETS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assets",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.asset.readone.v1": {
+        "ID": 33,
+        "Name": "READ ONE  ASSETID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/asset/:assetid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.asset.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assets/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.asset.update.v1": {
+        "ID": 35,
+        "Name": "UPDATE MULTIPLE ASSETS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assets",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.asset.deleteone.v1": {
+        "ID": 36,
+        "Name": "DELETE ONE ASSET",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/asset/:assetid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetclass.create.v1": {
+        "ID": 37,
+        "Name": "CREATE ASSETCLASS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetclass",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetclass.read.v1": {
+        "ID": 38,
+        "Name": "READ MULTIPLE ASSETCLASSES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetclasses",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetclass.readone.v1": {
+        "ID": 39,
+        "Name": "READ ONE  ASSETCLASSID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetclass/:assetclassid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetclass.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetclasses/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetclass.update.v1": {
+        "ID": 41,
+        "Name": "UPDATE MULTIPLE ASSETCLASSES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetclasses",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetclass.deleteone.v1": {
+        "ID": 42,
+        "Name": "DELETE ONE ASSETCLASS",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetclass/:assetclassid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetcategory.create.v1": {
+        "ID": 43,
+        "Name": "CREATE ASSETCATEGORY",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetcategory",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetcategory.read.v1": {
+        "ID": 44,
+        "Name": "READ MULTIPLE ASSETCATEGORYS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetcategorys",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetcategory.readone.v1": {
+        "ID": 45,
+        "Name": "READ ONE  ASSETCATEGORYID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetcategory/:assetcategoryid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetcategory.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetcategorys/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetcategory.update.v1": {
+        "ID": 47,
+        "Name": "UPDATE MULTIPLE ASSETCATEGORYS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetcategorys",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetcategory.deleteone.v1": {
+        "ID": 48,
+        "Name": "DELETE ONE ASSETCATEGORY",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetcategory/:assetcategoryid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetusage.create.v1": {
+        "ID": 49,
+        "Name": "CREATE ASSETUSAGE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetusage",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetusage.read.v1": {
+        "ID": 50,
+        "Name": "READ MULTIPLE ASSETUSAGES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetusages",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetusage.readone.v1": {
+        "ID": 51,
+        "Name": "READ ONE  ASSETUSAGEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetusage/:assetusageid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetusage.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetusages/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetusage.update.v1": {
+        "ID": 53,
+        "Name": "UPDATE MULTIPLE ASSETUSAGES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetusages",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetusage.deleteone.v1": {
+        "ID": 54,
+        "Name": "DELETE ONE ASSETUSAGE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetusage/:assetusageid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetusagetype.create.v1": {
+        "ID": 55,
+        "Name": "CREATE ASSETUSAGETYPE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetusagetype",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetusagetype.read.v1": {
+        "ID": 56,
+        "Name": "READ MULTIPLE ASSETUSAGETYPES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetusagetypes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetusagetype.readone.v1": {
+        "ID": 57,
+        "Name": "READ ONE  ASSETUSAGETYPEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetusagetype/:assetusagetypeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetusagetype.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetusagetypes/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetusagetype.update.v1": {
+        "ID": 59,
+        "Name": "UPDATE MULTIPLE ASSETUSAGETYPES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetusagetypes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetusagetype.deleteone.v1": {
+        "ID": 60,
+        "Name": "DELETE ONE ASSETUSAGETYPE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetusagetype/:assetusagetypeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetdepreciation.create.v1": {
+        "ID": 61,
+        "Name": "CREATE ASSETDEPRECIATION",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetdepreciation",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetdepreciation.read.v1": {
+        "ID": 62,
+        "Name": "READ MULTIPLE ASSETDEPRECIATIONS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetdepreciations",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetdepreciation.readone.v1": {
+        "ID": 63,
+        "Name": "READ ONE  ASSETDEPRECIATIONID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetdepreciation/:assetdepreciationid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetdepreciation.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetdepreciations/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetdepreciation.update.v1": {
+        "ID": 65,
+        "Name": "UPDATE MULTIPLE ASSETDEPRECIATIONS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetdepreciations",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetdepreciation.deleteone.v1": {
+        "ID": 66,
+        "Name": "DELETE ONE ASSETDEPRECIATION",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetdepreciation/:assetdepreciationid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetproductparam.create.v1": {
+        "ID": 67,
+        "Name": "CREATE ASSETPRODUCTPARAM",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetproductparam",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetproductparam.read.v1": {
+        "ID": 68,
+        "Name": "READ MULTIPLE ASSETPRODUCTPARAMS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetproductparams",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetproductparam.readone.v1": {
+        "ID": 69,
+        "Name": "READ ONE  ASSETPRODUCTPARAMID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetproductparam/:assetproductparamid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetproductparam.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetproductparams/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetproductparam.update.v1": {
+        "ID": 71,
+        "Name": "UPDATE MULTIPLE ASSETPRODUCTPARAMS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetproductparams",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assetproductparam.deleteone.v1": {
+        "ID": 72,
+        "Name": "DELETE ONE ASSETPRODUCTPARAM",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assetproductparam/:assetproductparamid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assettype.create.v1": {
+        "ID": 73,
+        "Name": "CREATE ASSETTYPE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assettype",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assettype.read.v1": {
+        "ID": 74,
+        "Name": "READ MULTIPLE ASSETTYPES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assettypes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assettype.readone.v1": {
+        "ID": 75,
+        "Name": "READ ONE  ASSETTYPEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assettype/:assettypeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assettype.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assettypes/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assettype.update.v1": {
+        "ID": 77,
+        "Name": "UPDATE MULTIPLE ASSETTYPES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assettypes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.assettype.deleteone.v1": {
+        "ID": 78,
+        "Name": "DELETE ONE ASSETTYPE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/asset/v1/assettype/:assettypeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bank.create.v1": {
+        "ID": 79,
+        "Name": "CREATE BANK",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/bank",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bank.read.v1": {
+        "ID": 80,
+        "Name": "READ MULTIPLE BANKS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/banks",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bank.readone.v1": {
+        "ID": 81,
+        "Name": "READ ONE  BANKID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/bank/:bankid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bank.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/banks/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bank.update.v1": {
+        "ID": 83,
+        "Name": "UPDATE MULTIPLE BANKS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/banks",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bank.deleteone.v1": {
+        "ID": 84,
+        "Name": "DELETE ONE BANK",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/bank/:bankid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bankaccount.create.v1": {
+        "ID": 85,
+        "Name": "CREATE BANKACCOUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/bankaccount",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bankaccount.read.v1": {
+        "ID": 86,
+        "Name": "READ MULTIPLE BANKACCOUNTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/bankaccounts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bankaccount.readone.v1": {
+        "ID": 87,
+        "Name": "READ ONE  BANKACCOUNTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/bankaccount/:bankaccountid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bankaccount.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/bankaccounts/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bankaccount.update.v1": {
+        "ID": 89,
+        "Name": "UPDATE MULTIPLE BANKACCOUNTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/bankaccounts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bankaccount.deleteone.v1": {
+        "ID": 90,
+        "Name": "DELETE ONE BANKACCOUNT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/bankaccount/:bankaccountid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bankaccountbalance.create.v1": {
+        "ID": 91,
+        "Name": "CREATE BANKACCOUNTBALANCE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/bankaccountbalance",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bankaccountbalance.read.v1": {
+        "ID": 92,
+        "Name": "READ MULTIPLE BANKACCOUNTBALANCES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/bankaccountbalances",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bankaccountbalance.readone.v1": {
+        "ID": 93,
+        "Name": "READ ONE  BANKACCOUNTBALANCEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/bankaccountbalance/:bankaccountbalanceid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bankaccountbalance.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/bankaccountbalances/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bankaccountbalance.update.v1": {
+        "ID": 95,
+        "Name": "UPDATE MULTIPLE BANKACCOUNTBALANCES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/bankaccountbalances",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bankaccountbalance.deleteone.v1": {
+        "ID": 96,
+        "Name": "DELETE ONE BANKACCOUNTBALANCE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/bankaccountbalance/:bankaccountbalanceid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bankaccountuser.create.v1": {
+        "ID": 97,
+        "Name": "CREATE BANKACCOUNTUSER",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/bankaccountuser",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bankaccountuser.read.v1": {
+        "ID": 98,
+        "Name": "READ MULTIPLE BANKACCOUNTUSERS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/bankaccountusers",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bankaccountuser.readone.v1": {
+        "ID": 99,
+        "Name": "READ ONE  BANKACCOUNTUSERID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/bankaccountuser/:bankaccountuserid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bankaccountuser.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/bankaccountusers/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bankaccountuser.update.v1": {
+        "ID": 101,
+        "Name": "UPDATE MULTIPLE BANKACCOUNTUSERS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/bankaccountusers",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.bankaccountuser.deleteone.v1": {
+        "ID": 102,
+        "Name": "DELETE ONE BANKACCOUNTUSER",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/bankaccountuser/:bankaccountuserid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.banktransaction.create.v1": {
+        "ID": 103,
+        "Name": "CREATE BANKTRANSACTION",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/banktransaction",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.banktransaction.read.v1": {
+        "ID": 104,
+        "Name": "READ MULTIPLE BANKTRANSACTIONS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/banktransactions",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.banktransaction.readone.v1": {
+        "ID": 105,
+        "Name": "READ ONE  BANKTRANSACTIONID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/banktransaction/:banktransactionid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.banktransaction.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/banktransactions/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.banktransaction.update.v1": {
+        "ID": 107,
+        "Name": "UPDATE MULTIPLE BANKTRANSACTIONS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/banktransactions",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.banktransaction.deleteone.v1": {
+        "ID": 108,
+        "Name": "DELETE ONE BANKTRANSACTION",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/banktransaction/:banktransactionid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.banktransactiontype.create.v1": {
+        "ID": 109,
+        "Name": "CREATE BANKTRANSACTIONTYPE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/banktransactiontype",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.banktransactiontype.read.v1": {
+        "ID": 110,
+        "Name": "READ MULTIPLE BANKTRANSACTIONTYPES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/banktransactiontypes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.banktransactiontype.readone.v1": {
+        "ID": 111,
+        "Name": "READ ONE  BANKTRANSACTIONTYPEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/banktransactiontype/:banktransactiontypeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.banktransactiontype.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/banktransactiontypes/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.banktransactiontype.update.v1": {
+        "ID": 113,
+        "Name": "UPDATE MULTIPLE BANKTRANSACTIONTYPES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/banktransactiontypes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.banktransactiontype.deleteone.v1": {
+        "ID": 114,
+        "Name": "DELETE ONE BANKTRANSACTIONTYPE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/bank/v1/banktransactiontype/:banktransactiontypeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.brand.create.v1": {
+        "ID": 115,
+        "Name": "CREATE BRAND",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/brand/v1/brand",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.brand.read.v1": {
+        "ID": 116,
+        "Name": "READ MULTIPLE BRANDS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/brand/v1/brands",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.brand.readone.v1": {
+        "ID": 117,
+        "Name": "READ ONE  BRANDID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/brand/v1/brand/:brandid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.brand.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/brand/v1/brands/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.brand.update.v1": {
+        "ID": 119,
+        "Name": "UPDATE MULTIPLE BRANDS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/brand/v1/brands",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.brand.deleteone.v1": {
+        "ID": 120,
+        "Name": "DELETE ONE BRAND",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/brand/v1/brand/:brandid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.category.create.v1": {
+        "ID": 121,
+        "Name": "CREATE CATEGORY",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/category/v1/category",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.category.read.v1": {
+        "ID": 122,
+        "Name": "READ MULTIPLE CATEGORYS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/category/v1/categorys",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.category.readone.v1": {
+        "ID": 123,
+        "Name": "READ ONE  CATEGORYID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/category/v1/category/:categoryid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.category.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/category/v1/categorys/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.category.update.v1": {
+        "ID": 125,
+        "Name": "UPDATE MULTIPLE CATEGORYS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/category/v1/categorys",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.category.deleteone.v1": {
+        "ID": 126,
+        "Name": "DELETE ONE CATEGORY",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/category/v1/category/:categoryid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.costlist.create.v1": {
+        "ID": 127,
+        "Name": "CREATE COSTLIST",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/cost/v1/costlist",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.costlist.read.v1": {
+        "ID": 128,
+        "Name": "READ MULTIPLE COSTLISTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/cost/v1/costlists",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.costlist.readone.v1": {
+        "ID": 129,
+        "Name": "READ ONE  COSTLISTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/cost/v1/costlist/:costlistid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.costlist.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/cost/v1/costlists/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.costlist.update.v1": {
+        "ID": 131,
+        "Name": "UPDATE MULTIPLE COSTLISTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/cost/v1/costlists",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.costlist.deleteone.v1": {
+        "ID": 132,
+        "Name": "DELETE ONE COSTLIST",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/cost/v1/costlist/:costlistid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.costlistitem.create.v1": {
+        "ID": 133,
+        "Name": "CREATE COSTLISTITEM",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/cost/v1/costlistitem",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.costlistitem.read.v1": {
+        "ID": 134,
+        "Name": "READ MULTIPLE COSTLISTITEMS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/cost/v1/costlistitems",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.costlistitem.readone.v1": {
+        "ID": 135,
+        "Name": "READ ONE  COSTLISTITEMID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/cost/v1/costlistitem/:costlistitemid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.costlistitem.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/cost/v1/costlistitems/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.costlistitem.update.v1": {
+        "ID": 137,
+        "Name": "UPDATE MULTIPLE COSTLISTITEMS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/cost/v1/costlistitems",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.costlistitem.deleteone.v1": {
+        "ID": 138,
+        "Name": "DELETE ONE COSTLISTITEM",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/cost/v1/costlistitem/:costlistitemid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.costlistitembulkdiscount.create.v1": {
+        "ID": 139,
+        "Name": "CREATE COSTLISTITEMBULKDISCOUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/cost/v1/costlistitembulkdiscount",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.costlistitembulkdiscount.read.v1": {
+        "ID": 140,
+        "Name": "READ MULTIPLE COSTLISTITEMBULKDISCOUNTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/cost/v1/costlistitembulkdiscounts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.costlistitembulkdiscount.readone.v1": {
+        "ID": 141,
+        "Name": "READ ONE  COSTLISTITEMBULKDISCOUNTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/cost/v1/costlistitembulkdiscount/:costlistitembulkdiscountid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.costlistitembulkdiscount.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/cost/v1/costlistitembulkdiscounts/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.costlistitembulkdiscount.update.v1": {
+        "ID": 143,
+        "Name": "UPDATE MULTIPLE COSTLISTITEMBULKDISCOUNTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/cost/v1/costlistitembulkdiscounts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.costlistitembulkdiscount.deleteone.v1": {
+        "ID": 144,
+        "Name": "DELETE ONE COSTLISTITEMBULKDISCOUNT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/cost/v1/costlistitembulkdiscount/:costlistitembulkdiscountid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customer.create.v1": {
+        "ID": 145,
+        "Name": "CREATE CUSTOMER",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customer",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customer.read.v1": {
+        "ID": 146,
+        "Name": "READ MULTIPLE CUSTOMERS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customers",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customer.readone.v1": {
+        "ID": 147,
+        "Name": "READ ONE  CUSTOMERID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customer/:customerid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customer.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customers/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customer.update.v1": {
+        "ID": 149,
+        "Name": "UPDATE MULTIPLE CUSTOMERS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customers",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customer.deleteone.v1": {
+        "ID": 150,
+        "Name": "DELETE ONE CUSTOMER",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customer/:customerid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccount.create.v1": {
+        "ID": 151,
+        "Name": "CREATE CUSTOMERACCOUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccount",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccount.read.v1": {
+        "ID": 152,
+        "Name": "READ MULTIPLE CUSTOMERACCOUNTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccounts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccount.readone.v1": {
+        "ID": 153,
+        "Name": "READ ONE  CUSTOMERACCOUNTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccount/:customeraccountid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccount.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccounts/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccount.update.v1": {
+        "ID": 155,
+        "Name": "UPDATE MULTIPLE CUSTOMERACCOUNTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccounts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccount.deleteone.v1": {
+        "ID": 156,
+        "Name": "DELETE ONE CUSTOMERACCOUNT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccount/:customeraccountid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccountbalance.create.v1": {
+        "ID": 157,
+        "Name": "CREATE CUSTOMERACCOUNTBALANCE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccountbalance",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccountbalance.read.v1": {
+        "ID": 158,
+        "Name": "READ MULTIPLE CUSTOMERACCOUNTBALANCES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccountbalances",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccountbalance.readone.v1": {
+        "ID": 159,
+        "Name": "READ ONE  CUSTOMERACCOUNTBALANCEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccountbalance/:customeraccountbalanceid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccountbalance.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccountbalances/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccountbalance.update.v1": {
+        "ID": 161,
+        "Name": "UPDATE MULTIPLE CUSTOMERACCOUNTBALANCES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccountbalances",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccountbalance.deleteone.v1": {
+        "ID": 162,
+        "Name": "DELETE ONE CUSTOMERACCOUNTBALANCE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccountbalance/:customeraccountbalanceid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccountcard.create.v1": {
+        "ID": 163,
+        "Name": "CREATE CUSTOMERACCOUNTCARD",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccountcard",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccountcard.read.v1": {
+        "ID": 164,
+        "Name": "READ MULTIPLE CUSTOMERACCOUNTCARDS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccountcards",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccountcard.readone.v1": {
+        "ID": 165,
+        "Name": "READ ONE  CUSTOMERACCOUNTCARDID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccountcard/:customeraccountcardid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccountcard.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccountcards/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccountcard.update.v1": {
+        "ID": 167,
+        "Name": "UPDATE MULTIPLE CUSTOMERACCOUNTCARDS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccountcards",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccountcard.deleteone.v1": {
+        "ID": 168,
+        "Name": "DELETE ONE CUSTOMERACCOUNTCARD",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccountcard/:customeraccountcardid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccounttransaction.create.v1": {
+        "ID": 169,
+        "Name": "CREATE CUSTOMERACCOUNTTRANSACTION",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccounttransaction",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccounttransaction.read.v1": {
+        "ID": 170,
+        "Name": "READ MULTIPLE CUSTOMERACCOUNTTRANSACTIONS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccounttransactions",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccounttransaction.readone.v1": {
+        "ID": 171,
+        "Name": "READ ONE  CUSTOMERACCOUNTTRANSACTIONID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccounttransaction/:customeraccounttransactionid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccounttransaction.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccounttransactions/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccounttransaction.update.v1": {
+        "ID": 173,
+        "Name": "UPDATE MULTIPLE CUSTOMERACCOUNTTRANSACTIONS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccounttransactions",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customeraccounttransaction.deleteone.v1": {
+        "ID": 174,
+        "Name": "DELETE ONE CUSTOMERACCOUNTTRANSACTION",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customeraccounttransaction/:customeraccounttransactionid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerpayment.create.v1": {
+        "ID": 175,
+        "Name": "CREATE CUSTOMERPAYMENT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerpayment",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerpayment.read.v1": {
+        "ID": 176,
+        "Name": "READ MULTIPLE CUSTOMERPAYMENTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerpayments",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerpayment.readone.v1": {
+        "ID": 177,
+        "Name": "READ ONE  CUSTOMERPAYMENTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerpayment/:customerpaymentid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerpayment.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerpayments/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerpayment.update.v1": {
+        "ID": 179,
+        "Name": "UPDATE MULTIPLE CUSTOMERPAYMENTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerpayments",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerpayment.deleteone.v1": {
+        "ID": 180,
+        "Name": "DELETE ONE CUSTOMERPAYMENT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerpayment/:customerpaymentid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerpaymentitem.create.v1": {
+        "ID": 181,
+        "Name": "CREATE CUSTOMERPAYMENTITEM",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerpaymentitem",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerpaymentitem.read.v1": {
+        "ID": 182,
+        "Name": "READ MULTIPLE CUSTOMERPAYMENTITEMS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerpaymentitems",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerpaymentitem.readone.v1": {
+        "ID": 183,
+        "Name": "READ ONE  CUSTOMERPAYMENTITEMID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerpaymentitem/:customerpaymentitemid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerpaymentitem.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerpaymentitems/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerpaymentitem.update.v1": {
+        "ID": 185,
+        "Name": "UPDATE MULTIPLE CUSTOMERPAYMENTITEMS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerpaymentitems",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerpaymentitem.deleteone.v1": {
+        "ID": 186,
+        "Name": "DELETE ONE CUSTOMERPAYMENTITEM",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerpaymentitem/:customerpaymentitemid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerproductusage.create.v1": {
+        "ID": 187,
+        "Name": "CREATE CUSTOMERPRODUCTUSAGE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerproductusage",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerproductusage.read.v1": {
+        "ID": 188,
+        "Name": "READ MULTIPLE CUSTOMERPRODUCTUSAGES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerproductusages",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerproductusage.readone.v1": {
+        "ID": 189,
+        "Name": "READ ONE  CUSTOMERPRODUCTUSAGEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerproductusage/:customerproductusageid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerproductusage.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerproductusages/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerproductusage.update.v1": {
+        "ID": 191,
+        "Name": "UPDATE MULTIPLE CUSTOMERPRODUCTUSAGES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerproductusages",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerproductusage.deleteone.v1": {
+        "ID": 192,
+        "Name": "DELETE ONE CUSTOMERPRODUCTUSAGE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerproductusage/:customerproductusageid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerproductusagelog.create.v1": {
+        "ID": 193,
+        "Name": "CREATE CUSTOMERPRODUCTUSAGELOG",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerproductusagelog",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerproductusagelog.read.v1": {
+        "ID": 194,
+        "Name": "READ MULTIPLE CUSTOMERPRODUCTUSAGELOGS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerproductusagelogs",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerproductusagelog.readone.v1": {
+        "ID": 195,
+        "Name": "READ ONE  CUSTOMERPRODUCTUSAGELOGID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerproductusagelog/:customerproductusagelogid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerproductusagelog.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerproductusagelogs/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerproductusagelog.update.v1": {
+        "ID": 197,
+        "Name": "UPDATE MULTIPLE CUSTOMERPRODUCTUSAGELOGS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerproductusagelogs",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerproductusagelog.deleteone.v1": {
+        "ID": 198,
+        "Name": "DELETE ONE CUSTOMERPRODUCTUSAGELOG",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerproductusagelog/:customerproductusagelogid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerstatement.create.v1": {
+        "ID": 199,
+        "Name": "CREATE CUSTOMERSTATEMENT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerstatement",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerstatement.read.v1": {
+        "ID": 200,
+        "Name": "READ MULTIPLE CUSTOMERSTATEMENTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerstatements",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerstatement.readone.v1": {
+        "ID": 201,
+        "Name": "READ ONE  CUSTOMERSTATEMENTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerstatement/:customerstatementid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerstatement.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerstatements/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerstatement.update.v1": {
+        "ID": 203,
+        "Name": "UPDATE MULTIPLE CUSTOMERSTATEMENTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerstatements",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customerstatement.deleteone.v1": {
+        "ID": 204,
+        "Name": "DELETE ONE CUSTOMERSTATEMENT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/customer/v1/customerstatement/:customerstatementid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.currency.create.v1": {
+        "ID": 205,
+        "Name": "CREATE CURRENCY",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/currency/v1/currency",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.currency.read.v1": {
+        "ID": 206,
+        "Name": "READ MULTIPLE CURRENCYS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/currency/v1/currencys",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.currency.readone.v1": {
+        "ID": 207,
+        "Name": "READ ONE  CURRENCYID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/currency/v1/currency/:currencyid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.currency.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/currency/v1/currencys/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.currency.update.v1": {
+        "ID": 209,
+        "Name": "UPDATE MULTIPLE CURRENCYS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/currency/v1/currencys",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.currency.deleteone.v1": {
+        "ID": 210,
+        "Name": "DELETE ONE CURRENCY",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/currency/v1/currency/:currencyid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employee.create.v1": {
+        "ID": 211,
+        "Name": "CREATE EMPLOYEE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employee",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employee.read.v1": {
+        "ID": 212,
+        "Name": "READ MULTIPLE EMPLOYEES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employees",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employee.readone.v1": {
+        "ID": 213,
+        "Name": "READ ONE  EMPLOYEEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employee/:employeeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employee.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employees/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employee.update.v1": {
+        "ID": 215,
+        "Name": "UPDATE MULTIPLE EMPLOYEES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employees",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employee.deleteone.v1": {
+        "ID": 216,
+        "Name": "DELETE ONE EMPLOYEE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employee/:employeeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employeetype.create.v1": {
+        "ID": 217,
+        "Name": "CREATE EMPLOYEETYPE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employeetype",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employeetype.read.v1": {
+        "ID": 218,
+        "Name": "READ MULTIPLE EMPLOYEETYPES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employeetypes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employeetype.readone.v1": {
+        "ID": 219,
+        "Name": "READ ONE  EMPLOYEETYPEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employeetype/:employeetypeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employeetype.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employeetypes/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employeetype.update.v1": {
+        "ID": 221,
+        "Name": "UPDATE MULTIPLE EMPLOYEETYPES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employeetypes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employeetype.deleteone.v1": {
+        "ID": 222,
+        "Name": "DELETE ONE EMPLOYEETYPE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employeetype/:employeetypeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employeepackage.create.v1": {
+        "ID": 223,
+        "Name": "CREATE EMPLOYEEPACKAGE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employeepackage",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employeepackage.read.v1": {
+        "ID": 224,
+        "Name": "READ MULTIPLE EMPLOYEEPACKAGES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employeepackages",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employeepackage.readone.v1": {
+        "ID": 225,
+        "Name": "READ ONE  EMPLOYEEPACKAGEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employeepackage/:employeepackageid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employeepackage.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employeepackages/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employeepackage.update.v1": {
+        "ID": 227,
+        "Name": "UPDATE MULTIPLE EMPLOYEEPACKAGES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employeepackages",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employeepackage.deleteone.v1": {
+        "ID": 228,
+        "Name": "DELETE ONE EMPLOYEEPACKAGE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employeepackage/:employeepackageid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employeepackagelog.create.v1": {
+        "ID": 229,
+        "Name": "CREATE EMPLOYEEPACKAGELOG",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employeepackagelog",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employeepackagelog.read.v1": {
+        "ID": 230,
+        "Name": "READ MULTIPLE EMPLOYEEPACKAGELOGS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employeepackagelogs",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employeepackagelog.readone.v1": {
+        "ID": 231,
+        "Name": "READ ONE  EMPLOYEEPACKAGELOGID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employeepackagelog/:employeepackagelogid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employeepackagelog.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employeepackagelogs/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employeepackagelog.update.v1": {
+        "ID": 233,
+        "Name": "UPDATE MULTIPLE EMPLOYEEPACKAGELOGS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employeepackagelogs",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.employeepackagelog.deleteone.v1": {
+        "ID": 234,
+        "Name": "DELETE ONE EMPLOYEEPACKAGELOG",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/employee/v1/employeepackagelog/:employeepackagelogid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.department.create.v1": {
+        "ID": 235,
+        "Name": "CREATE DEPARTMENT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/department/v1/department",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.department.read.v1": {
+        "ID": 236,
+        "Name": "READ MULTIPLE DEPARTMENTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/department/v1/departments",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.department.readone.v1": {
+        "ID": 237,
+        "Name": "READ ONE  DEPARTMENTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/department/v1/department/:departmentid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.department.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/department/v1/departments/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.department.update.v1": {
+        "ID": 239,
+        "Name": "UPDATE MULTIPLE DEPARTMENTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/department/v1/departments",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.department.deleteone.v1": {
+        "ID": 240,
+        "Name": "DELETE ONE DEPARTMENT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/department/v1/department/:departmentid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.location.create.v1": {
+        "ID": 241,
+        "Name": "CREATE LOCATION",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/location/v1/location",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.location.read.v1": {
+        "ID": 242,
+        "Name": "READ MULTIPLE LOCATIONS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/location/v1/locations",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.location.readone.v1": {
+        "ID": 243,
+        "Name": "READ ONE  LOCATIONID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/location/v1/location/:locationid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.location.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/location/v1/locations/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.location.update.v1": {
+        "ID": 245,
+        "Name": "UPDATE MULTIPLE LOCATIONS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/location/v1/locations",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.location.deleteone.v1": {
+        "ID": 246,
+        "Name": "DELETE ONE LOCATION",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/location/v1/location/:locationid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.group.create.v1": {
+        "ID": 247,
+        "Name": "CREATE GROUP",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/group/v1/group",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.group.read.v1": {
+        "ID": 248,
+        "Name": "READ MULTIPLE GROUPS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/group/v1/groups",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.group.readone.v1": {
+        "ID": 249,
+        "Name": "READ ONE  GROUPID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/group/v1/group/:groupid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.group.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/group/v1/groups/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.group.update.v1": {
+        "ID": 251,
+        "Name": "UPDATE MULTIPLE GROUPS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/group/v1/groups",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.group.deleteone.v1": {
+        "ID": 252,
+        "Name": "DELETE ONE GROUP",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/group/v1/group/:groupid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.grouprole.create.v1": {
+        "ID": 253,
+        "Name": "CREATE GROUPROLE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/group/v1/grouprole",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.grouprole.read.v1": {
+        "ID": 254,
+        "Name": "READ MULTIPLE GROUPROLES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/group/v1/grouproles",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.grouprole.readone.v1": {
+        "ID": 255,
+        "Name": "READ ONE  GROUPROLEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/group/v1/grouprole/:grouproleid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.grouprole.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/group/v1/grouproles/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.grouprole.update.v1": {
+        "ID": 257,
+        "Name": "UPDATE MULTIPLE GROUPROLES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/group/v1/grouproles",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.grouprole.deleteone.v1": {
+        "ID": 258,
+        "Name": "DELETE ONE GROUPROLE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/group/v1/grouprole/:grouproleid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.groupuser.create.v1": {
+        "ID": 259,
+        "Name": "CREATE GROUPUSER",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/group/v1/groupuser",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.groupuser.read.v1": {
+        "ID": 260,
+        "Name": "READ MULTIPLE GROUPUSERS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/group/v1/groupusers",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.groupuser.readone.v1": {
+        "ID": 261,
+        "Name": "READ ONE  GROUPUSERID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/group/v1/groupuser/:groupuserid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.groupuser.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/group/v1/groupusers/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.groupuser.update.v1": {
+        "ID": 263,
+        "Name": "UPDATE MULTIPLE GROUPUSERS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/group/v1/groupusers",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.groupuser.deleteone.v1": {
+        "ID": 264,
+        "Name": "DELETE ONE GROUPUSER",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/group/v1/groupuser/:groupuserid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.invoice.create.v1": {
+        "ID": 265,
+        "Name": "CREATE INVOICE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/invoice/v1/invoice",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.invoice.read.v1": {
+        "ID": 266,
+        "Name": "READ MULTIPLE INVOICES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/invoice/v1/invoices",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.invoice.readone.v1": {
+        "ID": 267,
+        "Name": "READ ONE  INVOICEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/invoice/v1/invoice/:invoiceid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.invoice.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/invoice/v1/invoices/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.invoice.update.v1": {
+        "ID": 269,
+        "Name": "UPDATE MULTIPLE INVOICES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/invoice/v1/invoices",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.invoice.deleteone.v1": {
+        "ID": 270,
+        "Name": "DELETE ONE INVOICE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/invoice/v1/invoice/:invoiceid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.invoiceitem.create.v1": {
+        "ID": 271,
+        "Name": "CREATE INVOICEITEM",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/invoice/v1/invoiceitem",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.invoiceitem.read.v1": {
+        "ID": 272,
+        "Name": "READ MULTIPLE INVOICEITEMS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/invoice/v1/invoiceitems",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.invoiceitem.readone.v1": {
+        "ID": 273,
+        "Name": "READ ONE  INVOICEITEMID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/invoice/v1/invoiceitem/:invoiceitemid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.invoiceitem.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/invoice/v1/invoiceitems/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.invoiceitem.update.v1": {
+        "ID": 275,
+        "Name": "UPDATE MULTIPLE INVOICEITEMS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/invoice/v1/invoiceitems",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.invoiceitem.deleteone.v1": {
+        "ID": 276,
+        "Name": "DELETE ONE INVOICEITEM",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/invoice/v1/invoiceitem/:invoiceitemid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.invoicestatus.create.v1": {
+        "ID": 277,
+        "Name": "CREATE INVOICESTATUS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/invoice/v1/invoicestatus",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.invoicestatus.read.v1": {
+        "ID": 278,
+        "Name": "READ MULTIPLE INVOICESTATUSES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/invoice/v1/invoicestatuses",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.invoicestatus.readone.v1": {
+        "ID": 279,
+        "Name": "READ ONE  INVOICESTATUSID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/invoice/v1/invoicestatus/:invoicestatusid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.invoicestatus.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/invoice/v1/invoicestatuses/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.invoicestatus.update.v1": {
+        "ID": 281,
+        "Name": "UPDATE MULTIPLE INVOICESTATUSES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/invoice/v1/invoicestatuses",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.invoicestatus.deleteone.v1": {
+        "ID": 282,
+        "Name": "DELETE ONE INVOICESTATUS",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/invoice/v1/invoicestatus/:invoicestatusid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.merchant.create.v1": {
+        "ID": 283,
+        "Name": "CREATE MERCHANT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/merchant/v1/merchant",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.merchant.read.v1": {
+        "ID": 284,
+        "Name": "READ MULTIPLE MERCHANTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/merchant/v1/merchants",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.merchant.readone.v1": {
+        "ID": 285,
+        "Name": "READ ONE  MERCHANTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/merchant/v1/merchant/:merchantid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.merchant.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/merchant/v1/merchants/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.merchant.update.v1": {
+        "ID": 287,
+        "Name": "UPDATE MULTIPLE MERCHANTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/merchant/v1/merchants",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.merchant.deleteone.v1": {
+        "ID": 288,
+        "Name": "DELETE ONE MERCHANT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/merchant/v1/merchant/:merchantid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.manufacturer.create.v1": {
+        "ID": 289,
+        "Name": "CREATE MANUFACTURER",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/manufacturer/v1/manufacturer",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.manufacturer.read.v1": {
+        "ID": 290,
+        "Name": "READ MULTIPLE MANUFACTURERS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/manufacturer/v1/manufacturers",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.manufacturer.readone.v1": {
+        "ID": 291,
+        "Name": "READ ONE  MANUFACTURERID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/manufacturer/v1/manufacturer/:manufacturerid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.manufacturer.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/manufacturer/v1/manufacturers/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.manufacturer.update.v1": {
+        "ID": 293,
+        "Name": "UPDATE MULTIPLE MANUFACTURERS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/manufacturer/v1/manufacturers",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.manufacturer.deleteone.v1": {
+        "ID": 294,
+        "Name": "DELETE ONE MANUFACTURER",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/manufacturer/v1/manufacturer/:manufacturerid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.tenant.create.v1": {
+        "ID": 295,
+        "Name": "CREATE TENANT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/tenant/v1/tenant",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.tenant.read.v1": {
+        "ID": 296,
+        "Name": "READ MULTIPLE TENANTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/tenant/v1/tenants",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.tenant.readone.v1": {
+        "ID": 297,
+        "Name": "READ ONE  TENANTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/tenant/v1/tenant/:tenantid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.tenant.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/tenant/v1/tenants/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.tenant.update.v1": {
+        "ID": 299,
+        "Name": "UPDATE MULTIPLE TENANTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/tenant/v1/tenants",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.tenant.deleteone.v1": {
+        "ID": 300,
+        "Name": "DELETE ONE TENANT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/tenant/v1/tenant/:tenantid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.contact.create.v1": {
+        "ID": 301,
+        "Name": "CREATE CONTACT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/contact",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.contact.read.v1": {
+        "ID": 302,
+        "Name": "READ MULTIPLE CONTACTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/contacts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.contact.readone.v1": {
+        "ID": 303,
+        "Name": "READ ONE  CONTACTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/contact/:contactid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.contact.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/contacts/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.contact.update.v1": {
+        "ID": 305,
+        "Name": "UPDATE MULTIPLE CONTACTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/contacts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.contact.deleteone.v1": {
+        "ID": 306,
+        "Name": "DELETE ONE CONTACT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/contact/:contactid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.contactperson.create.v1": {
+        "ID": 307,
+        "Name": "CREATE CONTACTPERSON",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/contactperson",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.contactperson.read.v1": {
+        "ID": 308,
+        "Name": "READ MULTIPLE CONTACTPERSONS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/contactpersons",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.contactperson.readone.v1": {
+        "ID": 309,
+        "Name": "READ ONE  CONTACTPERSONID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/contactperson/:contactpersonid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.contactperson.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/contactpersons/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.contactperson.update.v1": {
+        "ID": 311,
+        "Name": "UPDATE MULTIPLE CONTACTPERSONS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/contactpersons",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.contactperson.deleteone.v1": {
+        "ID": 312,
+        "Name": "DELETE ONE CONTACTPERSON",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/contactperson/:contactpersonid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customercontact.create.v1": {
+        "ID": 313,
+        "Name": "CREATE CUSTOMERCONTACT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/customercontact",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customercontact.read.v1": {
+        "ID": 314,
+        "Name": "READ MULTIPLE CUSTOMERCONTACTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/customercontacts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customercontact.readone.v1": {
+        "ID": 315,
+        "Name": "READ ONE  CUSTOMERCONTACTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/customercontact/:customercontactid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customercontact.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/customercontacts/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customercontact.update.v1": {
+        "ID": 317,
+        "Name": "UPDATE MULTIPLE CUSTOMERCONTACTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/customercontacts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customercontact.deleteone.v1": {
+        "ID": 318,
+        "Name": "DELETE ONE CUSTOMERCONTACT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/customercontact/:customercontactid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customertenantcontact.create.v1": {
+        "ID": 319,
+        "Name": "CREATE CUSTOMERTENANTCONTACT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/customertenantcontact",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customertenantcontact.read.v1": {
+        "ID": 320,
+        "Name": "READ MULTIPLE CUSTOMERTENANTCONTACTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/customertenantcontacts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customertenantcontact.readone.v1": {
+        "ID": 321,
+        "Name": "READ ONE  CUSTOMERTENANTCONTACTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/customertenantcontact/:customertenantcontactid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customertenantcontact.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/customertenantcontacts/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customertenantcontact.update.v1": {
+        "ID": 323,
+        "Name": "UPDATE MULTIPLE CUSTOMERTENANTCONTACTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/customertenantcontacts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.customertenantcontact.deleteone.v1": {
+        "ID": 324,
+        "Name": "DELETE ONE CUSTOMERTENANTCONTACT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/customertenantcontact/:customertenantcontactid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.tenantcontact.create.v1": {
+        "ID": 325,
+        "Name": "CREATE TENANTCONTACT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/tenantcontact",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.tenantcontact.read.v1": {
+        "ID": 326,
+        "Name": "READ MULTIPLE TENANTCONTACTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/tenantcontacts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.tenantcontact.readone.v1": {
+        "ID": 327,
+        "Name": "READ ONE  TENANTCONTACTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/tenantcontact/:tenantcontactid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.tenantcontact.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/tenantcontacts/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.tenantcontact.update.v1": {
+        "ID": 329,
+        "Name": "UPDATE MULTIPLE TENANTCONTACTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/tenantcontacts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.tenantcontact.deleteone.v1": {
+        "ID": 330,
+        "Name": "DELETE ONE TENANTCONTACT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/tenantcontact/:tenantcontactid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorcontact.create.v1": {
+        "ID": 331,
+        "Name": "CREATE VENDORCONTACT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/vendorcontact",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorcontact.read.v1": {
+        "ID": 332,
+        "Name": "READ MULTIPLE VENDORCONTACTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/vendorcontacts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorcontact.readone.v1": {
+        "ID": 333,
+        "Name": "READ ONE  VENDORCONTACTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/vendorcontact/:vendorcontactid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorcontact.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/vendorcontacts/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorcontact.update.v1": {
+        "ID": 335,
+        "Name": "UPDATE MULTIPLE VENDORCONTACTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/vendorcontacts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorcontact.deleteone.v1": {
+        "ID": 336,
+        "Name": "DELETE ONE VENDORCONTACT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/vendorcontact/:vendorcontactid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendortenantcontact.create.v1": {
+        "ID": 337,
+        "Name": "CREATE VENDORTENANTCONTACT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/vendortenantcontact",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendortenantcontact.read.v1": {
+        "ID": 338,
+        "Name": "READ MULTIPLE VENDORTENANTCONTACTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/vendortenantcontacts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendortenantcontact.readone.v1": {
+        "ID": 339,
+        "Name": "READ ONE  VENDORTENANTCONTACTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/vendortenantcontact/:vendortenantcontactid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendortenantcontact.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/vendortenantcontacts/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendortenantcontact.update.v1": {
+        "ID": 341,
+        "Name": "UPDATE MULTIPLE VENDORTENANTCONTACTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/vendortenantcontacts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendortenantcontact.deleteone.v1": {
+        "ID": 342,
+        "Name": "DELETE ONE VENDORTENANTCONTACT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/contact/v1/vendortenantcontact/:vendortenantcontactid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.auth.create.v1": {
+        "ID": 343,
+        "Name": "CREATE AUTH",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/auth/v1/auth",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.auth.read.v1": {
+        "ID": 344,
+        "Name": "READ MULTIPLE AUTHS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/auth/v1/auths",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.auth.readone.v1": {
+        "ID": 345,
+        "Name": "READ ONE  AUTHID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/auth/v1/auth/:authid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.auth.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/auth/v1/auths/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.auth.update.v1": {
+        "ID": 347,
+        "Name": "UPDATE MULTIPLE AUTHS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/auth/v1/auths",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.auth.deleteone.v1": {
+        "ID": 348,
+        "Name": "DELETE ONE AUTH",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/auth/v1/auth/:authid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.packagetype.create.v1": {
+        "ID": 349,
+        "Name": "CREATE PACKAGETYPE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/package/v1/packagetype",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.packagetype.read.v1": {
+        "ID": 350,
+        "Name": "READ MULTIPLE PACKAGETYPES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/package/v1/packagetypes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.packagetype.readone.v1": {
+        "ID": 351,
+        "Name": "READ ONE  PACKAGETYPEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/package/v1/packagetype/:packagetypeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.packagetype.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/package/v1/packagetypes/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.packagetype.update.v1": {
+        "ID": 353,
+        "Name": "UPDATE MULTIPLE PACKAGETYPES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/package/v1/packagetypes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.packagetype.deleteone.v1": {
+        "ID": 354,
+        "Name": "DELETE ONE PACKAGETYPE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/package/v1/packagetype/:packagetypeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.paymentmethod.create.v1": {
+        "ID": 355,
+        "Name": "CREATE PAYMENTMETHOD",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payment/v1/paymentmethod",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.paymentmethod.read.v1": {
+        "ID": 356,
+        "Name": "READ MULTIPLE PAYMENTMETHODS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payment/v1/paymentmethods",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.paymentmethod.readone.v1": {
+        "ID": 357,
+        "Name": "READ ONE  PAYMENTMETHODID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payment/v1/paymentmethod/:paymentmethodid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.paymentmethod.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payment/v1/paymentmethods/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.paymentmethod.update.v1": {
+        "ID": 359,
+        "Name": "UPDATE MULTIPLE PAYMENTMETHODS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payment/v1/paymentmethods",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.paymentmethod.deleteone.v1": {
+        "ID": 360,
+        "Name": "DELETE ONE PAYMENTMETHOD",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payment/v1/paymentmethod/:paymentmethodid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.paymentstatus.create.v1": {
+        "ID": 361,
+        "Name": "CREATE PAYMENTSTATUS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payment/v1/paymentstatus",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.paymentstatus.read.v1": {
+        "ID": 362,
+        "Name": "READ MULTIPLE PAYMENTSTATUSES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payment/v1/paymentstatuses",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.paymentstatus.readone.v1": {
+        "ID": 363,
+        "Name": "READ ONE  PAYMENTSTATUSID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payment/v1/paymentstatus/:paymentstatusid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.paymentstatus.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payment/v1/paymentstatuses/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.paymentstatus.update.v1": {
+        "ID": 365,
+        "Name": "UPDATE MULTIPLE PAYMENTSTATUSES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payment/v1/paymentstatuses",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.paymentstatus.deleteone.v1": {
+        "ID": 366,
+        "Name": "DELETE ONE PAYMENTSTATUS",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payment/v1/paymentstatus/:paymentstatusid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.payrollbatch.create.v1": {
+        "ID": 367,
+        "Name": "CREATE PAYROLLBATCH",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payroll/v1/payrollbatch",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.payrollbatch.read.v1": {
+        "ID": 368,
+        "Name": "READ MULTIPLE PAYROLLBATCHS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payroll/v1/payrollbatchs",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.payrollbatch.readone.v1": {
+        "ID": 369,
+        "Name": "READ ONE  PAYROLLBATCHID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payroll/v1/payrollbatch/:payrollbatchid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.payrollbatch.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payroll/v1/payrollbatchs/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.payrollbatch.update.v1": {
+        "ID": 371,
+        "Name": "UPDATE MULTIPLE PAYROLLBATCHS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payroll/v1/payrollbatchs",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.payrollbatch.deleteone.v1": {
+        "ID": 372,
+        "Name": "DELETE ONE PAYROLLBATCH",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payroll/v1/payrollbatch/:payrollbatchid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.payrollbatchitem.create.v1": {
+        "ID": 373,
+        "Name": "CREATE PAYROLLBATCHITEM",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payroll/v1/payrollbatchitem",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.payrollbatchitem.read.v1": {
+        "ID": 374,
+        "Name": "READ MULTIPLE PAYROLLBATCHITEMS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payroll/v1/payrollbatchitems",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.payrollbatchitem.readone.v1": {
+        "ID": 375,
+        "Name": "READ ONE  PAYROLLBATCHITEMID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payroll/v1/payrollbatchitem/:payrollbatchitemid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.payrollbatchitem.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payroll/v1/payrollbatchitems/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.payrollbatchitem.update.v1": {
+        "ID": 377,
+        "Name": "UPDATE MULTIPLE PAYROLLBATCHITEMS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payroll/v1/payrollbatchitems",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.payrollbatchitem.deleteone.v1": {
+        "ID": 378,
+        "Name": "DELETE ONE PAYROLLBATCHITEM",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/payroll/v1/payrollbatchitem/:payrollbatchitemid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelist.create.v1": {
+        "ID": 379,
+        "Name": "CREATE PRICELIST",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelist",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelist.read.v1": {
+        "ID": 380,
+        "Name": "READ MULTIPLE PRICELISTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelists",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelist.readone.v1": {
+        "ID": 381,
+        "Name": "READ ONE  PRICELISTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelist/:pricelistid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelist.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelists/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelist.update.v1": {
+        "ID": 383,
+        "Name": "UPDATE MULTIPLE PRICELISTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelists",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelist.deleteone.v1": {
+        "ID": 384,
+        "Name": "DELETE ONE PRICELIST",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelist/:pricelistid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelistitem.create.v1": {
+        "ID": 385,
+        "Name": "CREATE PRICELISTITEM",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelistitem",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelistitem.read.v1": {
+        "ID": 386,
+        "Name": "READ MULTIPLE PRICELISTITEMS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelistitems",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelistitem.readone.v1": {
+        "ID": 387,
+        "Name": "READ ONE  PRICELISTITEMID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelistitem/:pricelistitemid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelistitem.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelistitems/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelistitem.update.v1": {
+        "ID": 389,
+        "Name": "UPDATE MULTIPLE PRICELISTITEMS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelistitems",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelistitem.deleteone.v1": {
+        "ID": 390,
+        "Name": "DELETE ONE PRICELISTITEM",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelistitem/:pricelistitemid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelistitembulkdiscount.create.v1": {
+        "ID": 391,
+        "Name": "CREATE PRICELISTITEMBULKDISCOUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelistitembulkdiscount",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelistitembulkdiscount.read.v1": {
+        "ID": 392,
+        "Name": "READ MULTIPLE PRICELISTITEMBULKDISCOUNTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelistitembulkdiscounts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelistitembulkdiscount.readone.v1": {
+        "ID": 393,
+        "Name": "READ ONE  PRICELISTITEMBULKDISCOUNTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelistitembulkdiscount/:pricelistitembulkdiscountid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelistitembulkdiscount.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelistitembulkdiscounts/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelistitembulkdiscount.update.v1": {
+        "ID": 395,
+        "Name": "UPDATE MULTIPLE PRICELISTITEMBULKDISCOUNTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelistitembulkdiscounts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelistitembulkdiscount.deleteone.v1": {
+        "ID": 396,
+        "Name": "DELETE ONE PRICELISTITEMBULKDISCOUNT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelistitembulkdiscount/:pricelistitembulkdiscountid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelistcustomeraccount.create.v1": {
+        "ID": 397,
+        "Name": "CREATE PRICELISTCUSTOMERACCOUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelistcustomeraccount",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelistcustomeraccount.read.v1": {
+        "ID": 398,
+        "Name": "READ MULTIPLE PRICELISTCUSTOMERACCOUNTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelistcustomeraccounts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelistcustomeraccount.readone.v1": {
+        "ID": 399,
+        "Name": "READ ONE  PRICELISTCUSTOMERACCOUNTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelistcustomeraccount/:pricelistcustomeraccountid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelistcustomeraccount.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelistcustomeraccounts/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelistcustomeraccount.update.v1": {
+        "ID": 401,
+        "Name": "UPDATE MULTIPLE PRICELISTCUSTOMERACCOUNTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelistcustomeraccounts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.pricelistcustomeraccount.deleteone.v1": {
+        "ID": 402,
+        "Name": "DELETE ONE PRICELISTCUSTOMERACCOUNT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/pricelistcustomeraccount/:pricelistcustomeraccountid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.priceliststore.create.v1": {
+        "ID": 403,
+        "Name": "CREATE PRICELISTSTORE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/priceliststore",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.priceliststore.read.v1": {
+        "ID": 404,
+        "Name": "READ MULTIPLE PRICELISTSTORES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/priceliststores",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.priceliststore.readone.v1": {
+        "ID": 405,
+        "Name": "READ ONE  PRICELISTSTOREID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/priceliststore/:priceliststoreid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.priceliststore.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/priceliststores/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.priceliststore.update.v1": {
+        "ID": 407,
+        "Name": "UPDATE MULTIPLE PRICELISTSTORES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/priceliststores",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.priceliststore.deleteone.v1": {
+        "ID": 408,
+        "Name": "DELETE ONE PRICELISTSTORE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/priceliststore/:priceliststoreid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.priceliststatus.create.v1": {
+        "ID": 409,
+        "Name": "CREATE PRICELISTSTATUS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/priceliststatus",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.priceliststatus.read.v1": {
+        "ID": 410,
+        "Name": "READ MULTIPLE PRICELISTSTATUSES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/priceliststatuses",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.priceliststatus.readone.v1": {
+        "ID": 411,
+        "Name": "READ ONE  PRICELISTSTATUSID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/priceliststatus/:priceliststatusid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.priceliststatus.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/priceliststatuses/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.priceliststatus.update.v1": {
+        "ID": 413,
+        "Name": "UPDATE MULTIPLE PRICELISTSTATUSES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/priceliststatuses",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.priceliststatus.deleteone.v1": {
+        "ID": 414,
+        "Name": "DELETE ONE PRICELISTSTATUS",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/pricelist/v1/priceliststatus/:priceliststatusid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.product.create.v1": {
+        "ID": 415,
+        "Name": "CREATE PRODUCT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/product",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.product.read.v1": {
+        "ID": 416,
+        "Name": "READ MULTIPLE PRODUCTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/products",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.product.readone.v1": {
+        "ID": 417,
+        "Name": "READ ONE  PRODUCTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/product/:productid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.product.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/products/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.product.update.v1": {
+        "ID": 419,
+        "Name": "UPDATE MULTIPLE PRODUCTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/products",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.product.deleteone.v1": {
+        "ID": 420,
+        "Name": "DELETE ONE PRODUCT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/product/:productid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productparam.create.v1": {
+        "ID": 421,
+        "Name": "CREATE PRODUCTPARAM",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productparam",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productparam.read.v1": {
+        "ID": 422,
+        "Name": "READ MULTIPLE PRODUCTPARAMS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productparams",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productparam.readone.v1": {
+        "ID": 423,
+        "Name": "READ ONE  PRODUCTPARAMID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productparam/:productparamid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productparam.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productparams/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productparam.update.v1": {
+        "ID": 425,
+        "Name": "UPDATE MULTIPLE PRODUCTPARAMS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productparams",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productparam.deleteone.v1": {
+        "ID": 426,
+        "Name": "DELETE ONE PRODUCTPARAM",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productparam/:productparamid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productprice.create.v1": {
+        "ID": 427,
+        "Name": "CREATE PRODUCTPRICE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productprice",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productprice.read.v1": {
+        "ID": 428,
+        "Name": "READ MULTIPLE PRODUCTPRICES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productprices",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productprice.readone.v1": {
+        "ID": 429,
+        "Name": "READ ONE  PRODUCTPRICEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productprice/:productpriceid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productprice.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productprices/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productprice.update.v1": {
+        "ID": 431,
+        "Name": "UPDATE MULTIPLE PRODUCTPRICES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productprices",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productprice.deleteone.v1": {
+        "ID": 432,
+        "Name": "DELETE ONE PRODUCTPRICE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productprice/:productpriceid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productimage.create.v1": {
+        "ID": 433,
+        "Name": "CREATE PRODUCTIMAGE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productimage",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productimage.read.v1": {
+        "ID": 434,
+        "Name": "READ MULTIPLE PRODUCTIMAGES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productimages",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productimage.readone.v1": {
+        "ID": 435,
+        "Name": "READ ONE  PRODUCTIMAGEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productimage/:productimageid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productimage.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productimages/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productimage.update.v1": {
+        "ID": 437,
+        "Name": "UPDATE MULTIPLE PRODUCTIMAGES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productimages",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productimage.deleteone.v1": {
+        "ID": 438,
+        "Name": "DELETE ONE PRODUCTIMAGE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productimage/:productimageid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productcategory.create.v1": {
+        "ID": 439,
+        "Name": "CREATE PRODUCTCATEGORY",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productcategory",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productcategory.read.v1": {
+        "ID": 440,
+        "Name": "READ MULTIPLE PRODUCTCATEGORYS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productcategorys",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productcategory.readone.v1": {
+        "ID": 441,
+        "Name": "READ ONE  PRODUCTCATEGORYID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productcategory/:productcategoryid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productcategory.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productcategorys/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productcategory.update.v1": {
+        "ID": 443,
+        "Name": "UPDATE MULTIPLE PRODUCTCATEGORYS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productcategorys",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productcategory.deleteone.v1": {
+        "ID": 444,
+        "Name": "DELETE ONE PRODUCTCATEGORY",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productcategory/:productcategoryid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productbundle.create.v1": {
+        "ID": 445,
+        "Name": "CREATE PRODUCTBUNDLE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productbundle",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productbundle.read.v1": {
+        "ID": 446,
+        "Name": "READ MULTIPLE PRODUCTBUNDLES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productbundles",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productbundle.readone.v1": {
+        "ID": 447,
+        "Name": "READ ONE  PRODUCTBUNDLEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productbundle/:productbundleid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productbundle.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productbundles/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productbundle.update.v1": {
+        "ID": 449,
+        "Name": "UPDATE MULTIPLE PRODUCTBUNDLES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productbundles",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productbundle.deleteone.v1": {
+        "ID": 450,
+        "Name": "DELETE ONE PRODUCTBUNDLE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productbundle/:productbundleid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productbulkdiscount.create.v1": {
+        "ID": 451,
+        "Name": "CREATE PRODUCTBULKDISCOUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productbulkdiscount",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productbulkdiscount.read.v1": {
+        "ID": 452,
+        "Name": "READ MULTIPLE PRODUCTBULKDISCOUNTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productbulkdiscounts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productbulkdiscount.readone.v1": {
+        "ID": 453,
+        "Name": "READ ONE  PRODUCTBULKDISCOUNTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productbulkdiscount/:productbulkdiscountid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productbulkdiscount.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productbulkdiscounts/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productbulkdiscount.update.v1": {
+        "ID": 455,
+        "Name": "UPDATE MULTIPLE PRODUCTBULKDISCOUNTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productbulkdiscounts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productbulkdiscount.deleteone.v1": {
+        "ID": 456,
+        "Name": "DELETE ONE PRODUCTBULKDISCOUNT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productbulkdiscount/:productbulkdiscountid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productpackage.create.v1": {
+        "ID": 457,
+        "Name": "CREATE PRODUCTPACKAGE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productpackage",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productpackage.read.v1": {
+        "ID": 458,
+        "Name": "READ MULTIPLE PRODUCTPACKAGES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productpackages",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productpackage.readone.v1": {
+        "ID": 459,
+        "Name": "READ ONE  PRODUCTPACKAGEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productpackage/:productpackageid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productpackage.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productpackages/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productpackage.update.v1": {
+        "ID": 461,
+        "Name": "UPDATE MULTIPLE PRODUCTPACKAGES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productpackages",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.productpackage.deleteone.v1": {
+        "ID": 462,
+        "Name": "DELETE ONE PRODUCTPACKAGE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/product/v1/productpackage/:productpackageid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.project.create.v1": {
+        "ID": 463,
+        "Name": "CREATE PROJECT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/project/v1/project",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.project.read.v1": {
+        "ID": 464,
+        "Name": "READ MULTIPLE PROJECTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/project/v1/projects",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.project.readone.v1": {
+        "ID": 465,
+        "Name": "READ ONE  PROJECTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/project/v1/project/:projectid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.project.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/project/v1/projects/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.project.update.v1": {
+        "ID": 467,
+        "Name": "UPDATE MULTIPLE PROJECTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/project/v1/projects",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.project.deleteone.v1": {
+        "ID": 468,
+        "Name": "DELETE ONE PROJECT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/project/v1/project/:projectid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.projecttype.create.v1": {
+        "ID": 469,
+        "Name": "CREATE PROJECTTYPE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/project/v1/projecttype",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.projecttype.read.v1": {
+        "ID": 470,
+        "Name": "READ MULTIPLE PROJECTTYPES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/project/v1/projecttypes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.projecttype.readone.v1": {
+        "ID": 471,
+        "Name": "READ ONE  PROJECTTYPEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/project/v1/projecttype/:projecttypeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.projecttype.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/project/v1/projecttypes/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.projecttype.update.v1": {
+        "ID": 473,
+        "Name": "UPDATE MULTIPLE PROJECTTYPES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/project/v1/projecttypes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.projecttype.deleteone.v1": {
+        "ID": 474,
+        "Name": "DELETE ONE PROJECTTYPE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/project/v1/projecttype/:projecttypeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposal.create.v1": {
+        "ID": 475,
+        "Name": "CREATE PROPOSAL",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposal",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposal.read.v1": {
+        "ID": 476,
+        "Name": "READ MULTIPLE PROPOSALS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposals",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposal.readone.v1": {
+        "ID": 477,
+        "Name": "READ ONE  PROPOSALID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposal/:proposalid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposal.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposals/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposal.update.v1": {
+        "ID": 479,
+        "Name": "UPDATE MULTIPLE PROPOSALS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposals",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposal.deleteone.v1": {
+        "ID": 480,
+        "Name": "DELETE ONE PROPOSAL",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposal/:proposalid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposalitem.create.v1": {
+        "ID": 481,
+        "Name": "CREATE PROPOSALITEM",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposalitem",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposalitem.read.v1": {
+        "ID": 482,
+        "Name": "READ MULTIPLE PROPOSALITEMS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposalitems",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposalitem.readone.v1": {
+        "ID": 483,
+        "Name": "READ ONE  PROPOSALITEMID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposalitem/:proposalitemid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposalitem.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposalitems/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposalitem.update.v1": {
+        "ID": 485,
+        "Name": "UPDATE MULTIPLE PROPOSALITEMS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposalitems",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposalitem.deleteone.v1": {
+        "ID": 486,
+        "Name": "DELETE ONE PROPOSALITEM",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposalitem/:proposalitemid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposalitemparam.create.v1": {
+        "ID": 487,
+        "Name": "CREATE PROPOSALITEMPARAM",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposalitemparam",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposalitemparam.read.v1": {
+        "ID": 488,
+        "Name": "READ MULTIPLE PROPOSALITEMPARAMS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposalitemparams",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposalitemparam.readone.v1": {
+        "ID": 489,
+        "Name": "READ ONE  PROPOSALITEMPARAMID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposalitemparam/:proposalitemparamid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposalitemparam.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposalitemparams/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposalitemparam.update.v1": {
+        "ID": 491,
+        "Name": "UPDATE MULTIPLE PROPOSALITEMPARAMS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposalitemparams",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposalitemparam.deleteone.v1": {
+        "ID": 492,
+        "Name": "DELETE ONE PROPOSALITEMPARAM",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposalitemparam/:proposalitemparamid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposalvendorproduct.create.v1": {
+        "ID": 493,
+        "Name": "CREATE PROPOSALVENDORPRODUCT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposalvendorproduct",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposalvendorproduct.read.v1": {
+        "ID": 494,
+        "Name": "READ MULTIPLE PROPOSALVENDORPRODUCTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposalvendorproducts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposalvendorproduct.readone.v1": {
+        "ID": 495,
+        "Name": "READ ONE  PROPOSALVENDORPRODUCTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposalvendorproduct/:proposalvendorproductid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposalvendorproduct.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposalvendorproducts/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposalvendorproduct.update.v1": {
+        "ID": 497,
+        "Name": "UPDATE MULTIPLE PROPOSALVENDORPRODUCTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposalvendorproducts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.proposalvendorproduct.deleteone.v1": {
+        "ID": 498,
+        "Name": "DELETE ONE PROPOSALVENDORPRODUCT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/proposal/v1/proposalvendorproduct/:proposalvendorproductid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.quote.create.v1": {
+        "ID": 499,
+        "Name": "CREATE QUOTE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/quote/v1/quote",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.quote.read.v1": {
+        "ID": 500,
+        "Name": "READ MULTIPLE QUOTES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/quote/v1/quotes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.quote.readone.v1": {
+        "ID": 501,
+        "Name": "READ ONE  QUOTEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/quote/v1/quote/:quoteid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.quote.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/quote/v1/quotes/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.quote.update.v1": {
+        "ID": 503,
+        "Name": "UPDATE MULTIPLE QUOTES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/quote/v1/quotes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.quote.deleteone.v1": {
+        "ID": 504,
+        "Name": "DELETE ONE QUOTE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/quote/v1/quote/:quoteid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.quoteitem.create.v1": {
+        "ID": 505,
+        "Name": "CREATE QUOTEITEM",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/quote/v1/quoteitem",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.quoteitem.read.v1": {
+        "ID": 506,
+        "Name": "READ MULTIPLE QUOTEITEMS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/quote/v1/quoteitems",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.quoteitem.readone.v1": {
+        "ID": 507,
+        "Name": "READ ONE  QUOTEITEMID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/quote/v1/quoteitem/:quoteitemid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.quoteitem.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/quote/v1/quoteitems/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.quoteitem.update.v1": {
+        "ID": 509,
+        "Name": "UPDATE MULTIPLE QUOTEITEMS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/quote/v1/quoteitems",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.quoteitem.deleteone.v1": {
+        "ID": 510,
+        "Name": "DELETE ONE QUOTEITEM",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/quote/v1/quoteitem/:quoteitemid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.role.create.v1": {
+        "ID": 511,
+        "Name": "CREATE ROLE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/role/v1/role",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.role.read.v1": {
+        "ID": 512,
+        "Name": "READ MULTIPLE ROLES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/role/v1/roles",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.role.readone.v1": {
+        "ID": 513,
+        "Name": "READ ONE  ROLEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/role/v1/role/:roleid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.role.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/role/v1/roles/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.role.update.v1": {
+        "ID": 515,
+        "Name": "UPDATE MULTIPLE ROLES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/role/v1/roles",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.role.deleteone.v1": {
+        "ID": 516,
+        "Name": "DELETE ONE ROLE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/role/v1/role/:roleid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.store.create.v1": {
+        "ID": 517,
+        "Name": "CREATE STORE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/store/v1/store",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.store.read.v1": {
+        "ID": 518,
+        "Name": "READ MULTIPLE STORES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/store/v1/stores",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.store.readone.v1": {
+        "ID": 519,
+        "Name": "READ ONE  STOREID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/store/v1/store/:storeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.store.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/store/v1/stores/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.store.update.v1": {
+        "ID": 521,
+        "Name": "UPDATE MULTIPLE STORES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/store/v1/stores",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.store.deleteone.v1": {
+        "ID": 522,
+        "Name": "DELETE ONE STORE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/store/v1/store/:storeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.storetype.create.v1": {
+        "ID": 523,
+        "Name": "CREATE STORETYPE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/store/v1/storetype",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.storetype.read.v1": {
+        "ID": 524,
+        "Name": "READ MULTIPLE STORETYPES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/store/v1/storetypes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.storetype.readone.v1": {
+        "ID": 525,
+        "Name": "READ ONE  STORETYPEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/store/v1/storetype/:storetypeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.storetype.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/store/v1/storetypes/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.storetype.update.v1": {
+        "ID": 527,
+        "Name": "UPDATE MULTIPLE STORETYPES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/store/v1/storetypes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.storetype.deleteone.v1": {
+        "ID": 528,
+        "Name": "DELETE ONE STORETYPE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/store/v1/storetype/:storetypeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendor.create.v1": {
+        "ID": 529,
+        "Name": "CREATE VENDOR",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendor",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendor.read.v1": {
+        "ID": 530,
+        "Name": "READ MULTIPLE VENDORS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendors",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendor.readone.v1": {
+        "ID": 531,
+        "Name": "READ ONE  VENDORID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendor/:vendorid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendor.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendors/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendor.update.v1": {
+        "ID": 533,
+        "Name": "UPDATE MULTIPLE VENDORS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendors",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendor.deleteone.v1": {
+        "ID": 534,
+        "Name": "DELETE ONE VENDOR",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendor/:vendorid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendoraccount.create.v1": {
+        "ID": 535,
+        "Name": "CREATE VENDORACCOUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendoraccount",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendoraccount.read.v1": {
+        "ID": 536,
+        "Name": "READ MULTIPLE VENDORACCOUNTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendoraccounts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendoraccount.readone.v1": {
+        "ID": 537,
+        "Name": "READ ONE  VENDORACCOUNTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendoraccount/:vendoraccountid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendoraccount.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendoraccounts/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendoraccount.update.v1": {
+        "ID": 539,
+        "Name": "UPDATE MULTIPLE VENDORACCOUNTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendoraccounts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendoraccount.deleteone.v1": {
+        "ID": 540,
+        "Name": "DELETE ONE VENDORACCOUNT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendoraccount/:vendoraccountid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendoraccountbalance.create.v1": {
+        "ID": 541,
+        "Name": "CREATE VENDORACCOUNTBALANCE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendoraccountbalance",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendoraccountbalance.read.v1": {
+        "ID": 542,
+        "Name": "READ MULTIPLE VENDORACCOUNTBALANCES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendoraccountbalances",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendoraccountbalance.readone.v1": {
+        "ID": 543,
+        "Name": "READ ONE  VENDORACCOUNTBALANCEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendoraccountbalance/:vendoraccountbalanceid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendoraccountbalance.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendoraccountbalances/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendoraccountbalance.update.v1": {
+        "ID": 545,
+        "Name": "UPDATE MULTIPLE VENDORACCOUNTBALANCES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendoraccountbalances",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendoraccountbalance.deleteone.v1": {
+        "ID": 546,
+        "Name": "DELETE ONE VENDORACCOUNTBALANCE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendoraccountbalance/:vendoraccountbalanceid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorapproval.create.v1": {
+        "ID": 547,
+        "Name": "CREATE VENDORAPPROVAL",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorapproval",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorapproval.read.v1": {
+        "ID": 548,
+        "Name": "READ MULTIPLE VENDORAPPROVALS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorapprovals",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorapproval.readone.v1": {
+        "ID": 549,
+        "Name": "READ ONE  VENDORAPPROVALID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorapproval/:vendorapprovalid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorapproval.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorapprovals/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorapproval.update.v1": {
+        "ID": 551,
+        "Name": "UPDATE MULTIPLE VENDORAPPROVALS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorapprovals",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorapproval.deleteone.v1": {
+        "ID": 552,
+        "Name": "DELETE ONE VENDORAPPROVAL",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorapproval/:vendorapprovalid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorapprovalitem.create.v1": {
+        "ID": 553,
+        "Name": "CREATE VENDORAPPROVALITEM",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorapprovalitem",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorapprovalitem.read.v1": {
+        "ID": 554,
+        "Name": "READ MULTIPLE VENDORAPPROVALITEMS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorapprovalitems",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorapprovalitem.readone.v1": {
+        "ID": 555,
+        "Name": "READ ONE  VENDORAPPROVALITEMID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorapprovalitem/:vendorapprovalitemid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorapprovalitem.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorapprovalitems/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorapprovalitem.update.v1": {
+        "ID": 557,
+        "Name": "UPDATE MULTIPLE VENDORAPPROVALITEMS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorapprovalitems",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorapprovalitem.deleteone.v1": {
+        "ID": 558,
+        "Name": "DELETE ONE VENDORAPPROVALITEM",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorapprovalitem/:vendorapprovalitemid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorbill.create.v1": {
+        "ID": 559,
+        "Name": "CREATE VENDORBILL",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorbill",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorbill.read.v1": {
+        "ID": 560,
+        "Name": "READ MULTIPLE VENDORBILLS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorbills",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorbill.readone.v1": {
+        "ID": 561,
+        "Name": "READ ONE  VENDORBILLID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorbill/:vendorbillid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorbill.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorbills/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorbill.update.v1": {
+        "ID": 563,
+        "Name": "UPDATE MULTIPLE VENDORBILLS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorbills",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorbill.deleteone.v1": {
+        "ID": 564,
+        "Name": "DELETE ONE VENDORBILL",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorbill/:vendorbillid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorbillitem.create.v1": {
+        "ID": 565,
+        "Name": "CREATE VENDORBILLITEM",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorbillitem",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorbillitem.read.v1": {
+        "ID": 566,
+        "Name": "READ MULTIPLE VENDORBILLITEMS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorbillitems",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorbillitem.readone.v1": {
+        "ID": 567,
+        "Name": "READ ONE  VENDORBILLITEMID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorbillitem/:vendorbillitemid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorbillitem.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorbillitems/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorbillitem.update.v1": {
+        "ID": 569,
+        "Name": "UPDATE MULTIPLE VENDORBILLITEMS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorbillitems",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorbillitem.deleteone.v1": {
+        "ID": 570,
+        "Name": "DELETE ONE VENDORBILLITEM",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorbillitem/:vendorbillitemid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorcategory.create.v1": {
+        "ID": 571,
+        "Name": "CREATE VENDORCATEGORY",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorcategory",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorcategory.read.v1": {
+        "ID": 572,
+        "Name": "READ MULTIPLE VENDORCATEGORIES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorcategories",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorcategory.readone.v1": {
+        "ID": 573,
+        "Name": "READ ONE  VENDORCATEGORYID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorcategory/:vendorcategoryid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorcategory.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorcategories/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorcategory.update.v1": {
+        "ID": 575,
+        "Name": "UPDATE MULTIPLE VENDORCATEGORIES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorcategories",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorcategory.deleteone.v1": {
+        "ID": 576,
+        "Name": "DELETE ONE VENDORCATEGORY",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorcategory/:vendorcategoryid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorexpense.create.v1": {
+        "ID": 577,
+        "Name": "CREATE VENDOREXPENSE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorexpense",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorexpense.read.v1": {
+        "ID": 578,
+        "Name": "READ MULTIPLE VENDOREXPENSES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorexpenses",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorexpense.readone.v1": {
+        "ID": 579,
+        "Name": "READ ONE  VENDOREXPENSEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorexpense/:vendorexpenseid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorexpense.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorexpenses/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorexpense.update.v1": {
+        "ID": 581,
+        "Name": "UPDATE MULTIPLE VENDOREXPENSES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorexpenses",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorexpense.deleteone.v1": {
+        "ID": 582,
+        "Name": "DELETE ONE VENDOREXPENSE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorexpense/:vendorexpenseid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorpayment.create.v1": {
+        "ID": 583,
+        "Name": "CREATE VENDORPAYMENT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorpayment",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorpayment.read.v1": {
+        "ID": 584,
+        "Name": "READ MULTIPLE VENDORPAYMENTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorpayments",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorpayment.readone.v1": {
+        "ID": 585,
+        "Name": "READ ONE  VENDORPAYMENTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorpayment/:vendorpaymentid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorpayment.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorpayments/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorpayment.update.v1": {
+        "ID": 587,
+        "Name": "UPDATE MULTIPLE VENDORPAYMENTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorpayments",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorpayment.deleteone.v1": {
+        "ID": 588,
+        "Name": "DELETE ONE VENDORPAYMENT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorpayment/:vendorpaymentid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorpaymentitem.create.v1": {
+        "ID": 589,
+        "Name": "CREATE VENDORPAYMENTITEM",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorpaymentitem",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorpaymentitem.read.v1": {
+        "ID": 590,
+        "Name": "READ MULTIPLE VENDORPAYMENTITEMS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorpaymentitems",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorpaymentitem.readone.v1": {
+        "ID": 591,
+        "Name": "READ ONE  VENDORPAYMENTITEMID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorpaymentitem/:vendorpaymentitemid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorpaymentitem.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorpaymentitems/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorpaymentitem.update.v1": {
+        "ID": 593,
+        "Name": "UPDATE MULTIPLE VENDORPAYMENTITEMS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorpaymentitems",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorpaymentitem.deleteone.v1": {
+        "ID": 594,
+        "Name": "DELETE ONE VENDORPAYMENTITEM",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorpaymentitem/:vendorpaymentitemid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorpaymentlog.create.v1": {
+        "ID": 595,
+        "Name": "CREATE VENDORPAYMENTLOG",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorpaymentlog",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorpaymentlog.read.v1": {
+        "ID": 596,
+        "Name": "READ MULTIPLE VENDORPAYMENTLOGS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorpaymentlogs",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorpaymentlog.readone.v1": {
+        "ID": 597,
+        "Name": "READ ONE  VENDORPAYMENTLOGID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorpaymentlog/:vendorpaymentlogid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorpaymentlog.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorpaymentlogs/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorpaymentlog.update.v1": {
+        "ID": 599,
+        "Name": "UPDATE MULTIPLE VENDORPAYMENTLOGS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorpaymentlogs",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorpaymentlog.deleteone.v1": {
+        "ID": 600,
+        "Name": "DELETE ONE VENDORPAYMENTLOG",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorpaymentlog/:vendorpaymentlogid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorproduct.create.v1": {
+        "ID": 601,
+        "Name": "CREATE VENDORPRODUCT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorproduct",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorproduct.read.v1": {
+        "ID": 602,
+        "Name": "READ MULTIPLE VENDORPRODUCTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorproducts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorproduct.readone.v1": {
+        "ID": 603,
+        "Name": "READ ONE  VENDORPRODUCTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorproduct/:vendorproductid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorproduct.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorproducts/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorproduct.update.v1": {
+        "ID": 605,
+        "Name": "UPDATE MULTIPLE VENDORPRODUCTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorproducts",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorproduct.deleteone.v1": {
+        "ID": 606,
+        "Name": "DELETE ONE VENDORPRODUCT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorproduct/:vendorproductid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorstatement.create.v1": {
+        "ID": 607,
+        "Name": "CREATE VENDORSTATEMENT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorstatement",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorstatement.read.v1": {
+        "ID": 608,
+        "Name": "READ MULTIPLE VENDORSTATEMENTS",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorstatements",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorstatement.readone.v1": {
+        "ID": 609,
+        "Name": "READ ONE  VENDORSTATEMENTID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorstatement/:vendorstatementid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorstatement.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorstatements/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorstatement.update.v1": {
+        "ID": 611,
+        "Name": "UPDATE MULTIPLE VENDORSTATEMENTS",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorstatements",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendorstatement.deleteone.v1": {
+        "ID": 612,
+        "Name": "DELETE ONE VENDORSTATEMENT",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendorstatement/:vendorstatementid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendortransactiontype.create.v1": {
+        "ID": 613,
+        "Name": "CREATE VENDORTRANSACTIONTYPE",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendortransactiontype",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendortransactiontype.read.v1": {
+        "ID": 614,
+        "Name": "READ MULTIPLE VENDORTRANSACTIONTYPES",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendortransactiontypes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendortransactiontype.readone.v1": {
+        "ID": 615,
+        "Name": "READ ONE  VENDORTRANSACTIONTYPEID",
+        "Method": "GET",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendortransactiontype/:vendortransactiontypeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendortransactiontype.count.v1": {
+        "ID": 47,
+        "Name": "READ COUNT",
+        "Method": "POST",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendortransactiontypes/metrics",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendortransactiontype.update.v1": {
+        "ID": 617,
+        "Name": "UPDATE MULTIPLE VENDORTRANSACTIONTYPES",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendortransactiontypes",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "accounts.api.rest.dataaccess.vendortransactiontype.deleteone.v1": {
+        "ID": 618,
+        "Name": "DELETE ONE VENDORTRANSACTIONTYPE",
+        "Method": "DELETE",
+        "Endpoint": "/api/rest/accounts/dataaccess/1.0.0/vendor/v1/vendortransactiontype/:vendortransactiontypeid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    }
+}

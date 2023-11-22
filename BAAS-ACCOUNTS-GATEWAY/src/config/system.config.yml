@@ -1,0 +1,36 @@
+# CreatedBy    : Dinesh
+# CreatedTime  : June 19 2023
+# ModifiedBy   : Dinesh
+# ModifiedTime : June 19 2023
+
+# Core
+db:
+  redis:
+    emulate: true
+    namespace: EG
+
+#plugins:
+  # express-gateway-plugin-example:
+  #   param1: 'param from system.config' 
+
+crypto:
+  cipherKey: sensitiveKey
+  algorithm: aes256
+  saltRounds: 10
+
+# OAuth2 Settings
+session: 
+  secret: 0DRaAqHd6QmPnOWzD5SyHdell_0mk9fK8oTnouzB2xw 
+  resave: false 
+  saveUninitialized: false
+  algorithm: HS256
+accessTokens: 
+  # Keycloak URL has been configured here to validate the token
+  timeToExpiry: 10
+  tokenType: 'jwt'
+  issuer: 'https://sso.alitasys.com:8443/auth/realms/bbos-realm'
+  audience: 'realm-management'
+refreshTokens:
+  timeToExpiry: 10
+authorizationCodes: 
+  timeToExpiry: 10

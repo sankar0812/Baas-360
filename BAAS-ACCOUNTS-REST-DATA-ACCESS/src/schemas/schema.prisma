@@ -1,0 +1,3242 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["interactiveTransactions"]
+  binaryTargets   = ["native", "debian-openssl-1.1.x", "linux-musl"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model AppSettingDataType {
+  AppSettingDataTypeID BigInt    @id(map: "PK_AppSettingDataType") @default(autoincrement())
+  DataTypeName         String?   @db.VarChar(50)
+  Description          String?   @db.VarChar(500)
+  LargeImageURL        String?   @db.VarChar(500)
+  CreatedAuthID        BigInt
+  CreatedBy            String    @db.VarChar(150)
+  CreatedDate          DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID       BigInt?
+  ModifiedBy           String?   @db.VarChar(150)
+  ModifiedDate         DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted            Boolean   @default(false)
+  DeletedAuthID        BigInt?
+  DeletedBy            String?   @db.VarChar(150)
+  DeletedDate          DateTime? @db.Timestamp(6)
+  Auth                 Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+}
+
+model AppSettingNetTerm {
+  AppSettingNetTermID BigInt            @id(map: "PK_AppSettingNetTerm") @default(autoincrement())
+  AppSettingNetTerm   String?           @db.VarChar(50)
+  DisplayOrder        Int?
+  InternalCode        String?           @db.VarChar(10)
+  ShortDescription    String?           @db.VarChar(50)
+  Description         String?           @db.VarChar(500)
+  ShortImageURL       String?           @db.VarChar(500)
+  MidiumImageURL      String?           @db.VarChar(500)
+  LargeImageURL       String?           @db.VarChar(500)
+  CreatedAuthID       BigInt
+  CreatedBy           String            @db.VarChar(150)
+  CreatedDate         DateTime          @default(now()) @db.Timestamp(6)
+  ModifiedAuthID      BigInt?
+  ModifiedBy          String?           @db.VarChar(150)
+  ModifiedDate        DateTime?         @default(now()) @db.Timestamp(6)
+  IsDeleted           Boolean           @default(false)
+  DeletedAuthID       BigInt?
+  DeletedBy           String?           @db.VarChar(150)
+  DeletedDate         DateTime?         @db.Timestamp(6)
+  Auth                Auth              @relation(fields: [CreatedAuthID], references: [AuthID])
+  CustomerAccount     CustomerAccount[]
+  Invoice             Invoice[]
+}
+
+model AppSettingUom {
+  AppSettingUomID     BigInt    @id(map: "PK_AppSettingUom") @default(autoincrement())
+  AppSettingUomTypeID BigInt
+  UomName             String?   @db.VarChar(50)
+  UomCode             String?   @db.VarChar(50)
+  Description         String?   @db.VarChar(500)
+  CreatedAuthID       BigInt
+  CreatedBy           String    @db.VarChar(150)
+  CreatedDate         DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID      BigInt?
+  ModifiedBy          String?   @db.VarChar(150)
+  ModifiedDate        DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted           Boolean   @default(false)
+  DeletedAuthID       BigInt?
+  DeletedBy           String?   @db.VarChar(150)
+  DeletedDate         DateTime? @db.Timestamp(6)
+  Auth                Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+  Product             Product[]
+}
+
+model AppSettingUomType {
+  AppSettingUomTypeID BigInt    @id(map: "PK_AppSettingUomType") @default(autoincrement())
+  UomTypeName         String?   @db.VarChar(50)
+  Description         String?   @db.VarChar(500)
+  CreatedAuthID       BigInt
+  CreatedBy           String    @db.VarChar(150)
+  CreatedDate         DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID      BigInt?
+  ModifiedBy          String?   @db.VarChar(150)
+  ModifiedDate        DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted           Boolean   @default(false)
+  DeletedAuthID       BigInt?
+  DeletedBy           String?   @db.VarChar(150)
+  DeletedDate         DateTime? @db.Timestamp(6)
+  Auth                Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+}
+
+model ApprovalStatus {
+  ApprovalStatusID BigInt    @id(map: "PK_ApprovalStatus") @default(autoincrement())
+  ApprovalStatus   String    @db.VarChar(100)
+  Description      String?   @db.VarChar(100)
+  CreatedAuthID    BigInt
+  CreatedBy        String    @db.VarChar(150)
+  CreatedDate      DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID   BigInt?
+  ModifiedBy       String?   @db.VarChar(150)
+  ModifiedDate     DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted        Boolean   @default(false)
+  DeletedAuthID    BigInt?
+  DeletedBy        String?   @db.VarChar(150)
+  DeletedDate      DateTime? @db.Timestamp(6)
+  Auth             Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+}
+
+model Asset {
+  AssetID                      BigInt              @id(map: "PK_Asset") @default(autoincrement())
+  ManufacturerID               BigInt
+  BrandID                      BigInt
+  ProductID                    BigInt
+  MerchantID                   BigInt
+  TenantID                     BigInt
+  VendorBillID                 BigInt
+  VendorID                     BigInt
+  CustomerID                   BigInt
+  CurrencyID                   BigInt
+  AssetClassID                 BigInt
+  AssetTypeID                  BigInt
+  AssetSerialNumber            String?             @db.VarChar(50)
+  AssetStatusID                BigInt?
+  AssetStatus                  String?             @db.VarChar(50)
+  AssetCurrentValue            Float?
+  ProductCode                  String?             @db.VarChar(50)
+  ProductSerailNumber          String?             @db.VarChar(50)
+  VendorProductCode            String?             @db.VarChar(50)
+  VendorSerialNumber           String?             @db.VarChar(50)
+  CustomerProductCode          String?             @db.VarChar(50)
+  CustomerSerialNumber         String?             @db.VarChar(50)
+  Remarks                      String?             @db.VarChar(50)
+  PurchasedDate                DateTime?           @db.Date
+  PurchasedAmont               Float?
+  Make                         String?             @db.VarChar(50)
+  Model                        String?             @db.VarChar(50)
+  Year                         String?             @db.VarChar(50)
+  CreatedAuthID                BigInt
+  CreatedBy                    String              @db.VarChar(150)
+  CreatedDate                  DateTime            @default(now()) @db.Timestamp(6)
+  ModifiedAuthID               BigInt
+  ModifiedBy                   String              @db.VarChar(150)
+  ModifiedDate                 DateTime            @default(now()) @db.Timestamp(6)
+  IsDeleted                    Boolean             @default(false)
+  DeletedAuthID                BigInt?
+  DeletedBy                    String?             @db.VarChar(150)
+  DeletedDate                  DateTime?           @db.Timestamp(6)
+  assetCategoryAssetCategoryID BigInt?
+  AssetClass                   AssetClass          @relation(fields: [AssetClassID], references: [AssetClassID])
+  Auth                         Auth                @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency                     Currency            @relation(fields: [CurrencyID], references: [CurrencyID])
+  Customer                     Customer            @relation(fields: [CustomerID], references: [CustomerID])
+  Merchant                     Merchant            @relation(fields: [MerchantID], references: [MerchantID])
+  Product                      Product             @relation(fields: [ProductID], references: [ProductID])
+  Tenant                       Tenant              @relation(fields: [TenantID], references: [TenantID])
+  VendorBill                   VendorBill          @relation(fields: [VendorBillID], references: [VendorBillID])
+  Vendor                       Vendor              @relation(fields: [VendorID], references: [VendorID])
+  AssetCategory                AssetCategory?      @relation(fields: [assetCategoryAssetCategoryID], references: [AssetCategoryID])
+  AssetDepreciation            AssetDepreciation[]
+  AssetProductParam            AssetProductParam[]
+  AssetUsage                   AssetUsage[]
+}
+
+model AssetCategory {
+  AssetCategoryID       BigInt    @id(map: "PK_AssetCategory") @default(autoincrement())
+  TenantID              BigInt
+  MerchantID            BigInt
+  AssetCategoryName     String?   @db.VarChar(50)
+  Description           String?   @db.VarChar(50)
+  ParentAssetCategoryID BigInt?
+  DisplayOrder          Int?
+  CreatedAuthID         BigInt
+  CreatedBy             String    @db.VarChar(150)
+  CreatedDate           DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID        BigInt?
+  ModifiedBy            String?   @db.VarChar(150)
+  ModifiedDate          DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted             Boolean   @default(false)
+  DeletedAuthID         BigInt?
+  DeletedBy             String?   @db.VarChar(150)
+  DeletedDate           DateTime? @db.Timestamp(6)
+  Asset                 Asset[]
+  Auth                  Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant              Merchant  @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant                Tenant    @relation(fields: [TenantID], references: [TenantID])
+}
+
+model AssetClass {
+  AssetClassID   BigInt    @id(map: "PK_AssetClass") @default(autoincrement())
+  MerchantID     BigInt
+  TenantID       BigInt
+  AssetClass     String?   @db.VarChar(50)
+  Description    String?   @db.VarChar(50)
+  CreatedAuthID  BigInt
+  CreatedBy      String    @db.VarChar(150)
+  CreatedDate    DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID BigInt?
+  ModifiedBy     String?   @db.VarChar(150)
+  ModifiedDate   DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted      Boolean   @default(false)
+  DeletedAuthID  BigInt?
+  DeletedBy      String?   @db.VarChar(150)
+  DeletedDate    DateTime? @db.Timestamp(6)
+  Asset          Asset[]
+  Auth           Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant       Merchant  @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant         Tenant    @relation(fields: [TenantID], references: [TenantID])
+}
+
+model AssetDepreciation {
+  AssetDepreciationID    BigInt    @id(map: "PK_AssetDepreciation") @default(autoincrement())
+  AssetID                BigInt
+  FinancialYear          DateTime? @db.Date
+  AssetCurrentValue      Float?
+  DepreciationPercentage Decimal?  @db.Decimal(5, 2)
+  CreatedAuthID          BigInt
+  CreatedBy              String    @db.VarChar(150)
+  CreatedDate            DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID         BigInt?
+  ModifiedBy             String?   @db.VarChar(150)
+  ModifiedDate           DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted              Boolean   @default(false)
+  DeletedAuthID          BigInt?
+  DeletedBy              String?   @db.VarChar(150)
+  DeletedDate            DateTime? @db.Timestamp(6)
+  Asset                  Asset     @relation(fields: [AssetID], references: [AssetID])
+  Auth                   Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+}
+
+model AssetProductParam {
+  AssetProductParamID         BigInt       @id(map: "PK_AssetProductParam") @default(autoincrement())
+  MerchantID                  BigInt
+  TenantID                    BigInt
+  AssetID                     BigInt
+  ProductID                   BigInt
+  ProductParamID              BigInt
+  DisplayOrder                Int?
+  ParamName                   String?      @db.VarChar(100)
+  ParamValue                  String?      @db.VarChar(1500)
+  ParamAppSettingDataTypeID   BigInt?
+  ParamAppSettingDataObjectID BigInt?
+  ParamAppSettingUomTypeID    BigInt?
+  ParamAppSettingUomValueID   BigInt?
+  CreatedAuthID               BigInt
+  CreatedBy                   String       @db.VarChar(150)
+  CreatedDate                 DateTime     @default(now()) @db.Timestamp(6)
+  ModifiedAuthID              BigInt
+  ModifiedBy                  String       @db.VarChar(150)
+  ModifiedDate                DateTime     @default(now()) @db.Timestamp(6)
+  IsDeleted                   Boolean      @default(false)
+  DeletedAuthID               BigInt?
+  DeletedBy                   String?      @db.VarChar(150)
+  DeletedDate                 DateTime?    @db.Timestamp(6)
+  Asset                       Asset        @relation(fields: [AssetID], references: [AssetID])
+  Auth                        Auth         @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant                    Merchant     @relation(fields: [MerchantID], references: [MerchantID])
+  Product                     Product      @relation(fields: [ProductID], references: [ProductID])
+  ProductParam                ProductParam @relation(fields: [ProductParamID], references: [ProductParamID])
+  Tenant                      Tenant       @relation(fields: [TenantID], references: [TenantID])
+}
+
+model AssetType {
+  AssetTypeID    BigInt    @id(map: "PK_AssetType") @default(autoincrement())
+  MerchantID     BigInt
+  TenantID       BigInt
+  AssetType      String?   @db.VarChar(100)
+  CreatedAuthID  BigInt
+  CreatedBy      String    @db.VarChar(150)
+  CreatedDate    DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID BigInt?
+  ModifiedBy     String?   @db.VarChar(150)
+  ModifiedDate   DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted      Boolean   @default(false)
+  DeletedAuthID  BigInt?
+  DeletedBy      String?   @db.VarChar(150)
+  DeletedDate    DateTime? @db.Timestamp(6)
+  Auth           Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant       Merchant  @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant         Tenant    @relation(fields: [TenantID], references: [TenantID])
+}
+
+model AssetUsage {
+  AssetUsageID     BigInt         @id(map: "PK_AssetUsage") @default(autoincrement())
+  AssetID          BigInt
+  AssetUsageTypeID BigInt
+  MerchantID       BigInt
+  TenantID         BigInt
+  UsageStartDate   DateTime?      @default(now()) @db.Timestamp(6)
+  UsageEndDate     DateTime?      @default(now()) @db.Timestamp(6)
+  IsActive         Boolean?
+  CreatedAuthID    BigInt
+  CreatedBy        String         @db.VarChar(150)
+  CreatedDate      DateTime       @default(now()) @db.Timestamp(6)
+  ModifiedAuthID   BigInt?
+  ModifiedBy       String?        @db.VarChar(150)
+  ModifiedDate     DateTime?      @default(now()) @db.Timestamp(6)
+  IsDeleted        Boolean        @default(false)
+  DeletedAuthID    BigInt?
+  DeletedBy        String?        @db.VarChar(150)
+  DeletedDate      DateTime?      @db.Timestamp(6)
+  Asset            Asset          @relation(fields: [AssetID], references: [AssetID])
+  AssetUsageType   AssetUsageType @relation(fields: [AssetUsageTypeID], references: [AssetUsageTypeID])
+  Auth             Auth           @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant         Merchant       @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant           Tenant         @relation(fields: [TenantID], references: [TenantID])
+}
+
+model AssetUsageType {
+  AssetUsageTypeID BigInt       @id(map: "PK_AssetUsageType") @default(autoincrement())
+  MerchantID       BigInt
+  TenantID         BigInt
+  AssetUsageType   String?      @db.VarChar(50)
+  Description      String?      @db.VarChar(50)
+  CreatedAuthID    BigInt
+  CreatedBy        String       @db.VarChar(150)
+  CreatedDate      DateTime     @default(now()) @db.Timestamp(6)
+  ModifiedAuthID   BigInt?
+  ModifiedBy       String?      @db.VarChar(150)
+  ModifiedDate     DateTime?    @default(now()) @db.Timestamp(6)
+  IsDeleted        Boolean      @default(false)
+  DeletedAuthID    BigInt?
+  DeletedBy        String?      @db.VarChar(150)
+  DeletedDate      DateTime?    @db.Timestamp(6)
+  AssetUsage       AssetUsage[]
+  Auth             Auth         @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant         Merchant     @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant           Tenant       @relation(fields: [TenantID], references: [TenantID])
+}
+
+model AssignedToUserType {
+  AssignedToUserTypeID BigInt    @id(map: "PK_AssignedToUserType") @default(autoincrement())
+  AssignedToUserType   String?   @db.VarChar(50)
+  Description          String?   @db.VarChar(50)
+  CreatedAuthID        BigInt
+  CreatedBy            String    @db.VarChar(150)
+  CreatedDate          DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID       BigInt?
+  ModifiedBy           String?   @db.VarChar(150)
+  ModifiedDate         DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted            Boolean   @default(false)
+  DeletedAuthID        BigInt?
+  DeletedBy            String?   @db.VarChar(150)
+  DeletedDate          DateTime? @db.Timestamp(6)
+  Auth                 Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+}
+
+model Auth {
+  AuthID                     BigInt                       @id(map: "PK_Auth") @default(autoincrement())
+  ContactID                  BigInt
+  ContactPersonID            BigInt
+  AuthKey                    String                       @unique @db.VarChar(100)
+  ContactPersonKey           String                       @db.VarChar(100)
+  FourDigitPin               String?                      @db.VarChar(100)
+  VoicePassword              String?                      @db.VarChar(100)
+  MobileNumber               String?                      @db.VarChar(100)
+  MobilePassword             String?                      @db.VarChar(5000)
+  WebUsername                String?                      @db.VarChar(150)
+  WebPassword                String?                      @db.VarChar(150)
+  ThumbprintPassword         String?                      @db.VarChar(100)
+  RetinaPassword             String?                      @db.VarChar(150)
+  FacePassword               String?                      @db.VarChar(150)
+  CreatedDate                DateTime                     @default(now()) @db.Timestamp(6)
+  ModifiedDate               DateTime?                    @db.Timestamp(6)
+  IsAccessLocked             Boolean                      @default(false)
+  LockedDate                 DateTime?                    @db.Timestamp(6)
+  LockedBy                   String?                      @db.VarChar(150)
+  IsPlatformAdmin            Boolean?
+  CreatedAuthID              BigInt
+  CreatedBy                  String                       @db.VarChar(150)
+  DeletedAuthID              BigInt?
+  DeletedBy                  String?                      @db.VarChar(150)
+  DeletedDate                DateTime?                    @db.Timestamp(6)
+  IsDeleted                  Boolean                      @default(false)
+  ModifiedAuthID             BigInt
+  ModifiedBy                 String                       @db.VarChar(150)
+  AppSettingDataType         AppSettingDataType[]
+  AppSettingNetTerm          AppSettingNetTerm[]
+  AppSettingUom              AppSettingUom[]
+  AppSettingUomType          AppSettingUomType[]
+  ApprovalStatus             ApprovalStatus[]
+  Asset                      Asset[]
+  AssetCategory              AssetCategory[]
+  AssetClass                 AssetClass[]
+  AssetDepreciation          AssetDepreciation[]
+  AssetProductParam          AssetProductParam[]
+  AssetType                  AssetType[]
+  AssetUsage                 AssetUsage[]
+  AssetUsageType             AssetUsageType[]
+  AssignedToUserType         AssignedToUserType[]
+  Contact                    Contact                      @relation(fields: [ContactID], references: [ContactID])
+  ContactPerson              ContactPerson                @relation(fields: [ContactPersonID], references: [ContactPersonID])
+  Bank                       Bank[]
+  BankAccount                BankAccount[]
+  BankAccountBalance         BankAccountBalance[]
+  BankAccountUser            BankAccountUser[]
+  BankTransaction            BankTransaction[]
+  BankTransactionType        BankTransactionType[]
+  Brand                      Brand[]
+  Category                   Category[]
+  CostList                   CostList[]
+  CostListItem               CostListItem[]
+  CostListItemBulkDiscount   CostListItemBulkDiscount[]
+  Currency                   Currency[]
+  Customer                   Customer[]
+  CustomerAccount            CustomerAccount[]
+  CustomerAccountBalance     CustomerAccountBalance[]
+  CustomerAccountCard        CustomerAccountCard[]
+  CustomerAccountTransaction CustomerAccountTransaction[]
+  CustomerContact            CustomerContact[]
+  CustomerPayment            CustomerPayment[]
+  CustomerProductUsage       CustomerProductUsage[]
+  CustomerProductUsageLog    CustomerProductUsageLog[]
+  CustomerStatement          CustomerStatement[]
+  CustomerTenantContact      CustomerTenantContact[]
+  Department                 Department[]
+  Employee                   Employee[]
+  EmployeePackage            EmployeePackage[]
+  EmployeePackageLog         EmployeePackageLog[]
+  EmployeeType               EmployeeType[]
+  Group                      Group[]
+  GroupRole                  GroupRole[]
+  GroupUser                  GroupUser[]
+  Invoice                    Invoice[]
+  InvoiceItem                InvoiceItem[]
+  InvoiceStatus              InvoiceStatus[]
+  Location                   Location[]
+  Manufacturer               Manufacturer[]
+  Merchant                   Merchant[]
+  PackageType                PackageType[]
+  PaymentMethod              PaymentMethod[]
+  PaymentStatus              PaymentStatus[]
+  PayrollBatch               PayrollBatch[]
+  PayrollBatchItem           PayrollBatchItem[]
+  PriceList                  PriceList[]
+  PriceListCustomerAccount   PriceListCustomerAccount[]
+  PriceListItem              PriceListItem[]
+  PriceListItemBulkDiscount  PriceListItemBulkDiscount[]
+  PriceListStatus            PriceListStatus[]
+  PriceListStore             PriceListStore[]
+  Product                    Product[]
+  ProductBulkDiscount        ProductBulkDiscount[]
+  ProductImage               ProductImage[]
+  ProductPackage             ProductPackage[]
+  ProductParam               ProductParam[]
+  Project                    Project[]
+  ProjectType                ProjectType[]
+  Proposal                   Proposal[]
+  ProposalItem               ProposalItem[]
+  ProposalItemParam          ProposalItemParam[]
+  ProposalVendorProduct      ProposalVendorProduct[]
+  Quote                      Quote[]
+  QuoteItem                  QuoteItem[]
+  Role                       Role[]
+  Store                      Store[]
+  StoreType                  StoreType[]
+  TenantContact              TenantContact[]
+  User                       User[]
+  Vendor                     Vendor[]
+  VendorAccount              VendorAccount[]
+  VendorAccountBalance       VendorAccountBalance[]
+  VendorApproval             VendorApproval[]
+  VendorApprovalItem         VendorApprovalItem[]
+  VendorBill                 VendorBill[]
+  VendorBillItem             VendorBillItem[]
+  VendorCategory             VendorCategory[]
+  VendorContact              VendorContact[]
+  VendorExpense              VendorExpense[]
+  VendorPayment              VendorPayment[]
+  VendorPaymentItem          VendorPaymentItem[]
+  VendorPaymentLog           VendorPaymentLog[]
+  VendorProduct              VendorProduct[]
+  VendorStatement            VendorStatement[]
+  VendorTenantContact        VendorTenantContact[]
+  VendorTransactionType      VendorTransactionType[]
+}
+
+model Bank {
+  BankID             BigInt               @id(map: "PK_Bank") @default(autoincrement())
+  MerchantID         BigInt
+  TenantID           BigInt
+  CurrencyID         BigInt
+  BankName           String?              @db.VarChar(50)
+  BankShortName      String?              @db.VarChar(50)
+  Address1           String?              @db.VarChar(50)
+  Address2           String?              @db.VarChar(50)
+  City               String?              @db.VarChar(50)
+  State              String?              @db.VarChar(50)
+  Country            String?              @db.VarChar(50)
+  Postal             String?              @db.VarChar(50)
+  Phone              String?              @db.VarChar(50)
+  Email              String?              @db.VarChar(50)
+  CreatedAuthID      BigInt
+  CreatedBy          String               @db.VarChar(150)
+  CreatedDate        DateTime             @default(now()) @db.Timestamp(6)
+  ModifiedAuthID     BigInt
+  ModifiedBy         String               @db.VarChar(150)
+  ModifiedDate       DateTime             @default(now()) @db.Timestamp(6)
+  IsDeleted          Boolean              @default(false)
+  DeletedAuthID      BigInt?
+  DeletedBy          String?              @db.VarChar(150)
+  DeletedDate        DateTime?            @db.Timestamp(6)
+  Auth               Auth                 @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency           Currency             @relation(fields: [CurrencyID], references: [CurrencyID])
+  Merchant           Merchant             @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant             Tenant               @relation(fields: [TenantID], references: [TenantID])
+  BankAccount        BankAccount[]
+  BankAccountBalance BankAccountBalance[]
+  BankAccountUser    BankAccountUser[]
+  BankTransaction    BankTransaction[]
+}
+
+model BankAccount {
+  BankAccountID         BigInt               @id(map: "PK_BankAccount") @default(autoincrement())
+  MerchantID            BigInt
+  TenantID              BigInt
+  BankID                BigInt
+  CurrencyID            BigInt
+  DisplayName           String?              @db.VarChar(100)
+  AccountCode           String?              @db.VarChar(100)
+  AccountType           String?              @db.VarChar(100)
+  AccountNumberLast6    String?              @db.VarChar(100)
+  AccountBalance        Float?
+  PendingCharges        Float?
+  AvailableBalance      Float?
+  BankAvaillableBalance Float?
+  BankPendingCharges    Float?
+  CreatedAuthID         BigInt
+  CreatedBy             String               @db.VarChar(150)
+  CreatedDate           DateTime             @default(now()) @db.Timestamp(6)
+  ModifiedAuthID        BigInt?
+  ModifiedBy            String?              @db.VarChar(150)
+  ModifiedDate          DateTime?            @default(now()) @db.Timestamp(6)
+  IsDeleted             Boolean              @default(false)
+  DeletedAuthID         BigInt?
+  DeletedBy             String?              @db.VarChar(150)
+  DeletedDate           DateTime?            @db.Timestamp(6)
+  Bank                  Bank                 @relation(fields: [BankID], references: [BankID])
+  Auth                  Auth                 @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency              Currency             @relation(fields: [CurrencyID], references: [CurrencyID])
+  Merchant              Merchant             @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant                Tenant               @relation(fields: [TenantID], references: [TenantID])
+  BankAccountBalance    BankAccountBalance[]
+  BankAccountUser       BankAccountUser[]
+  BankTransaction       BankTransaction[]
+  VendorPayment         VendorPayment[]
+}
+
+model BankAccountBalance {
+  BankAccountBalanceID  BigInt      @id(map: "PK_BankAccountBalance") @default(autoincrement())
+  MerchantID            BigInt
+  TenantID              BigInt
+  BankAccountID         BigInt
+  BankID                BigInt
+  PostedDate            DateTime?   @db.Timestamp(6)
+  AccountBalance        Float?
+  PendingCharges        Float?
+  AvailableBalance      Float?
+  BankAvaillableBalance Float?
+  BankAccountBalance    Float?
+  BankPendingCharges    Float?
+  Currency              String?     @db.VarChar(100)
+  CreatedAuthID         BigInt
+  CreatedBy             String      @db.VarChar(150)
+  CreatedDate           DateTime    @default(now()) @db.Timestamp(6)
+  ModifiedAuthID        BigInt?
+  ModifiedBy            String?     @db.VarChar(150)
+  ModifiedDate          DateTime?   @default(now()) @db.Timestamp(6)
+  IsDeleted             Boolean     @default(false)
+  DeletedAuthID         BigInt?
+  DeletedBy             String?     @db.VarChar(150)
+  DeletedDate           DateTime?   @db.Timestamp(6)
+  BankAccount           BankAccount @relation(fields: [BankAccountID], references: [BankAccountID])
+  Bank                  Bank        @relation(fields: [BankID], references: [BankID])
+  Auth                  Auth        @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant              Merchant    @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant                Tenant      @relation(fields: [TenantID], references: [TenantID])
+}
+
+model BankAccountUser {
+  BankAccountUserID BigInt      @id(map: "PK_BankAccountUser") @default(autoincrement())
+  MerchantID        BigInt
+  TenantID          BigInt
+  BankID            BigInt
+  BankAccountID     BigInt
+  UserID            BigInt
+  StartDate         DateTime?   @db.Date
+  EndDate           DateTime?   @db.Date
+  CreatedAuthID     BigInt
+  CreatedBy         String      @db.VarChar(150)
+  CreatedDate       DateTime    @default(now()) @db.Timestamp(6)
+  ModifiedAuthID    BigInt?
+  ModifiedBy        String?     @db.VarChar(150)
+  ModifiedDate      DateTime?   @default(now()) @db.Timestamp(6)
+  IsDeleted         Boolean     @default(false)
+  DeletedAuthID     BigInt?
+  DeletedBy         String?     @db.VarChar(150)
+  DeletedDate       DateTime?   @db.Timestamp(6)
+  BankAccount       BankAccount @relation(fields: [BankAccountID], references: [BankAccountID])
+  Bank              Bank        @relation(fields: [BankID], references: [BankID])
+  Auth              Auth        @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant          Merchant    @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant            Tenant      @relation(fields: [TenantID], references: [TenantID])
+  User              User        @relation(fields: [UserID], references: [UserID])
+}
+
+model BankTransaction {
+  BankTransactionID     BigInt      @id(map: "PK_BankTransaction") @default(autoincrement())
+  MerchantID            BigInt
+  TenantID              BigInt
+  BankID                BigInt
+  BankAccountID         BigInt
+  TxnDate               DateTime?   @db.Timestamp(6)
+  PostedDate            DateTime?   @db.Timestamp(6)
+  Description           String?     @db.VarChar(100)
+  Amount                Float?
+  BankTransactionTypeID BigInt
+  BankTransactionType   String?     @db.VarChar(100)
+  EdiJobID              BigInt
+  VendorID              BigInt?
+  VendorCode            String?     @db.VarChar(100)
+  TransactionNumber     String?     @db.VarChar(100)
+  TransactionDateTime   DateTime?   @db.Timestamp(6)
+  PostedDateTime        DateTime?   @db.Timestamp(6)
+  CardHolderName        String?     @db.VarChar(100)
+  CardLast4Digit        String?     @db.VarChar(100)
+  CardNickName          String?     @db.VarChar(100)
+  CustomerID            BigInt
+  CustomerCode          String?     @db.VarChar(100)
+  CreatedAuthID         BigInt
+  CreatedBy             String      @db.VarChar(150)
+  CreatedDate           DateTime    @default(now()) @db.Timestamp(6)
+  ModifiedAuthID        BigInt?
+  ModifiedBy            String?     @db.VarChar(150)
+  ModifiedDate          DateTime?   @default(now()) @db.Timestamp(6)
+  IsDeleted             Boolean     @default(false)
+  DeletedAuthID         BigInt?
+  DeletedBy             String?     @db.VarChar(150)
+  DeletedDate           DateTime?   @db.Timestamp(6)
+  BankAccount           BankAccount @relation(fields: [BankAccountID], references: [BankAccountID])
+  Bank                  Bank        @relation(fields: [BankID], references: [BankID])
+  Auth                  Auth        @relation(fields: [CreatedAuthID], references: [AuthID])
+  Customer              Customer    @relation(fields: [CustomerID], references: [CustomerID])
+  Merchant              Merchant    @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant                Tenant      @relation(fields: [TenantID], references: [TenantID])
+}
+
+model BankTransactionType {
+  BankTransactionTypeID BigInt    @id(map: "PK_BankTransactionType") @default(autoincrement())
+  BankTransactionType   String    @db.VarChar(100)
+  Description           String?   @db.VarChar(100)
+  CreatedAuthID         BigInt
+  CreatedBy             String    @db.VarChar(150)
+  CreatedDate           DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID        BigInt?
+  ModifiedBy            String?   @db.VarChar(150)
+  ModifiedDate          DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted             Boolean   @default(false)
+  DeletedAuthID         BigInt?
+  DeletedBy             String?   @db.VarChar(150)
+  DeletedDate           DateTime? @db.Timestamp(6)
+  Auth                  Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+}
+
+model Brand {
+  BrandID            BigInt    @id(map: "PK_Brand") @default(autoincrement())
+  MerchantID         BigInt?
+  TenantID           BigInt?
+  BrandName          String?   @db.VarChar(50)
+  CreatedAuthID      BigInt
+  CreatedBy          String    @db.VarChar(150)
+  CreatedDate        DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID     BigInt?
+  ModifiedBy         String?   @db.VarChar(150)
+  ModifiedDate       DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted          Boolean   @default(false)
+  DeletedAuthID      BigInt?
+  DeletedBy          String?   @db.VarChar(150)
+  DeletedDate        DateTime? @db.Timestamp(6)
+  merchantMerchantID BigInt?
+  tenantTenantID     BigInt?
+  Auth               Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant           Merchant? @relation(fields: [merchantMerchantID], references: [MerchantID])
+  Tenant             Tenant?   @relation(fields: [tenantTenantID], references: [TenantID])
+}
+
+model Category {
+  CategoryID       BigInt            @id(map: "PK_Category") @default(autoincrement())
+  ParentCategoryID BigInt?
+  CategoryName     String            @db.VarChar(100)
+  CategoryCode     String            @db.VarChar(100)
+  Description      String?           @db.VarChar(100)
+  CreatedAuthID    BigInt
+  CreatedBy        String            @db.VarChar(150)
+  CreatedDate      DateTime          @default(now()) @db.Timestamp(6)
+  ModifiedAuthID   BigInt?
+  ModifiedBy       String?           @db.VarChar(150)
+  ModifiedDate     DateTime?         @default(now()) @db.Timestamp(6)
+  IsDeleted        Boolean           @default(false)
+  DeletedAuthID    BigInt?
+  DeletedBy        String?           @db.VarChar(150)
+  DeletedDate      DateTime?         @db.Timestamp(6)
+  Auth             Auth              @relation(fields: [CreatedAuthID], references: [AuthID])
+  ProductCategory  ProductCategory[]
+}
+
+model Contact {
+  ContactID       BigInt          @id(map: "PK_Contact") @default(autoincrement())
+  ParentContactID BigInt?
+  ContactKey      String          @unique @db.VarChar(100)
+  DisplayName     String          @db.VarChar(200)
+  ContactName     String          @db.VarChar(150)
+  ContactCode     String?         @db.VarChar(150)
+  LegalName       String          @db.VarChar(150)
+  TimeZone        String?         @db.VarChar(150)
+  DateFormat      String?         @db.VarChar(150)
+  Phone           String          @db.VarChar(150)
+  Email           String          @db.VarChar(150)
+  Website         String?         @db.VarChar(500)
+  CreatedDate     DateTime        @default(now()) @db.Timestamp(6)
+  CreatedAuthID   BigInt
+  ModifiedDate    DateTime?       @db.Timestamp(6)
+  ModifiedAuthID  BigInt?
+  CreatedBy       String          @db.VarChar(150)
+  DeletedAuthID   BigInt?
+  DeletedBy       String?         @db.VarChar(150)
+  DeletedDate     DateTime?       @db.Timestamp(6)
+  IsDeleted       Boolean         @default(false)
+  ModifiedBy      String?         @db.VarChar(150)
+  Description     String?         @db.VarChar(5000)
+  Auth            Auth[]
+  ContactPerson   ContactPerson[]
+  Merchant        Merchant[]
+  Tenant          Tenant[]
+}
+
+model ContactPerson {
+  ContactPersonID   BigInt    @id(map: "PK_ContactPerson") @default(autoincrement())
+  ContactID         BigInt
+  ContactPersonKey  String    @unique @db.VarChar(100)
+  ContactPersonName String    @db.VarChar(150)
+  FirstName         String    @db.VarChar(100)
+  MiddleName        String?   @db.VarChar(100)
+  LastName          String    @db.VarChar(100)
+  Email             String    @db.VarChar(150)
+  Mobile            String?   @db.VarChar(100)
+  CreatedDate       DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedDate      DateTime? @db.Timestamp(6)
+  CreatedAuthID     BigInt
+  CreatedBy         String    @db.VarChar(150)
+  DeletedAuthID     BigInt?
+  DeletedBy         String?   @db.VarChar(150)
+  DeletedDate       DateTime? @db.Timestamp(6)
+  IsDeleted         Boolean   @default(false)
+  ModifiedAuthID    BigInt?
+  ModifiedBy        String?   @db.VarChar(150)
+  Auth              Auth[]
+  Contact           Contact   @relation(fields: [ContactID], references: [ContactID])
+}
+
+model CostList {
+  CostListID               BigInt                     @id(map: "PK_CostList") @default(autoincrement())
+  MerchantID               BigInt
+  TenantID                 BigInt
+  VendorID                 BigInt
+  StartDate                DateTime?                  @db.Date
+  EndDate                  DateTime?                  @db.Date
+  DisplayName              String?                    @db.VarChar(100)
+  IsActive                 Boolean?
+  ActiveDate               DateTime?                  @db.Timestamp(6)
+  InactiveDate             DateTime?                  @db.Timestamp(6)
+  Remarks                  String?                    @db.VarChar(100)
+  CreatedAuthID            BigInt
+  CreatedBy                String                     @db.VarChar(150)
+  CreatedDate              DateTime                   @default(now()) @db.Timestamp(6)
+  ModifiedAuthID           BigInt?
+  ModifiedBy               String?                    @db.VarChar(150)
+  ModifiedDate             DateTime?                  @default(now()) @db.Timestamp(6)
+  IsDeleted                Boolean                    @default(false)
+  DeletedAuthID            BigInt?
+  DeletedBy                String?                    @db.VarChar(150)
+  DeletedDate              DateTime?                  @db.Timestamp(6)
+  Auth                     Auth                       @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant                 Merchant                   @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant                   Tenant                     @relation(fields: [TenantID], references: [TenantID])
+  Vendor                   Vendor                     @relation(fields: [VendorID], references: [VendorID])
+  CostListItem             CostListItem[]
+  CostListItemBulkDiscount CostListItemBulkDiscount[]
+}
+
+model CostListItem {
+  CostListItemID           BigInt                     @id(map: "PK_CostListItem") @default(autoincrement())
+  CostListID               BigInt
+  MerchantID               BigInt
+  TenantID                 BigInt
+  VendorID                 BigInt
+  ProductID                BigInt
+  Rate                     Float?
+  Remarks                  String?                    @db.VarChar(100)
+  CreatedAuthID            BigInt
+  CreatedBy                String                     @db.VarChar(150)
+  CreatedDate              DateTime                   @default(now()) @db.Timestamp(6)
+  ModifiedAuthID           BigInt?
+  ModifiedBy               String?                    @db.VarChar(150)
+  ModifiedDate             DateTime?                  @default(now()) @db.Timestamp(6)
+  IsDeleted                Boolean                    @default(false)
+  DeletedAuthID            BigInt?
+  DeletedBy                String?                    @db.VarChar(150)
+  DeletedDate              DateTime?                  @db.Timestamp(6)
+  CostList                 CostList                   @relation(fields: [CostListID], references: [CostListID])
+  Auth                     Auth                       @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant                 Merchant                   @relation(fields: [MerchantID], references: [MerchantID])
+  Product                  Product                    @relation(fields: [ProductID], references: [ProductID])
+  Tenant                   Tenant                     @relation(fields: [TenantID], references: [TenantID])
+  Vendor                   Vendor                     @relation(fields: [VendorID], references: [VendorID])
+  CostListItemBulkDiscount CostListItemBulkDiscount[]
+}
+
+model CostListItemBulkDiscount {
+  CostListItemBulkDiscountID BigInt       @id(map: "PK_CostListItemBulkDiscount") @default(autoincrement())
+  CostListItemID             BigInt
+  CostListID                 BigInt
+  MerchantID                 BigInt
+  TenantID                   BigInt
+  ProductID                  BigInt
+  CurrencyID                 BigInt
+  RangeMin                   Int?
+  RangeMax                   Int?
+  DiscountPeriod             String?      @db.VarChar(100)
+  DiscountType               String?      @db.VarChar(100)
+  UnitDiscountPercent        Decimal?     @db.Decimal(4, 2)
+  UnitDiscountRate           Float?
+  Description                String?      @db.VarChar(500)
+  CreatedAuthID              BigInt
+  CreatedBy                  String       @db.VarChar(150)
+  CreatedDate                DateTime     @default(now()) @db.Timestamp(6)
+  ModifiedAuthID             BigInt?
+  ModifiedBy                 String?      @db.VarChar(150)
+  ModifiedDate               DateTime?    @default(now()) @db.Timestamp(6)
+  IsDeleted                  Boolean      @default(false)
+  DeletedAuthID              BigInt?
+  DeletedBy                  String?      @db.VarChar(150)
+  DeletedDate                DateTime?    @db.Timestamp(6)
+  CostList                   CostList     @relation(fields: [CostListID], references: [CostListID])
+  CostListItem               CostListItem @relation(fields: [CostListItemID], references: [CostListItemID])
+  Auth                       Auth         @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency                   Currency     @relation(fields: [CurrencyID], references: [CurrencyID])
+  Merchant                   Merchant     @relation(fields: [MerchantID], references: [MerchantID])
+  Product                    Product      @relation(fields: [ProductID], references: [ProductID])
+  Tenant                     Tenant       @relation(fields: [TenantID], references: [TenantID])
+}
+
+model Currency {
+  CurrencyID                 BigInt                       @id(map: "PK_Currency") @default(autoincrement())
+  CurrencyName               String                       @db.VarChar(150)
+  CurrencyCode               String                       @db.VarChar(50)
+  CurrencySymbol             String?                      @db.VarChar(50)
+  Description                String?                      @db.VarChar(500)
+  CreatedAuthID              BigInt
+  CreatedBy                  String                       @db.VarChar(150)
+  CreatedDate                DateTime                     @default(now()) @db.Timestamp(6)
+  ModifiedAuthID             BigInt
+  ModifiedBy                 String                       @db.VarChar(150)
+  ModifiedDate               DateTime                     @default(now()) @db.Timestamp(6)
+  IsDeleted                  Boolean                      @default(false)
+  DeletedAuthID              BigInt?
+  DeletedBy                  String?                      @db.VarChar(150)
+  DeletedDate                DateTime?                    @db.Timestamp(6)
+  Asset                      Asset[]
+  Bank                       Bank[]
+  BankAccount                BankAccount[]
+  CostListItemBulkDiscount   CostListItemBulkDiscount[]
+  Auth                       Auth                         @relation(fields: [CreatedAuthID], references: [AuthID])
+  CustomerAccount            CustomerAccount[]
+  CustomerAccountBalance     CustomerAccountBalance[]
+  CustomerAccountTransaction CustomerAccountTransaction[]
+  CustomerPayment            CustomerPayment[]
+  CustomerPaymentItem        CustomerPaymentItem[]
+  Invoice                    Invoice[]
+  Merchant                   Merchant[]
+  PriceListItemBulkDiscount  PriceListItemBulkDiscount[]
+  Product                    Product[]
+  ProductBulkDiscount        ProductBulkDiscount[]
+  Project                    Project[]
+  Proposal                   Proposal[]
+  ProposalItem               ProposalItem[]
+  ProposalVendorProduct      ProposalVendorProduct[]
+  Quote                      Quote[]
+  QuoteItem                  QuoteItem[]
+  Tenant                     Tenant[]
+  Vendor                     Vendor[]
+  VendorAccount              VendorAccount[]
+  VendorBill                 VendorBill[]
+  VendorBillItem             VendorBillItem[]
+  VendorExpense              VendorExpense[]
+  VendorPayment              VendorPayment[]
+  VendorPaymentItem          VendorPaymentItem[]
+}
+
+model Customer {
+  CustomerID                 BigInt                       @id(map: "PK_Customer") @default(autoincrement())
+  MerchantID                 BigInt
+  TenantID                   BigInt
+  CustomerCode               String                       @db.VarChar(100)
+  CustomerName               String                       @db.VarChar(100)
+  Address1                   String?                      @db.VarChar(100)
+  Address2                   String?                      @db.VarChar(100)
+  City                       String?                      @db.VarChar(100)
+  State                      String?                      @db.VarChar(100)
+  PostalCode                 String?                      @db.VarChar(100)
+  Country                    String?                      @db.VarChar(250)
+  InvoicePrefix              String                       @db.VarChar(100)
+  InvoieSequence             BigInt
+  CreatedAuthID              BigInt
+  CreatedBy                  String                       @db.VarChar(150)
+  CreatedDate                DateTime                     @default(now()) @db.Timestamp(6)
+  ModifiedAuthID             BigInt?
+  ModifiedBy                 String?                      @db.VarChar(150)
+  ModifiedDate               DateTime?                    @default(now()) @db.Timestamp(6)
+  IsDeleted                  Boolean                      @default(false)
+  DeletedAuthID              BigInt?
+  DeletedBy                  String?                      @db.VarChar(150)
+  DeletedDate                DateTime?                    @db.Timestamp(6)
+  customerProductUsageID     BigInt?
+  Asset                      Asset[]
+  BankTransaction            BankTransaction[]
+  Auth                       Auth                         @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant                   Merchant                     @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant                     Tenant                       @relation(fields: [TenantID], references: [TenantID])
+  CustomerAccount            CustomerAccount[]
+  CustomerAccountBalance     CustomerAccountBalance[]
+  CustomerAccountCard        CustomerAccountCard[]
+  CustomerAccountTransaction CustomerAccountTransaction[]
+  CustomerContact            CustomerContact[]
+  CustomerPayment            CustomerPayment[]
+  CustomerProductUsage       CustomerProductUsage[]
+  CustomerStatement          CustomerStatement[]
+  CustomerTenantContact      CustomerTenantContact[]
+  Invoice                    Invoice[]
+  Project                    Project[]
+  VendorApproval             VendorApproval[]
+  VendorBill                 VendorBill[]
+  VendorBillItem             VendorBillItem[]
+}
+
+model CustomerAccount {
+  CustomerAccountID          BigInt                       @id(map: "PK_CustomerAccount") @default(autoincrement())
+  CustomerID                 BigInt
+  CurrencyID                 BigInt
+  AccountNumber              String?                      @db.VarChar(100)
+  AccountCode                String?                      @db.VarChar(100)
+  DisplayName                String?                      @db.VarChar(100)
+  OpenedDate                 DateTime?                    @db.Timestamp(6)
+  Username                   String?                      @db.VarChar(100)
+  Password                   String?                      @db.VarChar(100)
+  AppSettingNetTermID        BigInt
+  AccountBalance             Float?
+  AutoReplenishAmount        Float?
+  LowBalanceThreshold        Float?
+  CreatedAuthID              BigInt
+  CreatedBy                  String                       @db.VarChar(150)
+  CreatedDate                DateTime                     @default(now()) @db.Timestamp(6)
+  ModifiedAuthID             BigInt?
+  ModifiedBy                 String?                      @db.VarChar(150)
+  ModifiedDate               DateTime?                    @default(now()) @db.Timestamp(6)
+  IsDeleted                  Boolean                      @default(false)
+  DeletedAuthID              BigInt?
+  DeletedBy                  String?                      @db.VarChar(150)
+  DeletedDate                DateTime?                    @db.Timestamp(6)
+  CustomerContactID          BigInt?
+  AppSettingNetTerm          AppSettingNetTerm            @relation(fields: [AppSettingNetTermID], references: [AppSettingNetTermID])
+  Auth                       Auth                         @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency                   Currency                     @relation(fields: [CurrencyID], references: [CurrencyID])
+  Customer                   Customer                     @relation(fields: [CustomerID], references: [CustomerID])
+  CustomerAccountBalance     CustomerAccountBalance[]
+  CustomerAccountCard        CustomerAccountCard[]
+  CustomerAccountTransaction CustomerAccountTransaction[]
+  CustomerPayment            CustomerPayment[]
+  CustomerStatement          CustomerStatement[]
+  Invoice                    Invoice[]
+  PriceListCustomerAccount   PriceListCustomerAccount[]
+}
+
+model CustomerAccountBalance {
+  CustomerAccountBalanceID BigInt          @id(map: "PK_CustomerAccountBalance") @default(autoincrement())
+  MerchantID               BigInt
+  TenantID                 BigInt
+  CustomerAccountID        BigInt
+  CustomerID               BigInt
+  CurrencyID               BigInt
+  PostedDate               DateTime?       @db.Timestamp(6)
+  AccountBalance           Float?
+  CreatedAuthID            BigInt
+  CreatedBy                String          @db.VarChar(150)
+  CreatedDate              DateTime        @default(now()) @db.Timestamp(6)
+  ModifiedAuthID           BigInt?
+  ModifiedBy               String?         @db.VarChar(150)
+  ModifiedDate             DateTime?       @default(now()) @db.Timestamp(6)
+  IsDeleted                Boolean         @default(false)
+  DeletedAuthID            BigInt?
+  DeletedBy                String?         @db.VarChar(150)
+  DeletedDate              DateTime?       @db.Timestamp(6)
+  Auth                     Auth            @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency                 Currency        @relation(fields: [CurrencyID], references: [CurrencyID])
+  CustomerAccount          CustomerAccount @relation(fields: [CustomerAccountID], references: [CustomerAccountID])
+  Customer                 Customer        @relation(fields: [CustomerID], references: [CustomerID])
+  Merchant                 Merchant        @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant                   Tenant          @relation(fields: [TenantID], references: [TenantID])
+}
+
+model CustomerAccountCard {
+  CustomerAccountCardID BigInt          @id(map: "PK_CustomerAccountCard") @default(autoincrement())
+  CustomerAccountID     BigInt
+  CustomerID            BigInt
+  MerchantID            BigInt
+  TenantID              BigInt
+  CardType              String?         @db.VarChar(50)
+  Last4Digit            String?         @db.VarChar(5)
+  CardName              String?         @db.VarChar(50)
+  CardProcessorToken    String?         @db.VarChar(50)
+  CardProcessorKey      String?         @db.VarChar(50)
+  ChargePostingOrder    Int?
+  CreatedAuthID         BigInt
+  CreatedBy             String          @db.VarChar(150)
+  CreatedDate           DateTime        @default(now()) @db.Timestamp(6)
+  ModifiedAuthID        BigInt?
+  ModifiedBy            String?         @db.VarChar(150)
+  ModifiedDate          DateTime?       @default(now()) @db.Timestamp(6)
+  IsDeleted             Boolean         @default(false)
+  DeletedAuthID         BigInt?
+  DeletedBy             String?         @db.VarChar(150)
+  DeletedDate           DateTime?       @db.Timestamp(6)
+  Auth                  Auth            @relation(fields: [CreatedAuthID], references: [AuthID])
+  CustomerAccount       CustomerAccount @relation(fields: [CustomerAccountID], references: [CustomerAccountID])
+  Customer              Customer        @relation(fields: [CustomerID], references: [CustomerID])
+  Merchant              Merchant        @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant                Tenant          @relation(fields: [TenantID], references: [TenantID])
+}
+
+model CustomerAccountTransaction {
+  CustomerAccountTransactionID BigInt          @id(map: "PK_CustomerAccountTransaction") @default(autoincrement())
+  CustomerID                   BigInt
+  CustomerAccountID            BigInt
+  MerchantID                   BigInt
+  TenantID                     BigInt
+  CurrencyID                   BigInt
+  CreditDebitFlag              String?         @db.VarChar(5)
+  TransactionType              String?         @db.VarChar(50)
+  TransactionNumber            String?         @db.VarChar(50)
+  TransactionDateTime          DateTime?       @default(now()) @db.Timestamp(6)
+  PostedDateTime               DateTime?       @default(now()) @db.Timestamp(6)
+  Amount                       Float?
+  RunningAccountBalance        Float?
+  CreatedAuthID                BigInt
+  CreatedBy                    String          @db.VarChar(150)
+  CreatedDate                  DateTime        @default(now()) @db.Timestamp(6)
+  ModifiedAuthID               BigInt?
+  ModifiedBy                   String?         @db.VarChar(150)
+  ModifiedDate                 DateTime?       @default(now()) @db.Timestamp(6)
+  IsDeleted                    Boolean         @default(false)
+  DeletedAuthID                BigInt?
+  DeletedBy                    String?         @db.VarChar(150)
+  DeletedDate                  DateTime?       @db.Timestamp(6)
+  Auth                         Auth            @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency                     Currency        @relation(fields: [CurrencyID], references: [CurrencyID])
+  CustomerAccount              CustomerAccount @relation(fields: [CustomerAccountID], references: [CustomerAccountID])
+  Customer                     Customer        @relation(fields: [CustomerID], references: [CustomerID])
+  Merchant                     Merchant        @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant                       Tenant          @relation(fields: [TenantID], references: [TenantID])
+}
+
+model CustomerContact {
+  CustomerContactID      BigInt    @id(map: "PK_CustomerContact") @default(autoincrement())
+  CustomerID             BigInt
+  MerchantID             BigInt
+  TenantID               BigInt
+  FullName               String?   @db.VarChar(150)
+  Email                  String?   @db.VarChar(150)
+  Phone                  String?   @db.VarChar(150)
+  Mobile                 String?   @db.VarChar(150)
+  Title                  String?   @db.VarChar(150)
+  EnableLowBalanceAlert  Boolean?
+  EnableNewInvoiceAlert  Boolean?
+  EnablePaymentAlert     Boolean?
+  EnableAutoPaymentAlert Boolean?
+  EnableWeblogin         Boolean?
+  UserID                 BigInt
+  CreatedAuthID          BigInt
+  CreatedBy              String    @db.VarChar(150)
+  CreatedDate            DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID         BigInt?
+  ModifiedBy             String?   @db.VarChar(150)
+  ModifiedDate           DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted              Boolean   @default(false)
+  DeletedAuthID          BigInt?
+  DeletedBy              String?   @db.VarChar(150)
+  DeletedDate            DateTime? @db.Timestamp(6)
+  Auth                   Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+  Customer               Customer  @relation(fields: [CustomerID], references: [CustomerID])
+  Merchant               Merchant  @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant                 Tenant    @relation(fields: [TenantID], references: [TenantID])
+  User                   User      @relation(fields: [UserID], references: [UserID])
+}
+
+model CustomerPayment {
+  CustomerPaymentID   BigInt                @id(map: "PK_CustomerPayment") @default(autoincrement())
+  BankAccountID       BigInt
+  CustomerID          BigInt
+  PaymentMethodID     BigInt
+  CurrencyID          BigInt
+  PaidDate            DateTime?             @db.Date
+  PaidAmount          Float?
+  PaymentConfirmation String?               @db.VarChar(100)
+  BankDepositedDate   DateTime?             @db.Date
+  BankPostedDate      DateTime?             @db.Date
+  Remarks             String?               @db.VarChar(500)
+  CreatedAuthID       BigInt
+  CreatedBy           String                @db.VarChar(150)
+  CreatedDate         DateTime              @default(now()) @db.Timestamp(6)
+  ModifiedAuthID      BigInt?
+  ModifiedBy          String?               @db.VarChar(150)
+  ModifiedDate        DateTime?             @default(now()) @db.Timestamp(6)
+  IsDeleted           Boolean               @default(false)
+  DeletedAuthID       BigInt?
+  DeletedBy           String?               @db.VarChar(150)
+  DeletedDate         DateTime?             @db.Timestamp(6)
+  CustomerAccountID   BigInt
+  Auth                Auth                  @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency            Currency              @relation(fields: [CurrencyID], references: [CurrencyID])
+  CustomerAccount     CustomerAccount       @relation(fields: [CustomerAccountID], references: [CustomerAccountID])
+  Customer            Customer              @relation(fields: [CustomerID], references: [CustomerID])
+  PaymentMethod       PaymentMethod         @relation(fields: [PaymentMethodID], references: [PaymentMethodID])
+  CustomerPaymentItem CustomerPaymentItem[]
+}
+
+model CustomerPaymentItem {
+  CustomerPaymentItemID BigInt          @id(map: "PK_CustomerPaymentItem") @default(autoincrement())
+  CustomerPaymentID     BigInt
+  InvoiceID             BigInt
+  CurrencyID            BigInt
+  ReferenceCode         String          @db.VarChar(100)
+  Description           String?         @db.VarChar(100)
+  InvoicePaidAmount     Float
+  CreatedAuthID         BigInt
+  CreatedBy             String          @db.VarChar(150)
+  CreatedDate           DateTime        @default(now()) @db.Timestamp(6)
+  ModifiedAuthID        BigInt?
+  ModifiedBy            String?         @db.VarChar(150)
+  ModifiedDate          DateTime?       @default(now()) @db.Timestamp(6)
+  IsDeleted             Boolean         @default(false)
+  DeletedAuthID         BigInt?
+  DeletedBy             String?         @db.VarChar(150)
+  DeletedDate           DateTime?       @db.Timestamp(6)
+  Currency              Currency        @relation(fields: [CurrencyID], references: [CurrencyID])
+  CustomerPayment       CustomerPayment @relation(fields: [CustomerPaymentID], references: [CustomerPaymentID])
+  Invoice               Invoice         @relation(fields: [InvoiceID], references: [InvoiceID])
+}
+
+model CustomerProductUsage {
+  CustomerProductUsageID  BigInt                    @id(map: "PK_CustomerProductUsage") @default(autoincrement())
+  CustomerID              BigInt
+  ProductID               BigInt
+  PeriodType              String?                   @db.VarChar(100)
+  PeriodStartDay          DateTime?                 @db.Date
+  SaleQty                 BigInt?
+  LastModifiedDate        DateTime?                 @db.Timestamp(6)
+  Remarks                 String?                   @db.VarChar(500)
+  CreatedAuthID           BigInt
+  CreatedBy               String                    @db.VarChar(150)
+  CreatedDate             DateTime                  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID          BigInt?
+  ModifiedBy              String?                   @db.VarChar(150)
+  ModifiedDate            DateTime?                 @default(now()) @db.Timestamp(6)
+  IsDeleted               Boolean                   @default(false)
+  DeletedAuthID           BigInt?
+  DeletedBy               String?                   @db.VarChar(150)
+  DeletedDate             DateTime?                 @db.Timestamp(6)
+  Auth                    Auth                      @relation(fields: [CreatedAuthID], references: [AuthID])
+  Customer                Customer                  @relation(fields: [CustomerID], references: [CustomerID])
+  Product                 Product                   @relation(fields: [ProductID], references: [ProductID])
+  CustomerProductUsageLog CustomerProductUsageLog[]
+}
+
+model CustomerProductUsageLog {
+  CustomerProductUsageLogID BigInt               @id(map: "PK_CustomerProductUsageLog") @default(autoincrement())
+  CustomerProductUsageID    BigInt
+  InvoiceID                 BigInt
+  InvoiceItemID             BigInt
+  ProductID                 BigInt
+  InvoiceItemQty            BigInt?
+  LogMessage                String?              @db.VarChar(100)
+  CreatedAuthID             BigInt
+  CreatedBy                 String               @db.VarChar(150)
+  CreatedDate               DateTime             @default(now()) @db.Timestamp(6)
+  ModifiedAuthID            BigInt?
+  ModifiedBy                String?              @db.VarChar(150)
+  ModifiedDate              DateTime?            @default(now()) @db.Timestamp(6)
+  IsDeleted                 Boolean              @default(false)
+  DeletedAuthID             BigInt?
+  DeletedBy                 String?              @db.VarChar(150)
+  DeletedDate               DateTime?            @db.Timestamp(6)
+  Auth                      Auth                 @relation(fields: [CreatedAuthID], references: [AuthID])
+  CustomerProductUsage      CustomerProductUsage @relation(fields: [CustomerProductUsageID], references: [CustomerProductUsageID])
+  Invoice                   Invoice              @relation(fields: [InvoiceID], references: [InvoiceID])
+  InvoiceItem               InvoiceItem          @relation(fields: [InvoiceItemID], references: [InvoiceItemID])
+  Product                   Product              @relation(fields: [ProductID], references: [ProductID])
+}
+
+model CustomerStatement {
+  CustomerStatementID BigInt          @id(map: "PK_CustomerStatement") @default(autoincrement())
+  CustomerID          BigInt
+  CustomerAccountID   BigInt
+  MerchantID          BigInt
+  TenantID            BigInt
+  PeriodStart         DateTime?       @db.Date
+  PeriodEnd           DateTime?       @db.Date
+  TimeZone            String?         @db.VarChar(100)
+  DisplayName         String?         @db.VarChar(100)
+  Remarks             String?         @db.VarChar(100)
+  CreatedDate         DateTime?       @db.Date
+  PostedDate          DateTime?       @db.Date
+  CreatedAuthID       BigInt
+  CreatedBy           String          @db.VarChar(150)
+  ModifiedAuthID      BigInt?
+  ModifiedBy          String?         @db.VarChar(150)
+  ModifiedDate        DateTime?       @default(now()) @db.Timestamp(6)
+  IsDeleted           Boolean         @default(false)
+  DeletedAuthID       BigInt?
+  DeletedBy           String?         @db.VarChar(150)
+  DeletedDate         DateTime?       @db.Timestamp(6)
+  Auth                Auth            @relation(fields: [CreatedAuthID], references: [AuthID])
+  CustomerAccount     CustomerAccount @relation(fields: [CustomerAccountID], references: [CustomerAccountID])
+  Customer            Customer        @relation(fields: [CustomerID], references: [CustomerID])
+  Merchant            Merchant        @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant              Tenant          @relation(fields: [TenantID], references: [TenantID])
+}
+
+model CustomerTenantContact {
+  CustomerTenentConactID BigInt        @id(map: "PK_CustomerTenantContact") @default(autoincrement())
+  CustomerID             BigInt
+  TenantContactID        BigInt
+  MerchantID             BigInt
+  TenantID               BigInt
+  FullName               String?       @db.VarChar(150)
+  Email                  String?       @db.VarChar(150)
+  IsEnabled              Boolean?
+  EnabledDate            DateTime?     @default(now()) @db.Timestamp(6)
+  DisabledDate           DateTime?     @default(now()) @db.Timestamp(6)
+  CreatedAuthID          BigInt
+  CreatedBy              String        @db.VarChar(150)
+  ModifiedAuthID         BigInt?
+  ModifiedBy             String?       @db.VarChar(150)
+  ModifiedDate           DateTime?     @default(now()) @db.Timestamp(6)
+  IsDeleted              Boolean       @default(false)
+  DeletedAuthID          BigInt?
+  DeletedBy              String?       @db.VarChar(150)
+  DeletedDate            DateTime?     @db.Timestamp(6)
+  Auth                   Auth          @relation(fields: [CreatedAuthID], references: [AuthID])
+  Customer               Customer      @relation(fields: [CustomerID], references: [CustomerID])
+  Merchant               Merchant      @relation(fields: [MerchantID], references: [MerchantID])
+  TenantContact          TenantContact @relation(fields: [TenantContactID], references: [TenantContactID])
+  Tenant                 Tenant        @relation(fields: [TenantID], references: [TenantID])
+}
+
+model Department {
+  DepartmentID   BigInt    @id(map: "PK_Department") @default(autoincrement())
+  MerchantID     BigInt
+  TenantID       BigInt
+  DepartmentName String?   @db.VarChar(50)
+  CreatedAuthID  BigInt
+  CreatedBy      String    @db.VarChar(150)
+  ModifiedAuthID BigInt?
+  ModifiedBy     String?   @db.VarChar(150)
+  ModifiedDate   DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted      Boolean   @default(false)
+  DeletedAuthID  BigInt?
+  DeletedBy      String?   @db.VarChar(150)
+  DeletedDate    DateTime? @db.Timestamp(6)
+  Auth           Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant       Merchant  @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant         Tenant    @relation(fields: [TenantID], references: [TenantID])
+}
+
+model Employee {
+  EmployeeID         BigInt               @id(map: "PK_Employee") @default(autoincrement())
+  EmployeeTypeID     BigInt
+  MerchantID         BigInt
+  TenantID           BigInt
+  EmployeeNumber     String?              @db.VarChar(50)
+  DisplayName        String?              @db.VarChar(50)
+  AvatorURL          String?              @db.VarChar(50)
+  Address1           String?              @db.VarChar(50)
+  Address2           String?              @db.VarChar(50)
+  City               String?              @db.VarChar(50)
+  State              String?              @db.VarChar(50)
+  Country            String?              @db.VarChar(50)
+  PostalCode         String?              @db.VarChar(50)
+  CreatedAuthID      BigInt
+  CreatedBy          String               @db.VarChar(150)
+  ModifiedAuthID     BigInt?
+  ModifiedBy         String?              @db.VarChar(150)
+  ModifiedDate       DateTime?            @default(now()) @db.Timestamp(6)
+  IsDeleted          Boolean              @default(false)
+  DeletedAuthID      BigInt?
+  DeletedBy          String?              @db.VarChar(150)
+  DeletedDate        DateTime?            @db.Timestamp(6)
+  Auth               Auth                 @relation(fields: [CreatedAuthID], references: [AuthID])
+  EmployeeType       EmployeeType         @relation(fields: [EmployeeTypeID], references: [EmployeeTypeID])
+  Merchant           Merchant             @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant             Tenant               @relation(fields: [TenantID], references: [TenantID])
+  EmployeePackage    EmployeePackage[]
+  EmployeePackageLog EmployeePackageLog[]
+  PayrollBatchItem   PayrollBatchItem[]
+}
+
+model EmployeePackage {
+  EmployeePackageID  BigInt               @id(map: "PK_EmployeePackage") @default(autoincrement())
+  EmployeeID         BigInt
+  MerchantID         BigInt
+  TenantID           BigInt
+  CurrentCode        String?              @db.VarChar(50)
+  SalaryCTC          Float?
+  SalaryMonthly      Float?
+  Basic              Float?
+  HRA                Float?
+  TravelAllowance    Float?
+  MedicalAllowance   Float?
+  OtherAllowance     Float?
+  Total              Float?
+  Remarks            String?              @db.VarChar(500)
+  EffectiveDate      DateTime?            @db.Date
+  ApprovedDate       DateTime?            @db.Date
+  ApprovedBy         String?              @db.VarChar(50)
+  CreatedAuthID      BigInt
+  CreatedBy          String               @db.VarChar(150)
+  ModifiedAuthID     BigInt?
+  ModifiedBy         String?              @db.VarChar(150)
+  ModifiedDate       DateTime?            @default(now()) @db.Timestamp(6)
+  IsDeleted          Boolean              @default(false)
+  DeletedAuthID      BigInt?
+  DeletedBy          String?              @db.VarChar(150)
+  DeletedDate        DateTime?            @db.Timestamp(6)
+  Auth               Auth                 @relation(fields: [CreatedAuthID], references: [AuthID])
+  Employee           Employee             @relation(fields: [EmployeeID], references: [EmployeeID])
+  Merchant           Merchant             @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant             Tenant               @relation(fields: [TenantID], references: [TenantID])
+  EmployeePackageLog EmployeePackageLog[]
+  PayrollBatchItem   PayrollBatchItem[]
+}
+
+model EmployeePackageLog {
+  EmployeePackageLogID BigInt          @id(map: "PK_EmployeePackageLog") @default(autoincrement())
+  EmployeePackageID    BigInt
+  EmployeeID           BigInt
+  MerchantID           BigInt
+  TenantID             BigInt
+  CurrentCode          String?         @db.VarChar(50)
+  CTC                  Float?
+  Monthly              Float?
+  Basic                Float?
+  HRA                  Float?
+  TravelAllowance      Float?
+  MedicalAllowance     Float?
+  OtherAllowance       Float?
+  Total                Float?
+  Remarks              String?         @db.VarChar(500)
+  EffectiveDate        DateTime?       @db.Date
+  ApprovedDate         DateTime?       @db.Date
+  ApprovedBy           String?         @db.VarChar(50)
+  CreatedAuthID        BigInt
+  CreatedBy            String          @db.VarChar(150)
+  ModifiedAuthID       BigInt?
+  ModifiedBy           String?         @db.VarChar(150)
+  ModifiedDate         DateTime?       @default(now()) @db.Timestamp(6)
+  IsDeleted            Boolean         @default(false)
+  DeletedAuthID        BigInt?
+  DeletedBy            String?         @db.VarChar(150)
+  DeletedDate          DateTime?       @db.Timestamp(6)
+  Auth                 Auth            @relation(fields: [CreatedAuthID], references: [AuthID])
+  Employee             Employee        @relation(fields: [EmployeeID], references: [EmployeeID])
+  EmployeePackage      EmployeePackage @relation(fields: [EmployeePackageID], references: [EmployeePackageID])
+  Merchant             Merchant        @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant               Tenant          @relation(fields: [TenantID], references: [TenantID])
+}
+
+model EmployeeType {
+  EmployeeTypeID BigInt     @id(map: "PK_EmployeeType") @default(autoincrement())
+  MerchantID     BigInt
+  TenantID       BigInt
+  EmployeeType   String?    @db.VarChar(50)
+  Description    String?    @db.VarChar(50)
+  CreatedAuthID  BigInt
+  CreatedBy      String     @db.VarChar(150)
+  ModifiedAuthID BigInt?
+  ModifiedBy     String?    @db.VarChar(150)
+  ModifiedDate   DateTime?  @default(now()) @db.Timestamp(6)
+  IsDeleted      Boolean    @default(false)
+  DeletedAuthID  BigInt?
+  DeletedBy      String?    @db.VarChar(150)
+  DeletedDate    DateTime?  @db.Timestamp(6)
+  Employee       Employee[]
+  Auth           Auth       @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant       Merchant   @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant         Tenant     @relation(fields: [TenantID], references: [TenantID])
+}
+
+model Group {
+  GroupID        BigInt      @id(map: "PK_Group") @default(autoincrement())
+  MerchantID     BigInt
+  TenantID       BigInt
+  GroupName      String?     @db.VarChar(100)
+  GroupCode      String?     @db.VarChar(100)
+  CreatedAuthID  BigInt
+  CreatedBy      String      @db.VarChar(150)
+  CreatedDate    DateTime    @default(now()) @db.Timestamp(6)
+  ModifiedAuthID BigInt?
+  ModifiedBy     String?     @db.VarChar(150)
+  ModifiedDate   DateTime?   @default(now()) @db.Timestamp(6)
+  IsDeleted      Boolean     @default(false)
+  DeletedAuthID  BigInt?
+  DeletedBy      String?     @db.VarChar(150)
+  DeletedDate    DateTime?   @db.Timestamp(6)
+  Auth           Auth        @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant       Merchant    @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant         Tenant      @relation(fields: [TenantID], references: [TenantID])
+  GroupRole      GroupRole[]
+  GroupUser      GroupUser[]
+}
+
+model GroupRole {
+  GroupRoleID                  BigInt         @id(map: "PK_GroupRole") @default(autoincrement())
+  MerchantID                   BigInt
+  TenantID                     BigInt
+  GroupID                      BigInt
+  RoleID                       BigInt
+  IsActive                     Boolean?
+  CreatedAuthID                BigInt
+  CreatedBy                    String         @db.VarChar(150)
+  CreatedDate                  DateTime       @default(now()) @db.Timestamp(6)
+  ModifiedAuthID               BigInt?
+  ModifiedBy                   String?        @db.VarChar(150)
+  ModifiedDate                 DateTime?      @default(now()) @db.Timestamp(6)
+  IsDeleted                    Boolean        @default(false)
+  DeletedAuthID                BigInt?
+  DeletedBy                    String?        @db.VarChar(150)
+  DeletedDate                  DateTime?      @db.Timestamp(6)
+  tenantContactTenantContactID BigInt?
+  Auth                         Auth           @relation(fields: [CreatedAuthID], references: [AuthID])
+  Group                        Group          @relation(fields: [GroupID], references: [GroupID])
+  Merchant                     Merchant       @relation(fields: [MerchantID], references: [MerchantID])
+  Role                         Role           @relation(fields: [RoleID], references: [RoleID])
+  Tenant                       Tenant         @relation(fields: [TenantID], references: [TenantID])
+  TenantContact                TenantContact? @relation(fields: [tenantContactTenantContactID], references: [TenantContactID])
+}
+
+model GroupUser {
+  GroupUserID    BigInt    @id(map: "PK_GroupUser") @default(autoincrement())
+  MerchantID     BigInt
+  TenantID       BigInt
+  GroupID        BigInt
+  UserID         BigInt
+  IsActive       Boolean?
+  CreatedAuthID  BigInt
+  CreatedBy      String    @db.VarChar(150)
+  CreatedDate    DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID BigInt?
+  ModifiedBy     String?   @db.VarChar(150)
+  ModifiedDate   DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted      Boolean   @default(false)
+  DeletedAuthID  BigInt?
+  DeletedBy      String?   @db.VarChar(150)
+  DeletedDate    DateTime? @db.Timestamp(6)
+  Auth           Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+  Group          Group     @relation(fields: [GroupID], references: [GroupID])
+  Merchant       Merchant  @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant         Tenant    @relation(fields: [TenantID], references: [TenantID])
+  User           User      @relation(fields: [UserID], references: [UserID])
+}
+
+model Invoice {
+  InvoiceID               BigInt                    @id(map: "PK_Invoice") @default(autoincrement())
+  MerchantID              BigInt
+  TenantID                BigInt
+  ProjectID               BigInt
+  CustomerID              BigInt
+  CustomerAccountID       BigInt
+  CurrencyID              BigInt
+  InvoiceNumber           String                    @db.VarChar(100)
+  InvoiceDate             DateTime                  @db.Timestamp(6)
+  InvoiceStatusID         BigInt
+  AppSettingNetTermID     BigInt
+  ProductCharges          Float?
+  BackupCharges           Float?
+  Adjustment              Float?
+  SalesTax                Float?
+  SubTotal                Float
+  InvoiceAmount           Float
+  BalanceDue              Float
+  DueDate                 DateTime                  @db.Timestamp(6)
+  Remarks                 String?                   @db.VarChar(500)
+  CreatedAuthID           BigInt
+  CreatedBy               String                    @db.VarChar(150)
+  CreatedDate             DateTime                  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID          BigInt?
+  ModifiedBy              String?                   @db.VarChar(150)
+  ModifiedDate            DateTime?                 @default(now()) @db.Timestamp(6)
+  IsDeleted               Boolean                   @default(false)
+  DeletedAuthID           BigInt?
+  DeletedBy               String?                   @db.VarChar(150)
+  DeletedDate             DateTime?                 @db.Timestamp(6)
+  CustomerPaymentItem     CustomerPaymentItem[]
+  CustomerProductUsageLog CustomerProductUsageLog[]
+  AppSettingNetTerm       AppSettingNetTerm         @relation(fields: [AppSettingNetTermID], references: [AppSettingNetTermID])
+  Auth                    Auth                      @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency                Currency                  @relation(fields: [CurrencyID], references: [CurrencyID])
+  CustomerAccount         CustomerAccount           @relation(fields: [CustomerAccountID], references: [CustomerAccountID])
+  Customer                Customer                  @relation(fields: [CustomerID], references: [CustomerID])
+  InvoiceStatus           InvoiceStatus             @relation(fields: [InvoiceStatusID], references: [InvoiceStatusID])
+  Merchant                Merchant                  @relation(fields: [MerchantID], references: [MerchantID])
+  Project                 Project                   @relation(fields: [ProjectID], references: [ProjectID])
+  Tenant                  Tenant                    @relation(fields: [TenantID], references: [TenantID])
+  InvoiceItem             InvoiceItem[]
+}
+
+model InvoiceItem {
+  InvoiceItemID           BigInt                    @id(map: "PK_InvoiceItem") @default(autoincrement())
+  InvoiceID               BigInt
+  MerchantID              BigInt
+  TenantID                BigInt
+  ProductID               BigInt
+  Qty                     Float
+  Rate                    Float?
+  TotalAmount             Float?
+  Description             String?                   @db.VarChar(100)
+  CreatedAuthID           BigInt
+  CreatedBy               String                    @db.VarChar(150)
+  CreatedDate             DateTime                  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID          BigInt?
+  ModifiedBy              String?                   @db.VarChar(150)
+  ModifiedDate            DateTime?                 @default(now()) @db.Timestamp(6)
+  IsDeleted               Boolean                   @default(false)
+  DeletedAuthID           BigInt?
+  DeletedBy               String?                   @db.VarChar(150)
+  DeletedDate             DateTime?                 @db.Timestamp(6)
+  CustomerProductUsageLog CustomerProductUsageLog[]
+  Auth                    Auth                      @relation(fields: [CreatedAuthID], references: [AuthID])
+  Invoice                 Invoice                   @relation(fields: [InvoiceID], references: [InvoiceID])
+  Merchant                Merchant                  @relation(fields: [MerchantID], references: [MerchantID])
+  Product                 Product                   @relation(fields: [ProductID], references: [ProductID])
+  Tenant                  Tenant                    @relation(fields: [TenantID], references: [TenantID])
+}
+
+model InvoiceStatus {
+  InvoiceStatusID  BigInt    @id(map: "PK_InvoiceStatus") @default(autoincrement())
+  InvoiceStatus    String?   @db.VarChar(50)
+  DisplayOrder     Int?
+  InternalCode     String?   @db.VarChar(10)
+  ShortDescription String?   @db.VarChar(50)
+  Description      String?   @db.VarChar(500)
+  ShortImageURL    String?   @db.VarChar(500)
+  MidiumImageURL   String?   @db.VarChar(500)
+  LargeImageURL    String?   @db.VarChar(500)
+  CreatedAuthID    BigInt
+  CreatedBy        String    @db.VarChar(150)
+  CreatedDate      DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID   BigInt?
+  ModifiedBy       String?   @db.VarChar(150)
+  ModifiedDate     DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted        Boolean   @default(false)
+  DeletedAuthID    BigInt?
+  DeletedBy        String?   @db.VarChar(150)
+  DeletedDate      DateTime? @db.Timestamp(6)
+  Invoice          Invoice[]
+  Auth             Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+}
+
+model Location {
+  LocationID     BigInt    @id(map: "PK_Location") @default(autoincrement())
+  MerchantID     BigInt
+  TenantID       BigInt
+  LocationCode   String?   @db.VarChar(50)
+  LocationName   String?   @db.VarChar(50)
+  Address1       String?   @db.VarChar(50)
+  Address2       String?   @db.VarChar(50)
+  City           String?   @db.VarChar(50)
+  State          String?   @db.VarChar(50)
+  Country        String?   @db.VarChar(50)
+  PostalCode     String?   @db.VarChar(50)
+  Email          String?   @db.VarChar(50)
+  Phone          String?   @db.VarChar(50)
+  CreatedAuthID  BigInt
+  CreatedBy      String    @db.VarChar(150)
+  CreatedDate    DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID BigInt?
+  ModifiedBy     String?   @db.VarChar(150)
+  ModifiedDate   DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted      Boolean   @default(false)
+  DeletedAuthID  BigInt?
+  DeletedBy      String?   @db.VarChar(150)
+  DeletedDate    DateTime? @db.Timestamp(6)
+  Auth           Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant       Merchant  @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant         Tenant    @relation(fields: [TenantID], references: [TenantID])
+}
+
+model Manufacturer {
+  ManufacturerID   BigInt    @id(map: "PK_Manufacturer") @default(autoincrement())
+  TenantID         BigInt
+  MerchantID       BigInt
+  ManufacturerCode String?   @db.VarChar(50)
+  ManufacturerName String?   @db.VarChar(50)
+  CreatedAuthID    BigInt
+  CreatedBy        String    @db.VarChar(150)
+  CreatedDate      DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID   BigInt?
+  ModifiedBy       String?   @db.VarChar(150)
+  ModifiedDate     DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted        Boolean   @default(false)
+  DeletedAuthID    BigInt?
+  DeletedBy        String?   @db.VarChar(150)
+  DeletedDate      DateTime? @db.Timestamp(6)
+  Auth             Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant         Merchant  @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant           Tenant    @relation(fields: [TenantID], references: [TenantID])
+}
+
+model Merchant {
+  MerchantID                 BigInt                       @id(map: "PK_Merchant") @default(autoincrement())
+  ContactID                  BigInt
+  CurrencyID                 BigInt
+  MerchantKey                String                       @unique @db.VarChar(100)
+  MerchantName               String                       @db.VarChar(150)
+  MerchantContactKey         String                       @db.VarChar(100)
+  DisplayName                String                       @db.VarChar(150)
+  Description                String?                      @db.VarChar(5000)
+  Address                    String?                      @db.VarChar(250)
+  City                       String?                      @db.VarChar(250)
+  State                      String?                      @db.VarChar(250)
+  Country                    String?                      @db.VarChar(250)
+  ZipCode                    String?                      @db.VarChar(250)
+  CreatedDate                DateTime                     @default(now()) @db.Timestamp(6)
+  ContactName                String?                      @db.VarChar(150)
+  ContactCode                String?                      @db.VarChar(150)
+  LegalName                  String?                      @db.VarChar(150)
+  TimeZone                   String?                      @db.VarChar(150)
+  DateFormat                 String?                      @db.VarChar(150)
+  Phone                      String?                      @db.VarChar(150)
+  Email                      String?                      @db.VarChar(150)
+  Website                    String?                      @db.VarChar(500)
+  CreatedAuthID              BigInt
+  CreatedBy                  String                       @db.VarChar(150)
+  DeletedAuthID              BigInt?
+  DeletedBy                  String?                      @db.VarChar(150)
+  DeletedDate                DateTime?                    @db.Timestamp(6)
+  IsDeleted                  Boolean                      @default(false)
+  ModifiedAuthID             BigInt?
+  ModifiedBy                 String?                      @db.VarChar(150)
+  ModifiedDate               DateTime?                    @default(now()) @db.Timestamp(6)
+  Asset                      Asset[]
+  AssetCategory              AssetCategory[]
+  AssetClass                 AssetClass[]
+  AssetProductParam          AssetProductParam[]
+  AssetType                  AssetType[]
+  AssetUsage                 AssetUsage[]
+  AssetUsageType             AssetUsageType[]
+  Bank                       Bank[]
+  BankAccount                BankAccount[]
+  BankAccountBalance         BankAccountBalance[]
+  BankAccountUser            BankAccountUser[]
+  BankTransaction            BankTransaction[]
+  Brand                      Brand[]
+  CostList                   CostList[]
+  CostListItem               CostListItem[]
+  CostListItemBulkDiscount   CostListItemBulkDiscount[]
+  Customer                   Customer[]
+  CustomerAccountBalance     CustomerAccountBalance[]
+  CustomerAccountCard        CustomerAccountCard[]
+  CustomerAccountTransaction CustomerAccountTransaction[]
+  CustomerContact            CustomerContact[]
+  CustomerStatement          CustomerStatement[]
+  CustomerTenantContact      CustomerTenantContact[]
+  Department                 Department[]
+  Employee                   Employee[]
+  EmployeePackage            EmployeePackage[]
+  EmployeePackageLog         EmployeePackageLog[]
+  EmployeeType               EmployeeType[]
+  Group                      Group[]
+  GroupRole                  GroupRole[]
+  GroupUser                  GroupUser[]
+  Invoice                    Invoice[]
+  InvoiceItem                InvoiceItem[]
+  Location                   Location[]
+  Manufacturer               Manufacturer[]
+  Contact                    Contact                      @relation(fields: [ContactID], references: [ContactID])
+  Auth                       Auth                         @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency                   Currency                     @relation(fields: [CurrencyID], references: [CurrencyID])
+  PackageType                PackageType[]
+  PayrollBatch               PayrollBatch[]
+  PayrollBatchItem           PayrollBatchItem[]
+  PriceList                  PriceList[]
+  PriceListItem              PriceListItem[]
+  PriceListItemBulkDiscount  PriceListItemBulkDiscount[]
+  ProductBulkDiscount        ProductBulkDiscount[]
+  ProductParam               ProductParam[]
+  Project                    Project[]
+  ProjectType                ProjectType[]
+  Proposal                   Proposal[]
+  ProposalItem               ProposalItem[]
+  ProposalItemParam          ProposalItemParam[]
+  ProposalVendorProduct      ProposalVendorProduct[]
+  Quote                      Quote[]
+  QuoteItem                  QuoteItem[]
+  Role                       Role[]
+  StoreType                  StoreType[]
+  Tenant                     Tenant[]
+  TenantContact              TenantContact[]
+  User                       User[]
+  Vendor                     Vendor[]
+  VendorAccount              VendorAccount[]
+  VendorAccountBalance       VendorAccountBalance[]
+  VendorApproval             VendorApproval[]
+  VendorApprovalItem         VendorApprovalItem[]
+  VendorBill                 VendorBill[]
+  VendorBillItem             VendorBillItem[]
+  VendorCategory             VendorCategory[]
+  VendorContact              VendorContact[]
+  VendorPayment              VendorPayment[]
+  VendorPaymentItem          VendorPaymentItem[]
+  VendorProduct              VendorProduct[]
+  VendorStatement            VendorStatement[]
+  VendorTenantContact        VendorTenantContact[]
+}
+
+model PackageType {
+  PackageTypeID   BigInt           @id(map: "PK_PackageType") @default(autoincrement())
+  MerchantID      BigInt
+  TenantID        BigInt
+  PackageType     String           @db.VarChar(100)
+  PackageTypeCode String
+  Description     String?          @db.VarChar(100)
+  CreatedAuthID   BigInt
+  CreatedBy       String           @db.VarChar(150)
+  CreatedDate     DateTime         @default(now()) @db.Timestamp(6)
+  ModifiedAuthID  BigInt?
+  ModifiedBy      String?          @db.VarChar(150)
+  ModifiedDate    DateTime?        @default(now()) @db.Timestamp(6)
+  IsDeleted       Boolean          @default(false)
+  DeletedAuthID   BigInt?
+  DeletedBy       String?          @db.VarChar(150)
+  DeletedDate     DateTime?        @db.Timestamp(6)
+  Auth            Auth             @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant        Merchant         @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant          Tenant           @relation(fields: [TenantID], references: [TenantID])
+  ProductPackage  ProductPackage[]
+}
+
+model PaymentMethod {
+  PaymentMethodID BigInt            @id(map: "PK_PaymentMethod") @default(autoincrement())
+  PaymentMethod   String?           @db.VarChar(100)
+  Description     String?           @db.VarChar(100)
+  CreatedAuthID   BigInt
+  CreatedBy       String            @db.VarChar(150)
+  CreatedDate     DateTime          @default(now()) @db.Timestamp(6)
+  ModifiedAuthID  BigInt?
+  ModifiedBy      String?           @db.VarChar(150)
+  ModifiedDate    DateTime?         @default(now()) @db.Timestamp(6)
+  IsDeleted       Boolean           @default(false)
+  DeletedAuthID   BigInt?
+  DeletedBy       String?           @db.VarChar(150)
+  DeletedDate     DateTime?         @db.Timestamp(6)
+  CustomerPayment CustomerPayment[]
+  Auth            Auth              @relation(fields: [CreatedAuthID], references: [AuthID])
+  VendorExpense   VendorExpense[]
+  VendorPayment   VendorPayment[]
+}
+
+model PaymentStatus {
+  PaymentStatusID BigInt          @id(map: "PK_PaymentStatus") @default(autoincrement())
+  PaymentStatus   String?         @db.VarChar(100)
+  CreatedAuthID   BigInt
+  CreatedBy       String          @db.VarChar(150)
+  CreatedDate     DateTime        @default(now()) @db.Timestamp(6)
+  ModifiedAuthID  BigInt?
+  ModifiedBy      String?         @db.VarChar(150)
+  ModifiedDate    DateTime?       @default(now()) @db.Timestamp(6)
+  IsDeleted       Boolean         @default(false)
+  DeletedAuthID   BigInt?
+  DeletedBy       String?         @db.VarChar(150)
+  DeletedDate     DateTime?       @db.Timestamp(6)
+  Auth            Auth            @relation(fields: [CreatedAuthID], references: [AuthID])
+  VendorPayment   VendorPayment[]
+}
+
+model PayrollBatch {
+  PayrollBatchID     BigInt             @id(map: "PK_PayrollBatch") @default(autoincrement())
+  MerchantID         BigInt
+  TenantID           BigInt
+  BatchDisplayName   String?            @db.VarChar(250)
+  Description        String?            @db.VarChar(50)
+  StartDate          DateTime?          @db.Date
+  EndDate            DateTime?          @db.Date
+  PayrollBatchStatus Boolean?
+  CreatedAuthID      BigInt
+  CreatedBy          String             @db.VarChar(150)
+  CreatedDate        DateTime           @default(now()) @db.Timestamp(6)
+  ModifiedAuthID     BigInt?
+  ModifiedBy         String?            @db.VarChar(150)
+  ModifiedDate       DateTime?          @default(now()) @db.Timestamp(6)
+  IsDeleted          Boolean            @default(false)
+  DeletedAuthID      BigInt?
+  DeletedBy          String?            @db.VarChar(150)
+  DeletedDate        DateTime?          @db.Timestamp(6)
+  Auth               Auth               @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant           Merchant           @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant             Tenant             @relation(fields: [TenantID], references: [TenantID])
+  PayrollBatchItem   PayrollBatchItem[]
+}
+
+model PayrollBatchItem {
+  PayrollBatchItemID      BigInt          @id(map: "PK_PayrollBatchItem") @default(autoincrement())
+  PaySlipID               BigInt
+  PayrollBatchID          BigInt
+  MerchantID              BigInt
+  TenantID                BigInt
+  EmployeeID              BigInt
+  EmployeePackageID       BigInt
+  PackageSalaryCTC        Float?
+  PackageSalaryMonthy     Float?
+  WorkingDays             Int?
+  LossOfPayDays           Int?
+  CompOffDays             Int?
+  PayableDays             Int?
+  ExpectedDaySalary       Float?
+  LossOfPaySalary         Float?
+  CompOffSalary           Float?
+  CalculatedMonthlySalary Float?
+  Basic                   Float?
+  HRA                     Float?
+  TravelAllowance         Float?
+  MedicalAllowance        Float?
+  OtherAllowance          Float?
+  TotallWithOutDeductions Float?
+  DeductedTDS             Float?
+  DeductedEsiEmployee     Float?
+  DeductedEsiEmployer     Float?
+  DeductedPfEmployee      Float?
+  DeductedPfEmployer      Float?
+  DeductedIncomeTax       Float?
+  DeductedOthers          Float?
+  TotalDeductions         Float?
+  TotallAfterDeductions   Float?
+  Actual                  String?         @db.VarChar(150)
+  CreatedAuthID           BigInt
+  CreatedBy               String          @db.VarChar(150)
+  CreatedDate             DateTime        @default(now()) @db.Timestamp(6)
+  ModifiedAuthID          BigInt?
+  ModifiedBy              String?         @db.VarChar(150)
+  ModifiedDate            DateTime?       @default(now()) @db.Timestamp(6)
+  IsDeleted               Boolean         @default(false)
+  DeletedAuthID           BigInt?
+  DeletedBy               String?         @db.VarChar(150)
+  DeletedDate             DateTime?       @db.Timestamp(6)
+  Auth                    Auth            @relation(fields: [CreatedAuthID], references: [AuthID])
+  Employee                Employee        @relation(fields: [EmployeeID], references: [EmployeeID])
+  EmployeePackage         EmployeePackage @relation(fields: [EmployeePackageID], references: [EmployeePackageID])
+  Merchant                Merchant        @relation(fields: [MerchantID], references: [MerchantID])
+  PayrollBatch            PayrollBatch    @relation(fields: [PayrollBatchID], references: [PayrollBatchID])
+  Tenant                  Tenant          @relation(fields: [TenantID], references: [TenantID])
+}
+
+model PriceList {
+  PriceListID               BigInt                      @id(map: "PK_PriceList") @default(autoincrement())
+  MerchantID                BigInt
+  TenantID                  BigInt
+  PriceListStatusID         BigInt
+  StartDate                 DateTime                    @db.Date
+  EndDate                   DateTime?                   @db.Date
+  DisplayName               String                      @db.VarChar(100)
+  PriceListCode             String                      @db.VarChar(100)
+  IsActive                  Boolean?
+  ActiveDate                DateTime?                   @db.Timestamp(6)
+  InactiveDate              DateTime?                   @db.Timestamp(6)
+  Remarks                   String?                     @db.VarChar(100)
+  CreatedAuthID             BigInt
+  CreatedBy                 String                      @db.VarChar(150)
+  CreatedDate               DateTime                    @default(now()) @db.Timestamp(6)
+  ModifiedAuthID            BigInt?
+  ModifiedBy                String?                     @db.VarChar(150)
+  ModifiedDate              DateTime?                   @default(now()) @db.Timestamp(6)
+  IsDeleted                 Boolean                     @default(false)
+  DeletedAuthID             BigInt?
+  DeletedBy                 String?                     @db.VarChar(150)
+  DeletedDate               DateTime?                   @db.Timestamp(6)
+  Auth                      Auth                        @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant                  Merchant                    @relation(fields: [MerchantID], references: [MerchantID])
+  PriceListStatus           PriceListStatus             @relation(fields: [PriceListStatusID], references: [PriceListStatusID])
+  Tenant                    Tenant                      @relation(fields: [TenantID], references: [TenantID])
+  PriceListCustomerAccount  PriceListCustomerAccount[]
+  PriceListItem             PriceListItem[]
+  PriceListItemBulkDiscount PriceListItemBulkDiscount[]
+}
+
+model PriceListCustomerAccount {
+  PriceListCustomerAccountID BigInt          @id(map: "PK_PriceListCustomerAccount") @default(autoincrement())
+  PriceListID                BigInt
+  CustomerAccountID          BigInt
+  CreatedAuthID              BigInt
+  CreatedBy                  String          @db.VarChar(150)
+  CreatedDate                DateTime        @default(now()) @db.Timestamp(6)
+  ModifiedAuthID             BigInt?
+  ModifiedBy                 String?         @db.VarChar(150)
+  ModifiedDate               DateTime?       @default(now()) @db.Timestamp(6)
+  IsDeleted                  Boolean         @default(false)
+  DeletedAuthID              BigInt?
+  DeletedBy                  String?         @db.VarChar(150)
+  DeletedDate                DateTime?       @db.Timestamp(6)
+  Auth                       Auth            @relation(fields: [CreatedAuthID], references: [AuthID])
+  CustomerAccount            CustomerAccount @relation(fields: [CustomerAccountID], references: [CustomerAccountID])
+  PriceList                  PriceList       @relation(fields: [PriceListID], references: [PriceListID])
+}
+
+model PriceListItem {
+  PriceListItemID           BigInt                      @id(map: "PK_PriceListItem") @default(autoincrement())
+  PriceListID               BigInt
+  MerchantID                BigInt
+  TenantID                  BigInt
+  ProductID                 BigInt
+  Rate                      Float?
+  Remarks                   String?                     @db.VarChar(100)
+  CreatedAuthID             BigInt
+  CreatedBy                 String                      @db.VarChar(150)
+  CreatedDate               DateTime                    @default(now()) @db.Timestamp(6)
+  ModifiedAuthID            BigInt?
+  ModifiedBy                String?                     @db.VarChar(150)
+  ModifiedDate              DateTime?                   @default(now()) @db.Timestamp(6)
+  IsDeleted                 Boolean                     @default(false)
+  DeletedAuthID             BigInt?
+  DeletedBy                 String?                     @db.VarChar(150)
+  DeletedDate               DateTime?                   @db.Timestamp(6)
+  Auth                      Auth                        @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant                  Merchant                    @relation(fields: [MerchantID], references: [MerchantID])
+  PriceList                 PriceList                   @relation(fields: [PriceListID], references: [PriceListID])
+  Product                   Product                     @relation(fields: [ProductID], references: [ProductID])
+  Tenant                    Tenant                      @relation(fields: [TenantID], references: [TenantID])
+  PriceListItemBulkDiscount PriceListItemBulkDiscount[]
+}
+
+model PriceListItemBulkDiscount {
+  PriceListItemBulkDiscountID BigInt        @id(map: "PK_PriceListItemBulkDiscount") @default(autoincrement())
+  PriceListItemID             BigInt
+  PriceListID                 BigInt
+  MerchantID                  BigInt
+  TenantID                    BigInt
+  ProductID                   BigInt
+  CurrencyID                  BigInt
+  RangeMin                    Int?
+  RangeMax                    Int?
+  DiscountPeriod              String?       @db.VarChar(100)
+  DiscountType                String?       @db.VarChar(100)
+  DiscountPercent             Decimal?      @db.Decimal(4, 2)
+  DiscountRate                Float?
+  Description                 String?       @db.VarChar(500)
+  CreatedAuthID               BigInt
+  CreatedBy                   String        @db.VarChar(150)
+  CreatedDate                 DateTime      @default(now()) @db.Timestamp(6)
+  ModifiedAuthID              BigInt?
+  ModifiedBy                  String?       @db.VarChar(150)
+  ModifiedDate                DateTime?     @default(now()) @db.Timestamp(6)
+  IsDeleted                   Boolean       @default(false)
+  DeletedAuthID               BigInt?
+  DeletedBy                   String?       @db.VarChar(150)
+  DeletedDate                 DateTime?     @db.Timestamp(6)
+  Auth                        Auth          @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency                    Currency      @relation(fields: [CurrencyID], references: [CurrencyID])
+  Merchant                    Merchant      @relation(fields: [MerchantID], references: [MerchantID])
+  PriceList                   PriceList     @relation(fields: [PriceListID], references: [PriceListID])
+  PriceListItem               PriceListItem @relation(fields: [PriceListItemID], references: [PriceListItemID])
+  Product                     Product       @relation(fields: [ProductID], references: [ProductID])
+  Tenant                      Tenant        @relation(fields: [TenantID], references: [TenantID])
+}
+
+model PriceListStatus {
+  PriceListStatusID   BigInt      @id(map: "PK_PriceListStatus") @default(autoincrement())
+  PriceListStatus     String?     @db.VarChar(50)
+  DisplayOrder        Int?
+  PriceListStatusCode String?     @db.VarChar(10)
+  ShortDescription    String?     @db.VarChar(50)
+  Description         String?     @db.VarChar(500)
+  CreatedAuthID       BigInt
+  CreatedBy           String      @db.VarChar(150)
+  CreatedDate         DateTime    @default(now()) @db.Timestamp(6)
+  ModifiedAuthID      BigInt?
+  ModifiedBy          String?     @db.VarChar(150)
+  ModifiedDate        DateTime?   @default(now()) @db.Timestamp(6)
+  IsDeleted           Boolean     @default(false)
+  DeletedAuthID       BigInt?
+  DeletedBy           String?     @db.VarChar(150)
+  DeletedDate         DateTime?   @db.Timestamp(6)
+  PriceList           PriceList[]
+  Auth                Auth        @relation(fields: [CreatedAuthID], references: [AuthID])
+}
+
+model PriceListStore {
+  PriceListStoreID BigInt    @id(map: "PK_PriceListStore") @default(autoincrement())
+  PriceListID      BigInt
+  StoreID          BigInt
+  IsEnabled        Boolean
+  CreatedAuthID    BigInt
+  CreatedBy        String    @db.VarChar(150)
+  CreatedDate      DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID   BigInt?
+  ModifiedBy       String?   @db.VarChar(150)
+  ModifiedDate     DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted        Boolean   @default(false)
+  DeletedAuthID    BigInt?
+  DeletedBy        String?   @db.VarChar(150)
+  DeletedDate      DateTime? @db.Timestamp(6)
+  Auth             Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+}
+
+model Product {
+  ProductID                 BigInt                      @id(map: "PK_Product") @default(autoincrement())
+  ProductName               String                      @db.VarChar(100)
+  ProductCode               String                      @db.VarChar(100)
+  ProductUPC                String?                     @db.VarChar(100)
+  ProductSKU                String?                     @db.VarChar(100)
+  ParentProductID           BigInt?
+  AppSettingUomID           BigInt
+  CurrencyID                BigInt
+  BaseSaleRate              String?                     @db.VarChar(100)
+  ComparisionSaleRate       String?                     @db.VarChar(100)
+  IsAsset                   Boolean?
+  IsRental                  Boolean?
+  IsGoods                   Boolean?
+  IsService                 Boolean?
+  IsEnabled                 Boolean?
+  IsSellable                Boolean?
+  IsPurchase                Boolean?
+  StockLimit                String?                     @db.VarChar(100)
+  IsStockLimitDisabled      Boolean?
+  CreatedAuthID             BigInt
+  CreatedBy                 String                      @db.VarChar(150)
+  CreatedDate               DateTime                    @default(now()) @db.Timestamp(6)
+  ModifiedAuthID            BigInt?
+  ModifiedBy                String?                     @db.VarChar(150)
+  ModifiedDate              DateTime?                   @default(now()) @db.Timestamp(6)
+  IsDeleted                 Boolean                     @default(false)
+  DeletedAuthID             BigInt?
+  DeletedBy                 String?                     @db.VarChar(150)
+  DeletedDate               DateTime?                   @db.Timestamp(6)
+  Asset                     Asset[]
+  AssetProductParam         AssetProductParam[]
+  CostListItem              CostListItem[]
+  CostListItemBulkDiscount  CostListItemBulkDiscount[]
+  CustomerProductUsage      CustomerProductUsage[]
+  CustomerProductUsageLog   CustomerProductUsageLog[]
+  InvoiceItem               InvoiceItem[]
+  PriceListItem             PriceListItem[]
+  PriceListItemBulkDiscount PriceListItemBulkDiscount[]
+  AppSettingUom             AppSettingUom               @relation(fields: [AppSettingUomID], references: [AppSettingUomID])
+  Auth                      Auth                        @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency                  Currency                    @relation(fields: [CurrencyID], references: [CurrencyID])
+  ProductBulkDiscount       ProductBulkDiscount[]
+  ProductBundle             ProductBundle[]
+  ProductCategory           ProductCategory[]
+  ProductImage              ProductImage[]
+  ProductPackage            ProductPackage[]
+  ProductParam              ProductParam[]
+  ProposalItem              ProposalItem[]
+  ProposalItemParam         ProposalItemParam[]
+  ProposalVendorProduct     ProposalVendorProduct[]
+  QuoteItem                 QuoteItem[]
+  VendorBillItem            VendorBillItem[]
+  VendorProduct             VendorProduct[]
+}
+
+model ProductBulkDiscount {
+  ProductBulkDiscountID BigInt    @id(map: "PK_ProductBulkDiscount") @default(autoincrement())
+  MerchantID            BigInt
+  TenantID              BigInt
+  ProductID             BigInt
+  CurrencyID            BigInt
+  RangeMin              Int?
+  RangeMax              Int?
+  DiscountPeriod        String?   @db.VarChar(100)
+  DiscountType          String?   @db.VarChar(100)
+  DiscountPercent       Decimal?  @db.Decimal(4, 2)
+  DiscountRate          Float?
+  Description           String?   @db.VarChar(500)
+  CreatedAuthID         BigInt
+  CreatedBy             String    @db.VarChar(150)
+  CreatedDate           DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID        BigInt?
+  ModifiedBy            String?   @db.VarChar(150)
+  ModifiedDate          DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted             Boolean   @default(false)
+  DeletedAuthID         BigInt?
+  DeletedBy             String?   @db.VarChar(150)
+  DeletedDate           DateTime? @db.Timestamp(6)
+  Auth                  Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency              Currency  @relation(fields: [CurrencyID], references: [CurrencyID])
+  Merchant              Merchant  @relation(fields: [MerchantID], references: [MerchantID])
+  Product               Product   @relation(fields: [ProductID], references: [ProductID])
+  Tenant                Tenant    @relation(fields: [TenantID], references: [TenantID])
+}
+
+model ProductBundle {
+  ProductBundle          BigInt    @id(map: "PK_ProductBundle") @default(autoincrement())
+  ProductID              BigInt
+  BundledProductID       BigInt
+  BundledProductQuantity BigInt
+  Remarks                String    @db.VarChar(5000)
+  CreatedAuthID          BigInt
+  CreatedBy              String    @db.VarChar(150)
+  CreatedDate            DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID         BigInt?
+  ModifiedBy             String?   @db.VarChar(150)
+  ModifiedDate           DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted              Boolean   @default(false)
+  DeletedAuthID          BigInt?
+  DeletedBy              String?   @db.VarChar(150)
+  DeletedDate            DateTime? @db.Timestamp(6)
+  Product                Product   @relation(fields: [ProductID], references: [ProductID])
+}
+
+model ProductCategory {
+  ProductCategoryID BigInt    @id(map: "PK_ProductCategory") @default(autoincrement())
+  ProductID         BigInt
+  CategoryID        BigInt
+  Remarks           String    @db.VarChar(5000)
+  CreatedAuthID     BigInt
+  CreatedBy         String    @db.VarChar(150)
+  CreatedDate       DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID    BigInt?
+  ModifiedBy        String?   @db.VarChar(150)
+  ModifiedDate      DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted         Boolean   @default(false)
+  DeletedAuthID     BigInt?
+  DeletedBy         String?   @db.VarChar(150)
+  DeletedDate       DateTime? @db.Timestamp(6)
+  Category          Category  @relation(fields: [CategoryID], references: [CategoryID])
+  Product           Product   @relation(fields: [ProductID], references: [ProductID])
+}
+
+model ProductImage {
+  ProductImageID BigInt    @id(map: "PK_ProductImage") @default(autoincrement())
+  ProductID      BigInt
+  ImageURL       String    @db.VarChar(5000)
+  ImageAltName   String    @db.VarChar(100)
+  ImageSizeInKB  String    @db.VarChar(100)
+  CreatedAuthID  BigInt
+  CreatedBy      String    @db.VarChar(150)
+  CreatedDate    DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID BigInt?
+  ModifiedBy     String?   @db.VarChar(150)
+  ModifiedDate   DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted      Boolean   @default(false)
+  DeletedAuthID  BigInt?
+  DeletedBy      String?   @db.VarChar(150)
+  DeletedDate    DateTime? @db.Timestamp(6)
+  Auth           Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+  Product        Product   @relation(fields: [ProductID], references: [ProductID])
+}
+
+model ProductPackage {
+  ProductPackageID BigInt      @id(map: "PK_ProductPackage") @default(autoincrement())
+  ProductID        BigInt
+  PackageTypeID    BigInt
+  Length           String?     @db.VarChar(100)
+  LengthUom        String?     @db.VarChar(100)
+  Width            String?     @db.VarChar(100)
+  WidthUom         String?     @db.VarChar(100)
+  Height           String?     @db.VarChar(100)
+  HeightUom        String?     @db.VarChar(100)
+  Weight           String?     @db.VarChar(100)
+  WeightUom        String?     @db.VarChar(100)
+  PackageCount     String?     @db.VarChar(100)
+  IsEnabled        Boolean
+  CreatedAuthID    BigInt
+  CreatedBy        String      @db.VarChar(150)
+  CreatedDate      DateTime    @default(now()) @db.Timestamp(6)
+  ModifiedAuthID   BigInt?
+  ModifiedBy       String?     @db.VarChar(150)
+  ModifiedDate     DateTime?   @default(now()) @db.Timestamp(6)
+  IsDeleted        Boolean     @default(false)
+  DeletedAuthID    BigInt?
+  DeletedBy        String?     @db.VarChar(150)
+  DeletedDate      DateTime?   @db.Timestamp(6)
+  Auth             Auth        @relation(fields: [CreatedAuthID], references: [AuthID])
+  PackageType      PackageType @relation(fields: [PackageTypeID], references: [PackageTypeID])
+  Product          Product     @relation(fields: [ProductID], references: [ProductID])
+}
+
+model ProductParam {
+  ProductParamID              BigInt              @id(map: "PK_ProductParam") @default(autoincrement())
+  MerchantID                  BigInt
+  TenantID                    BigInt
+  ProductID                   BigInt
+  DisplayOrder                Int?
+  DisplayName                 String?             @db.VarChar(100)
+  ParamName                   String?             @db.VarChar(100)
+  IsRequired                  Boolean?
+  AppSettingDataTypeID        Boolean?
+  AppSettingUomTypeID         Boolean?
+  AppSettingUomID             Boolean?
+  ParamAppSettingDataObjectID BigInt?
+  ParamAppSettingUomValueID   BigInt?
+  ShortDescription            String?             @db.VarChar(150)
+  Description                 String?             @db.VarChar(500)
+  CreatedAuthID               BigInt
+  CreatedBy                   String              @db.VarChar(150)
+  CreatedDate                 DateTime            @default(now()) @db.Timestamp(6)
+  ModifiedAuthID              BigInt?
+  ModifiedBy                  String?             @db.VarChar(150)
+  ModifiedDate                DateTime?           @default(now()) @db.Timestamp(6)
+  IsDeleted                   Boolean             @default(false)
+  DeletedAuthID               BigInt?
+  DeletedBy                   String?             @db.VarChar(150)
+  DeletedDate                 DateTime?           @db.Timestamp(6)
+  AssetProductParam           AssetProductParam[]
+  Auth                        Auth                @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant                    Merchant            @relation(fields: [MerchantID], references: [MerchantID])
+  Product                     Product             @relation(fields: [ProductID], references: [ProductID])
+  Tenant                      Tenant              @relation(fields: [TenantID], references: [TenantID])
+}
+
+model Project {
+  ProjectID             BigInt                  @id(map: "PK_Project") @default(autoincrement())
+  ProjectTypeID         BigInt
+  MerchantID            BigInt
+  TenantID              BigInt
+  CustomerID            BigInt
+  CurrencyID            BigInt
+  Title                 String?                 @db.VarChar(100)
+  Description           String?                 @db.VarChar(100)
+  BidStartDate          DateTime?               @db.Date
+  BidEndDate            DateTime?               @db.Date
+  BudgetedAmount        Float?
+  CreatedAuthID         BigInt
+  CreatedBy             String                  @db.VarChar(150)
+  CreatedDate           DateTime                @default(now()) @db.Timestamp(6)
+  ModifiedAuthID        BigInt?
+  ModifiedBy            String?                 @db.VarChar(150)
+  ModifiedDate          DateTime?               @default(now()) @db.Timestamp(6)
+  IsDeleted             Boolean                 @default(false)
+  DeletedAuthID         BigInt?
+  DeletedBy             String?                 @db.VarChar(150)
+  DeletedDate           DateTime?               @db.Timestamp(6)
+  Invoice               Invoice[]
+  Auth                  Auth                    @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency              Currency                @relation(fields: [CurrencyID], references: [CurrencyID])
+  Customer              Customer                @relation(fields: [CustomerID], references: [CustomerID])
+  Merchant              Merchant                @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant                Tenant                  @relation(fields: [TenantID], references: [TenantID])
+  Proposal              Proposal[]
+  ProposalItemParam     ProposalItemParam[]
+  ProposalVendorProduct ProposalVendorProduct[]
+  Quote                 Quote[]
+  QuoteItem             QuoteItem[]
+  VendorApproval        VendorApproval[]
+  VendorBillItem        VendorBillItem[]
+}
+
+model ProjectType {
+  ProjectTypeID  BigInt    @id(map: "PK_ProjectType") @default(autoincrement())
+  MerchantID     BigInt
+  TenantID       BigInt
+  ProjectType    String    @db.VarChar(100)
+  Description    String?   @db.VarChar(100)
+  CreatedAuthID  BigInt
+  CreatedBy      String    @db.VarChar(150)
+  CreatedDate    DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID BigInt?
+  ModifiedBy     String?   @db.VarChar(150)
+  ModifiedDate   DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted      Boolean   @default(false)
+  DeletedAuthID  BigInt?
+  DeletedBy      String?   @db.VarChar(150)
+  DeletedDate    DateTime? @db.Timestamp(6)
+  Auth           Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant       Merchant  @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant         Tenant    @relation(fields: [TenantID], references: [TenantID])
+}
+
+model Proposal {
+  ProposalID            BigInt                  @id(map: "PK_Proposal") @default(autoincrement())
+  ProjectID             BigInt
+  MerchantID            BigInt
+  TenantID              BigInt
+  CurrencyID            BigInt
+  PropsalStatus         BigInt?
+  Title                 String?                 @db.VarChar(100)
+  Description           String?                 @db.VarChar(100)
+  BidStartDate          DateTime?               @db.Date
+  BidEndDate            DateTime?               @db.Date
+  BudgetedAmount        Float?
+  CreatedAuthID         BigInt
+  CreatedBy             String                  @db.VarChar(150)
+  CreatedDate           DateTime                @default(now()) @db.Timestamp(6)
+  ModifiedAuthID        BigInt?
+  ModifiedBy            String?                 @db.VarChar(150)
+  ModifiedDate          DateTime?               @default(now()) @db.Timestamp(6)
+  IsDeleted             Boolean                 @default(false)
+  DeletedAuthID         BigInt?
+  DeletedBy             String?                 @db.VarChar(150)
+  DeletedDate           DateTime?               @db.Timestamp(6)
+  Auth                  Auth                    @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency              Currency                @relation(fields: [CurrencyID], references: [CurrencyID])
+  Merchant              Merchant                @relation(fields: [MerchantID], references: [MerchantID])
+  Project               Project                 @relation(fields: [ProjectID], references: [ProjectID])
+  Tenant                Tenant                  @relation(fields: [TenantID], references: [TenantID])
+  ProposalItem          ProposalItem[]
+  ProposalItemParam     ProposalItemParam[]
+  ProposalVendorProduct ProposalVendorProduct[]
+  Quote                 Quote[]
+  QuoteItem             QuoteItem[]
+}
+
+model ProposalItem {
+  ProposalItemID        BigInt                  @id(map: "PK_ProposalItem") @default(autoincrement())
+  ProjectID             BigInt
+  MerchantID            BigInt
+  TenantID              BigInt
+  ProposalID            BigInt
+  ProductID             BigInt
+  CurrencyID            BigInt
+  Qty                   Int?
+  BudgetAmount          Float?
+  CreatedAuthID         BigInt
+  CreatedBy             String                  @db.VarChar(150)
+  CreatedDate           DateTime                @default(now()) @db.Timestamp(6)
+  ModifiedAuthID        BigInt?
+  ModifiedBy            String?                 @db.VarChar(150)
+  ModifiedDate          DateTime?               @default(now()) @db.Timestamp(6)
+  IsDeleted             Boolean                 @default(false)
+  DeletedAuthID         BigInt?
+  DeletedBy             String?                 @db.VarChar(150)
+  DeletedDate           DateTime?               @db.Timestamp(6)
+  Auth                  Auth                    @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency              Currency                @relation(fields: [CurrencyID], references: [CurrencyID])
+  Merchant              Merchant                @relation(fields: [MerchantID], references: [MerchantID])
+  Product               Product                 @relation(fields: [ProductID], references: [ProductID])
+  Proposal              Proposal                @relation(fields: [ProposalID], references: [ProposalID])
+  Tenant                Tenant                  @relation(fields: [TenantID], references: [TenantID])
+  ProposalItemParam     ProposalItemParam[]
+  ProposalVendorProduct ProposalVendorProduct[]
+  QuoteItem             QuoteItem[]
+}
+
+model ProposalItemParam {
+  ProposalItemParamID         BigInt       @id(map: "PK_ProposalItemParam") @default(autoincrement())
+  ProjectID                   BigInt
+  MerchantID                  BigInt
+  TenantID                    BigInt
+  ProposalID                  BigInt
+  ProductID                   BigInt
+  ProposalItemID              BigInt
+  DisplayOrder                Int?
+  ParamName                   String?      @db.VarChar(100)
+  ParamValue                  String?      @db.VarChar(1500)
+  ParamAppSettingDataTypeID   BigInt?
+  ParamAppSettingDataObjectID BigInt?
+  ParamAppSettingUomTypeID    BigInt?
+  ParamAppSettingUomValueID   BigInt?
+  CreatedAuthID               BigInt
+  CreatedBy                   String       @db.VarChar(150)
+  CreatedDate                 DateTime     @default(now()) @db.Timestamp(6)
+  ModifiedAuthID              BigInt?
+  ModifiedBy                  String?      @db.VarChar(150)
+  ModifiedDate                DateTime?    @default(now()) @db.Timestamp(6)
+  IsDeleted                   Boolean      @default(false)
+  DeletedAuthID               BigInt?
+  DeletedBy                   String?      @db.VarChar(150)
+  DeletedDate                 DateTime?    @db.Timestamp(6)
+  Auth                        Auth         @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant                    Merchant     @relation(fields: [MerchantID], references: [MerchantID])
+  Product                     Product      @relation(fields: [ProductID], references: [ProductID])
+  Project                     Project      @relation(fields: [ProjectID], references: [ProjectID])
+  Proposal                    Proposal     @relation(fields: [ProposalID], references: [ProposalID])
+  ProposalItem                ProposalItem @relation(fields: [ProposalItemID], references: [ProposalItemID])
+  Tenant                      Tenant       @relation(fields: [TenantID], references: [TenantID])
+}
+
+model ProposalVendorProduct {
+  ProposalVendorProductID BigInt       @id(map: "PK_ProposalVendorProduct") @default(autoincrement())
+  MerchantID              BigInt
+  TenantID                BigInt
+  ProposalItemID          BigInt
+  ProposalID              BigInt
+  ProjectID               BigInt
+  VendorID                BigInt
+  ProductID               BigInt
+  CurrencyID              BigInt
+  VendorProductCode       String?      @db.VarChar(100)
+  BudgetAmount            Float?
+  CreatedAuthID           BigInt
+  CreatedBy               String       @db.VarChar(150)
+  CreatedDate             DateTime     @default(now()) @db.Timestamp(6)
+  ModifiedAuthID          BigInt?
+  ModifiedBy              String?      @db.VarChar(150)
+  ModifiedDate            DateTime?    @default(now()) @db.Timestamp(6)
+  IsDeleted               Boolean      @default(false)
+  DeletedAuthID           BigInt?
+  DeletedBy               String?      @db.VarChar(150)
+  DeletedDate             DateTime?    @db.Timestamp(6)
+  Auth                    Auth         @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency                Currency     @relation(fields: [CurrencyID], references: [CurrencyID])
+  Merchant                Merchant     @relation(fields: [MerchantID], references: [MerchantID])
+  Product                 Product      @relation(fields: [ProductID], references: [ProductID])
+  Project                 Project      @relation(fields: [ProjectID], references: [ProjectID])
+  Proposal                Proposal     @relation(fields: [ProposalID], references: [ProposalID])
+  ProposalItem            ProposalItem @relation(fields: [ProposalItemID], references: [ProposalItemID])
+  Tenant                  Tenant       @relation(fields: [TenantID], references: [TenantID])
+  Vendor                  Vendor       @relation(fields: [VendorID], references: [VendorID])
+}
+
+model Quote {
+  QuoteID        BigInt      @id(map: "PK_Quote") @default(autoincrement())
+  ProposalID     BigInt
+  MerchantID     BigInt
+  TenantID       BigInt
+  VendorID       BigInt
+  ProjectID      BigInt
+  CurrencyID     BigInt
+  QuoteNumber    String?     @db.VarChar(100)
+  SubmittedDate  DateTime?   @db.Timestamp(6)
+  SubmittedBy    String?     @db.VarChar(100)
+  QuotedAmount   Float?
+  CreatedAuthID  BigInt
+  CreatedBy      String      @db.VarChar(150)
+  CreatedDate    DateTime    @default(now()) @db.Timestamp(6)
+  ModifiedAuthID BigInt?
+  ModifiedBy     String?     @db.VarChar(150)
+  ModifiedDate   DateTime?   @default(now()) @db.Timestamp(6)
+  IsDeleted      Boolean     @default(false)
+  DeletedAuthID  BigInt?
+  DeletedBy      String?     @db.VarChar(150)
+  DeletedDate    DateTime?   @db.Timestamp(6)
+  Auth           Auth        @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency       Currency    @relation(fields: [CurrencyID], references: [CurrencyID])
+  Merchant       Merchant    @relation(fields: [MerchantID], references: [MerchantID])
+  Project        Project     @relation(fields: [ProjectID], references: [ProjectID])
+  Proposal       Proposal    @relation(fields: [ProposalID], references: [ProposalID])
+  Tenant         Tenant      @relation(fields: [TenantID], references: [TenantID])
+  Vendor         Vendor      @relation(fields: [VendorID], references: [VendorID])
+  QuoteItem      QuoteItem[]
+}
+
+model QuoteItem {
+  QuoteItemID       BigInt       @id(map: "PK_QuoteItem") @default(autoincrement())
+  QuoteID           BigInt
+  ProjectID         BigInt
+  MerchantID        BigInt
+  TenantID          BigInt
+  ProposalID        BigInt
+  ProposalItemID    BigInt
+  ProductID         BigInt
+  CurrencyID        BigInt
+  VendorProductCode String?      @db.VarChar(100)
+  Qty               Int?
+  BudgetAmount      Float?
+  CreatedAuthID     BigInt
+  CreatedBy         String       @db.VarChar(150)
+  CreatedDate       DateTime     @default(now()) @db.Timestamp(6)
+  ModifiedAuthID    BigInt?
+  ModifiedBy        String?      @db.VarChar(150)
+  ModifiedDate      DateTime?    @default(now()) @db.Timestamp(6)
+  IsDeleted         Boolean      @default(false)
+  DeletedAuthID     BigInt?
+  DeletedBy         String?      @db.VarChar(150)
+  DeletedDate       DateTime?    @db.Timestamp(6)
+  Auth              Auth         @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency          Currency     @relation(fields: [CurrencyID], references: [CurrencyID])
+  Merchant          Merchant     @relation(fields: [MerchantID], references: [MerchantID])
+  Product           Product      @relation(fields: [ProductID], references: [ProductID])
+  Project           Project      @relation(fields: [ProjectID], references: [ProjectID])
+  Proposal          Proposal     @relation(fields: [ProposalID], references: [ProposalID])
+  ProposalItem      ProposalItem @relation(fields: [ProposalItemID], references: [ProposalItemID])
+  Quote             Quote        @relation(fields: [QuoteID], references: [QuoteID])
+  Tenant            Tenant       @relation(fields: [TenantID], references: [TenantID])
+}
+
+model Role {
+  RoleID           BigInt      @id(map: "PK_Role") @default(autoincrement())
+  MerchantID       BigInt
+  TenantID         BigInt
+  IsBuiltInAppRole Boolean?
+  RoleName         String?     @db.VarChar(100)
+  Description      String?     @db.VarChar(100)
+  CreatedAuthID    BigInt
+  CreatedBy        String      @db.VarChar(150)
+  CreatedDate      DateTime    @default(now()) @db.Timestamp(6)
+  ModifiedAuthID   BigInt?
+  ModifiedBy       String?     @db.VarChar(150)
+  ModifiedDate     DateTime?   @default(now()) @db.Timestamp(6)
+  IsDeleted        Boolean     @default(false)
+  DeletedAuthID    BigInt?
+  DeletedBy        String?     @db.VarChar(150)
+  DeletedDate      DateTime?   @db.Timestamp(6)
+  GroupRole        GroupRole[]
+  Auth             Auth        @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant         Merchant    @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant           Tenant      @relation(fields: [TenantID], references: [TenantID])
+}
+
+model Store {
+  StoreID        BigInt    @id(map: "PK_Store") @default(autoincrement())
+  StoreTypeID    BigInt
+  MerchantID     BigInt
+  TenantID       BigInt
+  StoreName      String    @db.VarChar(250)
+  StoreCode      String    @db.VarChar(250)
+  IsEnabled      Boolean   @default(false)
+  Description    String?   @db.VarChar(50)
+  StartDate      DateTime  @db.Date
+  EndDate        DateTime? @db.Date
+  CreatedAuthID  BigInt
+  CreatedBy      String    @db.VarChar(150)
+  CreatedDate    DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID BigInt?
+  ModifiedBy     String?   @db.VarChar(150)
+  ModifiedDate   DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted      Boolean   @default(false)
+  DeletedAuthID  BigInt?
+  DeletedBy      String?   @db.VarChar(150)
+  DeletedDate    DateTime? @db.Timestamp(6)
+  Auth           Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+  StoreType      StoreType @relation(fields: [StoreTypeID], references: [StoreTypeID])
+}
+
+model StoreType {
+  StoreTypeID    BigInt    @id(map: "PK_StoreType") @default(autoincrement())
+  MerchantID     BigInt
+  TenantID       BigInt
+  StoreTypeName  String    @db.VarChar(100)
+  StoreTypeCode  String
+  Description    String?   @db.VarChar(100)
+  CreatedAuthID  BigInt
+  CreatedBy      String    @db.VarChar(150)
+  CreatedDate    DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID BigInt?
+  ModifiedBy     String?   @db.VarChar(150)
+  ModifiedDate   DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted      Boolean   @default(false)
+  DeletedAuthID  BigInt?
+  DeletedBy      String?   @db.VarChar(150)
+  DeletedDate    DateTime? @db.Timestamp(6)
+  Store          Store[]
+  Auth           Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant       Merchant  @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant         Tenant    @relation(fields: [TenantID], references: [TenantID])
+}
+
+model Tenant {
+  TenantID                   BigInt                       @id(map: "PK_Tenant") @default(autoincrement())
+  MerchantID                 BigInt
+  ContactID                  BigInt
+  CurrencyID                 BigInt
+  TenantKey                  String                       @unique @db.VarChar(100)
+  TenantName                 String                       @db.VarChar(250)
+  TenantContactKey           String                       @db.VarChar(100)
+  DisplayName                String                       @db.VarChar(150)
+  ContactName                String                       @db.VarChar(150)
+  ContactCode                String                       @db.VarChar(150)
+  LegalName                  String                       @db.VarChar(150)
+  TimeZone                   String?                      @db.VarChar(150)
+  DateFormat                 String?                      @db.VarChar(150)
+  Description                String?                      @db.VarChar(5000)
+  Address                    String?                      @db.VarChar(250)
+  City                       String?                      @db.VarChar(250)
+  State                      String?                      @db.VarChar(250)
+  Country                    String?                      @db.VarChar(250)
+  ZipCode                    String?                      @db.VarChar(250)
+  Phone                      String                       @db.VarChar(150)
+  Email                      String                       @db.VarChar(150)
+  Website                    String?                      @db.VarChar(500)
+  IsMerchantManaged          Boolean
+  CreatedAuthID              BigInt
+  CreatedBy                  String                       @db.VarChar(150)
+  CreatedDate                DateTime                     @default(now()) @db.Timestamp(6)
+  ModifiedAuthID             BigInt?
+  ModifiedBy                 String?                      @db.VarChar(150)
+  ModifiedDate               DateTime?                    @default(now()) @db.Timestamp(6)
+  IsDeleted                  Boolean                      @default(false)
+  DeletedAuthID              BigInt?
+  DeletedBy                  String?                      @db.VarChar(150)
+  DeletedDate                DateTime?                    @db.Timestamp(6)
+  Asset                      Asset[]
+  AssetCategory              AssetCategory[]
+  AssetClass                 AssetClass[]
+  AssetProductParam          AssetProductParam[]
+  AssetType                  AssetType[]
+  AssetUsage                 AssetUsage[]
+  AssetUsageType             AssetUsageType[]
+  Bank                       Bank[]
+  BankAccount                BankAccount[]
+  BankAccountBalance         BankAccountBalance[]
+  BankAccountUser            BankAccountUser[]
+  BankTransaction            BankTransaction[]
+  Brand                      Brand[]
+  CostList                   CostList[]
+  CostListItem               CostListItem[]
+  CostListItemBulkDiscount   CostListItemBulkDiscount[]
+  Customer                   Customer[]
+  CustomerAccountBalance     CustomerAccountBalance[]
+  CustomerAccountCard        CustomerAccountCard[]
+  CustomerAccountTransaction CustomerAccountTransaction[]
+  CustomerContact            CustomerContact[]
+  CustomerStatement          CustomerStatement[]
+  CustomerTenantContact      CustomerTenantContact[]
+  Department                 Department[]
+  Employee                   Employee[]
+  EmployeePackage            EmployeePackage[]
+  EmployeePackageLog         EmployeePackageLog[]
+  EmployeeType               EmployeeType[]
+  Group                      Group[]
+  GroupRole                  GroupRole[]
+  GroupUser                  GroupUser[]
+  Invoice                    Invoice[]
+  InvoiceItem                InvoiceItem[]
+  Location                   Location[]
+  Manufacturer               Manufacturer[]
+  PackageType                PackageType[]
+  PayrollBatch               PayrollBatch[]
+  PayrollBatchItem           PayrollBatchItem[]
+  PriceList                  PriceList[]
+  PriceListItem              PriceListItem[]
+  PriceListItemBulkDiscount  PriceListItemBulkDiscount[]
+  ProductBulkDiscount        ProductBulkDiscount[]
+  ProductParam               ProductParam[]
+  Project                    Project[]
+  ProjectType                ProjectType[]
+  Proposal                   Proposal[]
+  ProposalItem               ProposalItem[]
+  ProposalItemParam          ProposalItemParam[]
+  ProposalVendorProduct      ProposalVendorProduct[]
+  Quote                      Quote[]
+  QuoteItem                  QuoteItem[]
+  Role                       Role[]
+  StoreType                  StoreType[]
+  Contact                    Contact                      @relation(fields: [ContactID], references: [ContactID])
+  Currency                   Currency                     @relation(fields: [CurrencyID], references: [CurrencyID])
+  Merchant                   Merchant                     @relation(fields: [MerchantID], references: [MerchantID])
+  TenantContact              TenantContact[]
+  User                       User[]
+  Vendor                     Vendor[]
+  VendorAccount              VendorAccount[]
+  VendorAccountBalance       VendorAccountBalance[]
+  VendorApproval             VendorApproval[]
+  VendorApprovalItem         VendorApprovalItem[]
+  VendorBill                 VendorBill[]
+  VendorBillItem             VendorBillItem[]
+  VendorCategory             VendorCategory[]
+  VendorContact              VendorContact[]
+  VendorPayment              VendorPayment[]
+  VendorPaymentItem          VendorPaymentItem[]
+  VendorProduct              VendorProduct[]
+  VendorStatement            VendorStatement[]
+  VendorTenantContact        VendorTenantContact[]
+}
+
+model TenantContact {
+  TenantContactID        BigInt                  @id(map: "PK_TenantContact") @default(autoincrement())
+  MerchantID             BigInt
+  TenantID               BigInt
+  FullName               String?                 @db.VarChar(150)
+  Email                  String?                 @db.VarChar(150)
+  Phone                  String?                 @db.VarChar(150)
+  Mobile                 String?                 @db.VarChar(150)
+  Title                  String?                 @db.VarChar(150)
+  EnableLowBalanceAlert  Boolean?
+  EnableNewInvoiceAlert  Boolean?
+  EnablePaymentAlert     Boolean?
+  EnableAutoPaymentAlert Boolean?
+  EnableWeblogin         Boolean?
+  UserID                 BigInt
+  CreatedAuthID          BigInt
+  CreatedBy              String                  @db.VarChar(150)
+  CreatedDate            DateTime                @default(now()) @db.Timestamp(6)
+  ModifiedAuthID         BigInt?
+  ModifiedBy             String?                 @db.VarChar(150)
+  ModifiedDate           DateTime?               @default(now()) @db.Timestamp(6)
+  IsDeleted              Boolean                 @default(false)
+  DeletedAuthID          BigInt?
+  DeletedBy              String?                 @db.VarChar(150)
+  DeletedDate            DateTime?               @db.Timestamp(6)
+  CustomerTenantContact  CustomerTenantContact[]
+  GroupRole              GroupRole[]
+  Auth                   Auth                    @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant               Merchant                @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant                 Tenant                  @relation(fields: [TenantID], references: [TenantID])
+  User                   User                    @relation(fields: [UserID], references: [UserID])
+  VendorTenantContact    VendorTenantContact[]
+}
+
+model User {
+  UserID          BigInt            @id(map: "PK_User") @default(autoincrement())
+  MerchantID      BigInt
+  TenantID        BigInt
+  Username        String?           @db.VarChar(100)
+  DisplayName     String?           @db.VarChar(150)
+  CreatedAuthID   BigInt
+  CreatedBy       String            @db.VarChar(150)
+  CreatedDate     DateTime          @default(now()) @db.Timestamp(6)
+  ModifiedAuthID  BigInt?
+  ModifiedBy      String?           @db.VarChar(150)
+  ModifiedDate    DateTime?         @default(now()) @db.Timestamp(6)
+  IsDeleted       Boolean           @default(false)
+  DeletedAuthID   BigInt?
+  DeletedBy       String?           @db.VarChar(150)
+  DeletedDate     DateTime?         @db.Timestamp(6)
+  IsEnabled       Boolean?
+  BankAccountUser BankAccountUser[]
+  CustomerContact CustomerContact[]
+  GroupUser       GroupUser[]
+  TenantContact   TenantContact[]
+  Auth            Auth              @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant        Merchant          @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant          Tenant            @relation(fields: [TenantID], references: [TenantID])
+  VendorContact   VendorContact[]
+}
+
+model Vendor {
+  VendorID              BigInt                  @id(map: "PK_Vendor") @default(autoincrement())
+  MerchantID            BigInt
+  TenantID              BigInt
+  CurrencyID            BigInt
+  VendorCode            String                  @db.VarChar(100)
+  VendorName            String                  @db.VarChar(100)
+  Address1              String?                 @db.VarChar(100)
+  Address2              String?                 @db.VarChar(100)
+  City                  String?                 @db.VarChar(100)
+  State                 String                  @db.VarChar(100)
+  PostalCode            String?                 @db.VarChar(100)
+  Country               String                  @db.VarChar(100)
+  Phone                 String?                 @db.VarChar(100)
+  Email                 String?                 @db.VarChar(100)
+  Website               String?                 @db.VarChar(100)
+  CreatedAuthID         BigInt
+  CreatedBy             String                  @db.VarChar(150)
+  CreatedDate           DateTime                @default(now()) @db.Timestamp(6)
+  ModifiedAuthID        BigInt?
+  ModifiedBy            String?                 @db.VarChar(150)
+  ModifiedDate          DateTime?               @default(now()) @db.Timestamp(6)
+  IsDeleted             Boolean                 @default(false)
+  DeletedAuthID         BigInt?
+  DeletedBy             String?                 @db.VarChar(150)
+  DeletedDate           DateTime?               @db.Timestamp(6)
+  Asset                 Asset[]
+  CostList              CostList[]
+  CostListItem          CostListItem[]
+  ProposalVendorProduct ProposalVendorProduct[]
+  Quote                 Quote[]
+  Auth                  Auth                    @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency              Currency                @relation(fields: [CurrencyID], references: [CurrencyID])
+  Merchant              Merchant                @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant                Tenant                  @relation(fields: [TenantID], references: [TenantID])
+  VendorAccount         VendorAccount[]
+  VendorAccountBalance  VendorAccountBalance[]
+  VendorApproval        VendorApproval[]
+  VendorBill            VendorBill[]
+  VendorBillItem        VendorBillItem[]
+  VendorContact         VendorContact[]
+  VendorExpense         VendorExpense[]
+  VendorPayment         VendorPayment[]
+  VendorProduct         VendorProduct[]
+  VendorStatement       VendorStatement[]
+  VendorTenantContact   VendorTenantContact[]
+  VendorTransactionType VendorTransactionType[]
+}
+
+model VendorAccount {
+  VendorAccountID      BigInt                 @id(map: "PK_VendorAccount") @default(autoincrement())
+  MerchantID           BigInt
+  TenantID             BigInt
+  VendorID             BigInt
+  CurrencyID           BigInt
+  AccountNumber        String?                @db.VarChar(100)
+  AccountCode          String                 @db.VarChar(100)
+  DisplayName          String?                @db.VarChar(100)
+  AccountBalance       Float?
+  OpenedDate           DateTime?              @db.Timestamp(6)
+  Username             String?                @db.VarChar(100)
+  Password             String?                @db.VarChar(100)
+  CreatedAuthID        BigInt
+  CreatedBy            String                 @db.VarChar(150)
+  CreatedDate          DateTime               @default(now()) @db.Timestamp(6)
+  ModifiedAuthID       BigInt?
+  ModifiedBy           String?                @db.VarChar(150)
+  ModifiedDate         DateTime?              @default(now()) @db.Timestamp(6)
+  IsDeleted            Boolean                @default(false)
+  DeletedAuthID        BigInt?
+  DeletedBy            String?                @db.VarChar(150)
+  DeletedDate          DateTime?              @db.Timestamp(6)
+  Auth                 Auth                   @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency             Currency               @relation(fields: [CurrencyID], references: [CurrencyID])
+  Merchant             Merchant               @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant               Tenant                 @relation(fields: [TenantID], references: [TenantID])
+  Vendor               Vendor                 @relation(fields: [VendorID], references: [VendorID])
+  VendorAccountBalance VendorAccountBalance[]
+  VendorPayment        VendorPayment[]
+  VendorStatement      VendorStatement[]
+}
+
+model VendorAccountBalance {
+  VendorAccountBalanceID BigInt        @id(map: "PK_VendorAccountBalance") @default(autoincrement())
+  MerchantID             BigInt
+  TenantID               BigInt
+  VendorAccountID        BigInt
+  VendorID               BigInt
+  PostedDate             DateTime?     @db.Timestamp(6)
+  AccountBalance         Float?
+  Currency               String?       @db.VarChar(100)
+  CreatedAuthID          BigInt
+  CreatedBy              String        @db.VarChar(150)
+  CreatedDate            DateTime      @default(now()) @db.Timestamp(6)
+  ModifiedAuthID         BigInt?
+  ModifiedBy             String?       @db.VarChar(150)
+  ModifiedDate           DateTime?     @default(now()) @db.Timestamp(6)
+  IsDeleted              Boolean       @default(false)
+  DeletedAuthID          BigInt?
+  DeletedBy              String?       @db.VarChar(150)
+  DeletedDate            DateTime?     @db.Timestamp(6)
+  Auth                   Auth          @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant               Merchant      @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant                 Tenant        @relation(fields: [TenantID], references: [TenantID])
+  VendorAccount          VendorAccount @relation(fields: [VendorAccountID], references: [VendorAccountID])
+  Vendor                 Vendor        @relation(fields: [VendorID], references: [VendorID])
+}
+
+model VendorApproval {
+  VendorApprovalID     BigInt               @id(map: "PK_VendorApproval") @default(autoincrement())
+  MerchantID           BigInt
+  TenantID             BigInt
+  VendorID             BigInt
+  ProjectID            BigInt
+  CustomerID           BigInt
+  CustomerUser         String?              @db.VarChar(100)
+  TenantUser           String?              @db.VarChar(100)
+  AssignedToUserTypeID BigInt?
+  AssignedToUserType   String?              @db.VarChar(100)
+  AssignedByUser       String?              @db.VarChar(100)
+  ApprovalStatusID     BigInt?
+  ApprovalStatus       String?              @db.VarChar(100)
+  Description          String?              @db.VarChar(100)
+  CreatedAuthID        BigInt
+  CreatedBy            String               @db.VarChar(150)
+  CreatedDate          DateTime             @default(now()) @db.Timestamp(6)
+  ModifiedAuthID       BigInt?
+  ModifiedBy           String?              @db.VarChar(150)
+  ModifiedDate         DateTime?            @default(now()) @db.Timestamp(6)
+  IsDeleted            Boolean              @default(false)
+  DeletedAuthID        BigInt?
+  DeletedBy            String?              @db.VarChar(150)
+  DeletedDate          DateTime?            @db.Timestamp(6)
+  Auth                 Auth                 @relation(fields: [CreatedAuthID], references: [AuthID])
+  Customer             Customer             @relation(fields: [CustomerID], references: [CustomerID])
+  Merchant             Merchant             @relation(fields: [MerchantID], references: [MerchantID])
+  Project              Project              @relation(fields: [ProjectID], references: [ProjectID])
+  Tenant               Tenant               @relation(fields: [TenantID], references: [TenantID])
+  Vendor               Vendor               @relation(fields: [VendorID], references: [VendorID])
+  VendorApprovalItem   VendorApprovalItem[]
+}
+
+model VendorApprovalItem {
+  VendorApprovalItemID BigInt         @id(map: "PK_VendorApprovalItem") @default(autoincrement())
+  VendorApprovalID     BigInt
+  MerchantID           BigInt
+  TenantID             BigInt
+  VendorID             BigInt
+  ItemType             String?        @db.VarChar(100)
+  ItemReference        String?        @db.VarChar(100)
+  VendorExpenseID      BigInt?
+  VendorBillID         BigInt?
+  VendorStatementID    String?        @db.VarChar(10)
+  CreatedAuthID        BigInt
+  CreatedBy            String         @db.VarChar(150)
+  CreatedDate          DateTime       @default(now()) @db.Timestamp(6)
+  ModifiedAuthID       BigInt?
+  ModifiedBy           String?        @db.VarChar(150)
+  ModifiedDate         DateTime?      @default(now()) @db.Timestamp(6)
+  IsDeleted            Boolean        @default(false)
+  DeletedAuthID        BigInt?
+  DeletedBy            String?        @db.VarChar(150)
+  DeletedDate          DateTime?      @db.Timestamp(6)
+  Auth                 Auth           @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant             Merchant       @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant               Tenant         @relation(fields: [TenantID], references: [TenantID])
+  VendorApproval       VendorApproval @relation(fields: [VendorApprovalID], references: [VendorApprovalID])
+}
+
+model VendorBill {
+  VendorBillID      BigInt              @id(map: "PK_VendorBill") @default(autoincrement())
+  MerchantID        BigInt
+  TenantID          BigInt
+  VendorID          BigInt
+  ProjectID         BigInt
+  CustomerID        BigInt
+  CurrencyID        BigInt
+  BillDate          DateTime?           @db.Timestamp(6)
+  BillStatus        String?             @db.VarChar(100)
+  ProductCharges    Float?
+  BackupCharges     Float?
+  Adjustment        Float?
+  SalesTax          Float?
+  InvoiceAmount     Float?
+  BalanceDue        Float?
+  Remarks           String?             @db.VarChar(500)
+  CreatedAuthID     BigInt
+  CreatedBy         String              @db.VarChar(150)
+  CreatedDate       DateTime            @default(now()) @db.Timestamp(6)
+  ModifiedAuthID    BigInt?
+  ModifiedBy        String?             @db.VarChar(150)
+  ModifiedDate      DateTime?           @default(now()) @db.Timestamp(6)
+  IsDeleted         Boolean             @default(false)
+  DeletedAuthID     BigInt?
+  DeletedBy         String?             @db.VarChar(150)
+  DeletedDate       DateTime?           @db.Timestamp(6)
+  Asset             Asset[]
+  Auth              Auth                @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency          Currency            @relation(fields: [CurrencyID], references: [CurrencyID])
+  Customer          Customer            @relation(fields: [CustomerID], references: [CustomerID])
+  Merchant          Merchant            @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant            Tenant              @relation(fields: [TenantID], references: [TenantID])
+  Vendor            Vendor              @relation(fields: [VendorID], references: [VendorID])
+  VendorBillItem    VendorBillItem[]
+  VendorPaymentItem VendorPaymentItem[]
+}
+
+model VendorBillItem {
+  VendorBillItemID BigInt     @id(map: "PK_VendorBillItem") @default(autoincrement())
+  MerchantID       BigInt
+  TenantID         BigInt
+  VendorID         BigInt
+  ProjectID        BigInt
+  VendorBillID     BigInt
+  CustomerID       BigInt
+  ProductID        BigInt
+  CurrencyID       BigInt
+  Qty              BigInt?
+  Rate             Float?
+  Total            Float?
+  CreatedAuthID    BigInt
+  CreatedBy        String     @db.VarChar(150)
+  CreatedDate      DateTime   @default(now()) @db.Timestamp(6)
+  ModifiedAuthID   BigInt?
+  ModifiedBy       String?    @db.VarChar(150)
+  ModifiedDate     DateTime?  @default(now()) @db.Timestamp(6)
+  IsDeleted        Boolean    @default(false)
+  DeletedAuthID    BigInt?
+  DeletedBy        String?    @db.VarChar(150)
+  DeletedDate      DateTime?  @db.Timestamp(6)
+  Auth             Auth       @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency         Currency   @relation(fields: [CurrencyID], references: [CurrencyID])
+  Customer         Customer   @relation(fields: [CustomerID], references: [CustomerID])
+  Merchant         Merchant   @relation(fields: [MerchantID], references: [MerchantID])
+  Product          Product    @relation(fields: [ProductID], references: [ProductID])
+  Project          Project    @relation(fields: [ProjectID], references: [ProjectID])
+  Tenant           Tenant     @relation(fields: [TenantID], references: [TenantID])
+  VendorBill       VendorBill @relation(fields: [VendorBillID], references: [VendorBillID])
+  Vendor           Vendor     @relation(fields: [VendorID], references: [VendorID])
+}
+
+model VendorCategory {
+  VendorCategoryID BigInt    @id(map: "PK_VendorCategory") @default(autoincrement())
+  MerchantID       BigInt
+  TenantID         BigInt
+  VendorCategory   String?   @db.VarChar(100)
+  CreatedAuthID    BigInt
+  CreatedBy        String    @db.VarChar(150)
+  CreatedDate      DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID   BigInt?
+  ModifiedBy       String?   @db.VarChar(150)
+  ModifiedDate     DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted        Boolean   @default(false)
+  DeletedAuthID    BigInt?
+  DeletedBy        String?   @db.VarChar(150)
+  DeletedDate      DateTime? @db.Timestamp(6)
+  Auth             Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant         Merchant  @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant           Tenant    @relation(fields: [TenantID], references: [TenantID])
+}
+
+model VendorContact {
+  VendorContactID        BigInt                @id(map: "PK_VendorContact") @default(autoincrement())
+  MerchantID             BigInt
+  TenantID               BigInt
+  VendorID               BigInt
+  FullName               String?               @db.VarChar(150)
+  Email                  String?               @db.VarChar(150)
+  Phone                  String?               @db.VarChar(150)
+  Mobile                 String?               @db.VarChar(150)
+  Title                  String?               @db.VarChar(150)
+  EnableLowBalanceAlert  Boolean?
+  EnableNewInvoiceAlert  Boolean?
+  EnablePaymentAlert     Boolean?
+  EnableAutoPaymentAlert Boolean?
+  EnableWeblogin         Boolean?
+  UserID                 BigInt
+  CreatedAuthID          BigInt
+  CreatedBy              String                @db.VarChar(150)
+  CreatedDate            DateTime              @default(now()) @db.Timestamp(6)
+  ModifiedAuthID         BigInt?
+  ModifiedBy             String?               @db.VarChar(150)
+  ModifiedDate           DateTime?             @default(now()) @db.Timestamp(6)
+  IsDeleted              Boolean               @default(false)
+  DeletedAuthID          BigInt?
+  DeletedBy              String?               @db.VarChar(150)
+  DeletedDate            DateTime?             @db.Timestamp(6)
+  Auth                   Auth                  @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant               Merchant              @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant                 Tenant                @relation(fields: [TenantID], references: [TenantID])
+  User                   User                  @relation(fields: [UserID], references: [UserID])
+  Vendor                 Vendor                @relation(fields: [VendorID], references: [VendorID])
+  VendorTenantContact    VendorTenantContact[]
+}
+
+model VendorExpense {
+  VendorExpenseID         BigInt                @id(map: "PK_VendorExpense") @default(autoincrement())
+  VendorID                BigInt
+  VendorTransactionTypeID BigInt
+  Description             String?               @db.VarChar(100)
+  PaymentMethodID         BigInt
+  CurrencyID              BigInt
+  PaidAmount              Float?
+  CreatedAuthID           BigInt
+  CreatedBy               String                @db.VarChar(150)
+  CreatedDate             DateTime              @default(now()) @db.Timestamp(6)
+  ModifiedAuthID          BigInt
+  ModifiedBy              String                @db.VarChar(150)
+  ModifiedDate            DateTime              @default(now()) @db.Timestamp(6)
+  IsDeleted               Boolean               @default(false)
+  DeletedAuthID           BigInt?
+  DeletedBy               String?               @db.VarChar(150)
+  DeletedDate             DateTime?             @db.Timestamp(6)
+  Auth                    Auth                  @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency                Currency              @relation(fields: [CurrencyID], references: [CurrencyID])
+  PaymentMethod           PaymentMethod         @relation(fields: [PaymentMethodID], references: [PaymentMethodID])
+  Vendor                  Vendor                @relation(fields: [VendorID], references: [VendorID])
+  VendorTransactionType   VendorTransactionType @relation(fields: [VendorTransactionTypeID], references: [VendorTransactionTypeID])
+  VendorPaymentItem       VendorPaymentItem[]
+}
+
+model VendorPayment {
+  VendorPaymentID         BigInt                @id(map: "PK_VendorPayment") @default(autoincrement())
+  MerchantID              BigInt
+  TenantID                BigInt
+  VendorID                BigInt
+  VendorAccountID         BigInt
+  CurrencyID              BigInt
+  VendorTransactionTypeID BigInt
+  PaidDate                DateTime?             @db.Timestamp(6)
+  PaidAmount              Float?
+  Remarks                 String?               @db.VarChar(100)
+  PaymentMethodID         BigInt
+  PaymentStatusID         BigInt
+  BankAccountID           BigInt
+  ReferenceCode           String?               @db.VarChar(100)
+  ReferenceDescription    String?               @db.VarChar(100)
+  ConfirmationNumber      String?               @db.VarChar(100)
+  ConfirmationScreenShot  String?               @db.VarChar(100)
+  CreatedAuthID           BigInt
+  CreatedBy               String                @db.VarChar(150)
+  CreatedDate             DateTime              @default(now()) @db.Timestamp(6)
+  ModifiedAuthID          BigInt?
+  ModifiedBy              String?               @db.VarChar(150)
+  ModifiedDate            DateTime?             @default(now()) @db.Timestamp(6)
+  IsDeleted               Boolean               @default(false)
+  DeletedAuthID           BigInt?
+  DeletedBy               String?               @db.VarChar(150)
+  DeletedDate             DateTime?             @db.Timestamp(6)
+  BankAccount             BankAccount           @relation(fields: [BankAccountID], references: [BankAccountID])
+  Auth                    Auth                  @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency                Currency              @relation(fields: [CurrencyID], references: [CurrencyID])
+  Merchant                Merchant              @relation(fields: [MerchantID], references: [MerchantID])
+  PaymentMethod           PaymentMethod         @relation(fields: [PaymentMethodID], references: [PaymentMethodID])
+  PaymentStatus           PaymentStatus         @relation(fields: [PaymentStatusID], references: [PaymentStatusID])
+  Tenant                  Tenant                @relation(fields: [TenantID], references: [TenantID])
+  VendorAccount           VendorAccount         @relation(fields: [VendorAccountID], references: [VendorAccountID])
+  Vendor                  Vendor                @relation(fields: [VendorID], references: [VendorID])
+  VendorTransactionType   VendorTransactionType @relation(fields: [VendorTransactionTypeID], references: [VendorTransactionTypeID])
+  VendorPaymentItem       VendorPaymentItem[]
+}
+
+model VendorPaymentItem {
+  VendorPaymentItemID                     BigInt               @id(map: "PK_VendorPaymentItem") @default(autoincrement())
+  MerchantID                              BigInt
+  TenantID                                BigInt
+  VendorPaymentID                         BigInt
+  CurrencyID                              BigInt
+  ReferenceType                           String?              @db.VarChar(100)
+  ReferenceNumber                         String?              @db.VarChar(100)
+  VendorBillID                            BigInt
+  VendorExpenseID                         BigInt
+  VendorStatementID                       BigInt
+  PaidAmount                              Float?
+  Remarks                                 String?              @db.VarChar(100)
+  CreatedAuthID                           BigInt
+  CreatedBy                               String               @db.VarChar(150)
+  CreatedDate                             DateTime             @default(now()) @db.Timestamp(6)
+  ModifiedAuthID                          BigInt?
+  ModifiedBy                              String?              @db.VarChar(150)
+  ModifiedDate                            DateTime?            @default(now()) @db.Timestamp(6)
+  IsDeleted                               Boolean              @default(false)
+  DeletedAuthID                           BigInt?
+  DeletedBy                               String?              @db.VarChar(150)
+  DeletedDate                             DateTime?            @db.Timestamp(6)
+  vendorTenantContactVendorTenentConactID BigInt?
+  Auth                                    Auth                 @relation(fields: [CreatedAuthID], references: [AuthID])
+  Currency                                Currency             @relation(fields: [CurrencyID], references: [CurrencyID])
+  Merchant                                Merchant             @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant                                  Tenant               @relation(fields: [TenantID], references: [TenantID])
+  VendorBill                              VendorBill           @relation(fields: [VendorBillID], references: [VendorBillID])
+  VendorExpense                           VendorExpense        @relation(fields: [VendorExpenseID], references: [VendorExpenseID])
+  VendorPayment                           VendorPayment        @relation(fields: [VendorPaymentID], references: [VendorPaymentID])
+  VendorStatement                         VendorStatement      @relation(fields: [VendorStatementID], references: [VendorStatementID])
+  VendorTenantContact                     VendorTenantContact? @relation(fields: [vendorTenantContactVendorTenentConactID], references: [VendorTenentConactID])
+}
+
+model VendorPaymentLog {
+  VendorPaymentLogID BigInt    @id(map: "PK_VendorPaymentLog") @default(autoincrement())
+  VendorPaymentID    BigInt
+  LogMessage         String?   @db.VarChar(1500)
+  CreatedAuthID      BigInt
+  CreatedBy          String    @db.VarChar(150)
+  CreatedDate        DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID     BigInt?
+  ModifiedBy         String?   @db.VarChar(150)
+  ModifiedDate       DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted          Boolean   @default(false)
+  DeletedAuthID      BigInt?
+  DeletedBy          String?   @db.VarChar(150)
+  DeletedDate        DateTime? @db.Timestamp(6)
+  Auth               Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+}
+
+model VendorProduct {
+  VendorProductID   BigInt    @id(map: "PK_VendorProduct") @default(autoincrement())
+  MerchantID        BigInt
+  TenantID          BigInt
+  ProductID         BigInt
+  VendorID          BigInt
+  VendorProductCode String    @db.VarChar(100)
+  IsActive          Boolean?
+  DiscontinueDate   DateTime? @db.Date
+  InactiveDate      DateTime? @db.Date
+  Remarks           String?   @db.VarChar(100)
+  CreatedAuthID     BigInt
+  CreatedBy         String    @db.VarChar(150)
+  CreatedDate       DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedAuthID    BigInt?
+  ModifiedBy        String?   @db.VarChar(150)
+  ModifiedDate      DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted         Boolean   @default(false)
+  DeletedAuthID     BigInt?
+  DeletedBy         String?   @db.VarChar(150)
+  DeletedDate       DateTime? @db.Timestamp(6)
+  Auth              Auth      @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant          Merchant  @relation(fields: [MerchantID], references: [MerchantID])
+  Product           Product   @relation(fields: [ProductID], references: [ProductID])
+  Tenant            Tenant    @relation(fields: [TenantID], references: [TenantID])
+  Vendor            Vendor    @relation(fields: [VendorID], references: [VendorID])
+}
+
+model VendorStatement {
+  VendorStatementID BigInt              @id(map: "PK_VendorStatement") @default(autoincrement())
+  VendorID          BigInt
+  VendorAccountID   BigInt
+  MerchantID        BigInt
+  TenantID          BigInt
+  PeriodStart       DateTime?           @db.Date
+  PeriodEnd         DateTime?           @db.Date
+  TimeZone          String?             @db.VarChar(100)
+  DisplayName       String?             @db.VarChar(100)
+  Remarks           String?             @db.VarChar(100)
+  PostedDate        DateTime?           @db.Date
+  CreatedAuthID     BigInt
+  CreatedBy         String              @db.VarChar(150)
+  CreatedDate       DateTime            @default(now()) @db.Timestamp(6)
+  ModifiedAuthID    BigInt?
+  ModifiedBy        String?             @db.VarChar(150)
+  ModifiedDate      DateTime?           @default(now()) @db.Timestamp(6)
+  IsDeleted         Boolean             @default(false)
+  DeletedAuthID     BigInt?
+  DeletedBy         String?             @db.VarChar(150)
+  DeletedDate       DateTime?           @db.Timestamp(6)
+  VendorPaymentItem VendorPaymentItem[]
+  Auth              Auth                @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant          Merchant            @relation(fields: [MerchantID], references: [MerchantID])
+  Tenant            Tenant              @relation(fields: [TenantID], references: [TenantID])
+  VendorAccount     VendorAccount       @relation(fields: [VendorAccountID], references: [VendorAccountID])
+  Vendor            Vendor              @relation(fields: [VendorID], references: [VendorID])
+}
+
+model VendorTenantContact {
+  VendorTenentConactID         BigInt              @id(map: "PK_VendorTenantContact") @default(autoincrement())
+  VendorID                     BigInt
+  TenantContactID              BigInt
+  MerchantID                   BigInt
+  TenantID                     BigInt
+  FullName                     String?             @db.VarChar(150)
+  Email                        String?             @db.VarChar(150)
+  IsEnabled                    Boolean?
+  EnabledDate                  DateTime?           @default(now()) @db.Timestamp(6)
+  DisabledDate                 DateTime?           @default(now()) @db.Timestamp(6)
+  CreatedAuthID                BigInt
+  CreatedBy                    String              @db.VarChar(150)
+  CreatedDate                  DateTime            @default(now()) @db.Timestamp(6)
+  ModifiedAuthID               BigInt?
+  ModifiedBy                   String?             @db.VarChar(150)
+  ModifiedDate                 DateTime?           @default(now()) @db.Timestamp(6)
+  IsDeleted                    Boolean             @default(false)
+  DeletedAuthID                BigInt?
+  DeletedBy                    String?             @db.VarChar(150)
+  DeletedDate                  DateTime?           @db.Timestamp(6)
+  vendorContactVendorContactID BigInt?
+  VendorPaymentItem            VendorPaymentItem[]
+  Auth                         Auth                @relation(fields: [CreatedAuthID], references: [AuthID])
+  Merchant                     Merchant            @relation(fields: [MerchantID], references: [MerchantID])
+  TenantContact                TenantContact       @relation(fields: [TenantContactID], references: [TenantContactID])
+  Tenant                       Tenant              @relation(fields: [TenantID], references: [TenantID])
+  Vendor                       Vendor              @relation(fields: [VendorID], references: [VendorID])
+  VendorContact                VendorContact?      @relation(fields: [vendorContactVendorContactID], references: [VendorContactID])
+}
+
+model VendorTransactionType {
+  VendorTransactionTypeID BigInt          @id(map: "PK_VendorTransactionType") @default(autoincrement())
+  VendorID                BigInt
+  CreatedAuthID           BigInt
+  CreatedBy               String          @db.VarChar(150)
+  CreatedDate             DateTime        @default(now()) @db.Timestamp(6)
+  ModifiedAuthID          BigInt?
+  ModifiedBy              String?         @db.VarChar(150)
+  ModifiedDate            DateTime?       @default(now()) @db.Timestamp(6)
+  IsDeleted               Boolean         @default(false)
+  DeletedAuthID           BigInt?
+  DeletedBy               String?         @db.VarChar(150)
+  DeletedDate             DateTime?       @db.Timestamp(6)
+  VendorExpense           VendorExpense[]
+  VendorPayment           VendorPayment[]
+  Auth                    Auth            @relation(fields: [CreatedAuthID], references: [AuthID])
+  Vendor                  Vendor          @relation(fields: [VendorID], references: [VendorID])
+}

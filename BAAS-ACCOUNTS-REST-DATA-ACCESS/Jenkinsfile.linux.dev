@@ -1,0 +1,128 @@
+// CreatedBy    : Dinesh
+// CreatedTime  : 05 Jan 2022
+// ModifiedBy   : Dinesh
+// ModifiedTime : 05 Jan 2022
+// Description  : This file contains all the instruction for jenkins pipeline
+
+
+// Pipeline configurations
+def AGENT_SERVER = "Dev-Server-Ubuntu"
+def EMAIL_TO_LIST = "dineshpandian@alitasys.com,petchimuthu@alitasys.com,karthick@alitasys.com,Harish@alitasys.com,harish.raj@alitasys.com"
+
+def CONFIG_REPO_NAME = "ACCOUNTS-CONFIG"
+def CONFIG_REPO_BRANCH = "develop"
+def CONFIG_REPO_FOLDER = "AccountsRestDataAccess"
+def CONFIG_REPO_URL = "https://dinesh:uk4rcqkpjbxv3agflrdj4lv7ytdh5vuxyxxhlu4okqec2hthelqa@dev.azure.com/goveindia/Baas-360/_git/PLATFORM-CONFIG"
+
+// Global Variables
+
+pipeline {
+    agent { label "${AGENT_SERVER}" }
+    tools {nodejs "node"}
+
+    stages { 
+        stage('PRE-DEPLOYMENT EMAIL') {
+            steps {
+                script {
+                    mail to: "${EMAIL_TO_LIST}",
+                    subject: "${currentBuild.fullDisplayName} : DEPLOYMENT STARTS",
+                    body: "Automated Deployment for ${currentBuild.fullDisplayName} has been initiated by code change in the Develop branch, please stand by, an email will be sent after deployment has been completed."
+                }
+            }
+        }
+        stage('INSTALLING THE DEPENDENCIES') {
+            steps {
+                script{
+                    catchError {
+                        sh 'npm install'
+                    }
+                }
+            }
+        } 
+        stage('SETTING UP ALL THE CONFIGURATIONS') {
+            steps {
+                script{
+                    catchError {
+                        sh "node command.js deleteFolder ${CONFIG_REPO_NAME}"
+                    }
+                    catchError {
+                        sh "git clone --recurse-submodules ${CONFIG_REPO_URL} -b ${CONFIG_REPO_BRANCH}"
+                    }
+                    catchError {
+                        sh "node command.js copyFilesToRoot  ${CONFIG_REPO_NAME}/${CONFIG_REPO_FOLDER} package.json"
+                    }
+                    catchError {
+                        sh "node command.js copyFilesToRoot  ${CONFIG_REPO_NAME}/${CONFIG_REPO_FOLDER} .env"
+                    }
+                    catchError {
+                        sh "node command.js copyFilesToRoot  ${CONFIG_REPO_NAME}/${CONFIG_REPO_FOLDER} .npmrc"
+                    }
+                    catchError {
+                        sh "node command.js copyFilesToRoot  ${CONFIG_REPO_NAME}/${CONFIG_REPO_FOLDER} Dockerfile" 
+                    }
+                    catchError {
+                        sh "node command.js copyFilesToRoot  ${CONFIG_REPO_NAME}/${CONFIG_REPO_FOLDER} config.js"
+                    }
+                    catchError {
+                        sh "node command.js deleteFolder ${CONFIG_REPO_NAME}"
+                    }
+                }
+            }
+        }
+        stage('STOPPING THE CURRENTLY RUNNING CONTAINER') {
+            steps {
+                script{
+                    catchError {
+                        sh 'npm run docker-stop-container'
+                    }
+                }
+            }
+        }
+        stage('DELETING THE STOPPED CONTAINER') {
+            steps{
+                script{
+                    catchError {
+                        sh 'npm run docker-delete-container'
+                    }
+                }
+            }
+        }
+        stage('DELETING THE IMAGE OF THE CONTAINER') {
+            steps{
+                script{
+                    catchError {
+                        sh 'npm run docker-delete-image'
+                    }
+                }
+
+            }
+        }
+        stage('BUILDING A NEW IMAGE FROM SOURCE CODE') {
+            steps{
+                script{
+                    catchError{
+                        sh 'npm run docker-build-image' 
+                    }
+                }
+            }
+        }
+        stage('RUNNING A NEW CONATINER FROM NEW IMAGE') {
+            steps{
+                script{
+                    catchError{
+                        sh 'npm run docker-start-new-container'
+                    }
+                }
+            }
+        }
+        stage('POST-DEPLOYMENT EMAIL') {
+            steps{
+                script{
+                    mail to: "${EMAIL_TO_LIST}",
+                    subject: "${currentBuild.fullDisplayName} : DEPLOYMENT ENDS",
+                    body: "Automated Deployment for ${currentBuild.fullDisplayName} has been completed $GIT_AUTHOR_NAME ,latest code has been deployed, Happy coding!!"
+                }
+            }
+        }
+    }
+}
