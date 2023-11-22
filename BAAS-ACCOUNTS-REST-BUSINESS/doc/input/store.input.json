@@ -1,0 +1,73 @@
+{
+  "accounts.api.rest.business.store.add.v1": {
+    "Input": {
+      "UserInfo": {
+        "MerchantID": 1,
+        "TenantID": 1,
+        "CreatedAuthID": 1,
+        "CreatedBy": "dinesh",
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "dinesh"
+      },
+      "StoreInfo": {
+        "StoreTypeID": 1,
+        "StoreName": "Finance",
+        "StoreCode": "FINANCE",
+        "StartDate": "2023-11-09T12:25:30.673Z"
+      }
+    }
+  },
+  "accounts.api.rest.business.store.change.v1": {
+    "Input": {
+      "UserInfo": {
+        "MerchantID": 1,
+        "TenantID": 1,
+        "CreatedAuthID": 1,
+        "CreatedBy": "dinesh",
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "dinesh"
+      },
+      "StoreInfo": {
+        "StoreID": 1,
+        "StoreName": "Bank",
+        "StoreCode": "BANK"
+      }
+    }
+  },
+  "accounts.api.rest.business.store.removepricelist.v1": {
+    "Input": {
+      "UserInfo": {
+        "CreatedAuthID": 1,
+        "CreatedBy": "dinesh",
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "dinesh"
+      },
+      "PricelistInfo": {
+        "PriceListID": 1,
+        "StoreID": 1,
+        "IsEnabled": true
+      }
+    }
+  },
+  "accounts.api.rest.business.store.changeeffectivedate.v1": {
+    "input": {
+      "UserInfo": {
+        "MerchantID": 1,
+        "TenantID": 1,
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "dinesh",
+        "DeletedAuthID": 1,
+        "DeletedBy": "dinesh",
+        "DeletedDate": "2020-04-23T00:54:16.000Z"
+      },
+      "PricelistInfo": {
+        "StoreID": 1
+      }
+    }
+  },
+  "accounts.api.rest.business.store.enable.v1": {
+    "input": {
+      "StoreID": 1
+    }
+  }
+}

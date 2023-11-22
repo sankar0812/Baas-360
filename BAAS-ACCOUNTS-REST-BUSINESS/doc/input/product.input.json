@@ -1,0 +1,349 @@
+{
+  "accounts.api.rest.business.product.add.v1": {
+    "Input": {
+      "UserInfo": {
+        "MerchantID": 2,
+        "TenantID": 1,
+        "CreatedAuthID": 1,
+        "CreatedBy": "dinesh",
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "dinesh"
+      },
+      "ProductInfo": {
+        "ProductName": "Toll Agency Toll Charges",
+        "ProductCode": "TA-TOLL-CHG",
+        "ParentProductID": null,
+        "AppSettingUomID": 1,
+        "CurrencyID": 1,
+        "BaseSaleRate": "200",
+        "ComparisionSaleRate": ""
+      }
+    },
+    "accounts.api.rest.business.product.add.v1": {
+      "Input": {
+        "UserInfo": {
+          "MerchantID": 2,
+          "TenantID": 1,
+          "CreatedAuthID": 1,
+          "CreatedBy": "dinesh",
+          "ModifiedAuthID": 1,
+          "ModifiedBy": "dinesh"
+        },
+        "ProductInfo": {
+          "ProductName": "Toll Agency Toll Charges",
+          "ProductCode": "TA-TOLL-CHG",
+          "ParentProductID": null,
+          "AppSettingUomID": 1,
+          "CurrencyID": 1,
+          "BaseSaleRate": "200",
+          "ComparisionSaleRate": ""
+        }
+      }
+    },
+    "accounts.api.rest.business.product.addpackage.v1": {
+      "Input": {
+        "UserInfo": {
+          "CreatedAuthID": 1,
+          "CreatedBy": "dinesh",
+          "ModifiedAuthID": 1,
+          "ModifiedBy": "dinesh"
+        },
+        "PackageInfo": {
+          "ProductID": 6,
+          "PackageTypeID": 1,
+          "Length": "50",
+          "LengthUom": "10",
+          "Width": "50",
+          "WidthUom": "10",
+          "Height": "50",
+          "HeightUom": "10",
+          "Weight": "20",
+          "WeightUom": "kg",
+          "PackageCount": "15"
+        }
+      }
+    },
+    "accounts.api.rest.business.product.addblukdiscount.v1": {
+      "Input": {
+        "UserInfo": {
+          "CreatedAuthID": 1,
+          "CreatedBy": "dinesh",
+          "ModifiedAuthID": 1,
+          "ModifiedBy": "dinesh",
+          "MerchantID": 1,
+          "TenantID": 1,
+          "CurrencyID": 1,
+          "ProductID": 1
+        },
+        "BlukDiscountInfo": [
+          {
+            "RangeMin": 1,
+            "RangeMax": 10,
+            "DiscountPeriod": "Month",
+            "DiscountType": "Annual",
+            "DiscountPercent": 10.4,
+            "DiscountRate": 10,
+            "Description": "Sample"
+          },
+          {
+            "RangeMin": 10,
+            "RangeMax": 100,
+            "DiscountPeriod": "Month",
+            "DiscountType": "Annual",
+            "DiscountPercent": 10.4,
+            "DiscountRate": 10,
+            "Description": "Sample"
+          }
+        ]
+      }
+    },
+    "accounts.api.rest.business.product.update.v1": {
+      "Input": {
+        "ProductID": 1,
+        "ProductName": "Toll Agency Toll Charges",
+        "ProductCode": "TA-TOLL-CHG",
+        "ProductUPC": "null",
+        "ProductSKU": "null",
+        "BaseSaleRate": "200",
+        "ComparisionSaleRate": "",
+        "CurrencyID": 1,
+        "AppSettingUomID": 1,
+        "IsGoods": null,
+        "IsService": null,
+        "StockLimit": "",
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "Dinesh"
+      }
+    },
+    "accounts.api.rest.business.product.addcategory.v1": {
+      "Input": {
+        "UserInfo": {
+          "CreatedAuthID": 1,
+          "CreatedBy": "dinesh",
+          "ModifiedAuthID": 1,
+          "ModifiedBy": "dinesh"
+        },
+        "CategoryInfo": [
+          {
+            "ProductID": 1,
+            "CategoryID": 1,
+            "Remarks": " "
+          },
+          {
+            "ProductID": 2,
+            "CategoryID": 2,
+            "Remarks": " "
+          }
+        ]
+      }
+    },
+    "accounts.api.rest.business.product.changepackage.v1": {
+      "Input": {
+        "ProductPackageID": 1,
+        "IsEnabled": true,
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "dinesh"
+      }
+    },
+    "accounts.api.rest.business.product.removepackage.v1": {
+      "Input": {
+        "ProductPackageID": 1,
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "Dinesh",
+        "DeletedAuthID": 1,
+        "DeletedBy": "Dinesh"
+      }
+    },
+    "accounts.api.rest.business.product.changeparentproduct.v1": {
+      "Input": {
+        "ProductID": 1,
+        "ParentProductID": 2,
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "dinesh"
+      }
+    },
+    "accounts.api.rest.business.product.removecategory.v1": {
+      "Input": {
+        "ProductCategoryID": 1,
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "Dinesh",
+        "DeletedAuthID": 1,
+        "DeletedBy": "Dinesh"
+      }
+    },
+    "accounts.api.rest.business.product.enablesale.v1": {
+      "Input": {
+        "ProductID": 1,
+        "IsSellable": true,
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "dinesh"
+      }
+    },
+    "accounts.api.rest.business.product.disablesale.v1": {
+      "Input": {
+        "ProductID": 1,
+        "IsSellable": false,
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "dinesh"
+      }
+    },
+    "accounts.api.rest.business.product.enablepurchase.v1": {
+      "Input": {
+        "ProductID": 1,
+        "IsPurchase": true,
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "dinesh"
+      }
+    },
+    "accounts.api.rest.business.product.disablepurchase.v1": {
+      "Input": {
+        "ProductID": 1,
+        "IsPurchase": false,
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "dinesh"
+      }
+    },
+    "accounts.api.rest.business.product.removebulkdiscount.v1": {
+      "Input": {
+        "ProductBulkDiscountID": 1,
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "Dinesh",
+        "DeletedAuthID": 1,
+        "DeletedBy": "Dinesh"
+      }
+    }
+  },
+  "accounts.api.rest.business.product.addpackage.v1": {
+    "Input": {
+      "UserInfo": {
+        "CreatedAuthID": 1,
+        "CreatedBy": "dinesh",
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "dinesh"
+      },
+      "PackageInfo": {
+        "ProductID": 6,
+        "PackageTypeID": 1,
+        "Length": "50",
+        "LengthUom": "10",
+        "Width": "50",
+        "WidthUom": "10",
+        "Height": "50",
+        "HeightUom": "10",
+        "Weight": "20",
+        "WeightUom": "kg",
+        "PackageCount": "15"
+      }
+    }
+  },
+  "accounts.api.rest.business.product.addblukdiscount.v1": {
+    "Input": {
+      "UserInfo": {
+        "CreatedAuthID": 1,
+        "CreatedBy": "dinesh",
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "dinesh",
+        "MerchantID": 1,
+        "TenantID": 1,
+        "CurrencyID": 1,
+        "ProductID": 1
+      },
+      "BlukDiscountInfo": [
+        {
+          "RangeMin": 1,
+          "RangeMax": 10,
+          "DiscountPeriod": "Month",
+          "DiscountType": "Annual",
+          "DiscountPercent": 10.4,
+          "DiscountRate": 10,
+          "Description": "Sample"
+        },
+        {
+          "RangeMin": 10,
+          "RangeMax": 100,
+          "DiscountPeriod": "Month",
+          "DiscountType": "Annual",
+          "DiscountPercent": 10.4,
+          "DiscountRate": 10,
+          "Description": "Sample"
+        }
+      ]
+    }
+  },
+  "accounts.api.rest.business.product.update.v1": {
+    "Input": {
+      "ProductID": 1,
+      "ProductName": "Toll Agency Toll Charges",
+      "ProductCode": "TA-TOLL-CHG",
+      "ProductUPC": "null",
+      "ProductSKU": "null",
+      "BaseSaleRate": "200",
+      "ComparisionSaleRate": "",
+      "IsGoods": null,
+      "IsService": null,
+      "StockLimit": "",
+      "ModifiedAuthID": 1,
+      "ModifiedBy": "Dinesh"
+    }
+  },
+  "accounts.api.rest.business.product.addcategory.v1": {
+    "Input": {
+      "UserInfo": {
+        "CreatedAuthID": 1,
+        "CreatedBy": "dinesh",
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "dinesh"
+      },
+      "CategoryInfo": [
+        {
+          "ProductID": 1,
+          "CategoryID": 1,
+          "Remarks": " "
+        },
+        {
+          "ProductID": 2,
+          "CategoryID": 2,
+          "Remarks": " "
+        }
+      ]
+    }
+  },
+  "accounts.api.rest.business.product.changepackage.v1": {
+    "Input": {
+      "ProductPackageID": 1,
+      "IsEnabled": true,
+      "ModifiedAuthID": 1,
+      "ModifiedBy": "dinesh"
+    }
+  },
+  "accounts.api.rest.business.product.enableavailability.v1": {
+    "Input": {
+      "UserInfo": {
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "dinesh",
+        "ModifiedDate": "2020-04-23T00:54:16.000Z"
+      },
+      "ProductInfo": {
+        "ProductID": 2,
+        "IsEnabled": true
+      }
+    }
+  },
+  "accounts.api.rest.business.product.filter.v1": {
+    "Input": {
+      "ProductInfo": {
+        "ProductUPC": "",
+        "ProductSKU": "",
+        "ProductCode": "book",
+        "ParentProductID": "",
+        "IsGoods": false,
+        "IsService": false
+      },
+      "CategoryInfo": {
+        "CategoryID": {
+          "in": []
+        }
+      }
+    }
+  }
+}

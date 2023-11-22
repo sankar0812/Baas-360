@@ -1,0 +1,93 @@
+{
+    "accounts.api.rest.business.invoice.downloadinvoice.v1": {
+        "Input": {
+            "InvoiceID": 1
+        }
+    },
+    "accounts.api.rest.business.invoice.addinvoice.v1": {
+        "Input": {
+            "UserInfo": {
+                "MerchantID": 1,
+                "TenantID": 1,
+                "CreatedAuthID": 1,
+                "CreatedBy": "dinesh",
+                "ModifiedAuthID": 1,
+                "ModifiedBy": "dinesh"
+            },
+            "InvoiceInfo": {
+                "ProjectID": 1,
+                "CustomerID": 1,
+                "CurrencyID": 1,
+                "AppSettingNetTermID": 1,
+                "CustomerAccountID": 1,
+                "InvoiceNumber": "ALS-RYD-2",
+                "InvoiceDate": "2023-08-06T10:52:02.932Z",
+                "ProductCharges": 175.35,
+                "BackupCharges": 0,
+                "InvoiceAmount": 175.35,
+                "BalanceDue": 175.35,
+                "DueDate": "2023-11-04T09:37:01.317Z",
+                "SubTotal": 0
+            },
+            "InvoiceItemInfo": [
+                {
+                    "ProductID": 1,
+                    "Qty": 10,
+                    "Rate": 0.35,
+                    "TotalAmount": 3.5,
+                    "Description": null
+                },
+                {
+                    "ProductID": 2,
+                    "Qty": 50,
+                    "Rate": 0.250,
+                    "TotalAmount": 3.500,
+                    "Description": null
+                }
+            ]
+        }
+    },
+    "accounts.api.rest.business.invoice.generatenumber.v1": {
+        "Input": {
+            "CustomerID": 1
+        }
+    },
+    "accounts.api.rest.business.invoice.statustoopen.v1": {
+        "Input": {
+            "userInfo": {
+                "MerchantID": 1,
+                "TenantID": 1,
+                "CurrencyID": 1,
+                "CreatedAuthID": 1,
+                "CreatedBy": "Dinesh",
+                "ModifiedAuthID": 1,
+                "ModifiedBy": "dinesh"
+            },
+            "StatusOpenInput": {
+                "InvoiceID": 1,
+                "InternalCode": "OPEN",
+                "CustomerAccountID": 2,
+                "CustomerID": 1
+            }
+        }
+    },
+    "accounts.api.rest.business.invoice.statustovoid.v1": {
+        "Input": {
+            "userInfo": {
+                "MerchantID": 1,
+                "TenantID": 1,
+                "CurrencyID": 1,
+                "CreatedAuthID": 1,
+                "CreatedBy": "Dinesh",
+                "ModifiedAuthID": 1,
+                "ModifiedBy": "dinesh"
+            },
+            "StatusOpenInput": {
+                "InvoiceID": 54,
+                "InternalCode": "OPEN",
+                "CustomerID": 1,
+                "CustomerAccountID": 2
+            }
+        }
+    }
+}

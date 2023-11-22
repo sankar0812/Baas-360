@@ -1,0 +1,48 @@
+{
+  "accounts.api.rest.business.category.add.v1": {
+    "Input": {
+      "UserInfo": {
+        "CreatedAuthID": 1,
+        "CreatedBy": "dinesh",
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "dinesh"
+      },
+      "CategoryInfo": {
+        "ParentCategoryID": " ",
+        "CategoryName": "Shirt",
+        "CategoryCode": "SHIRTs",
+        "Description": "one of the Category "
+      }
+    }
+  },
+
+  "accounts.api.rest.business.category.change.v1": {
+    "Input": {
+      "UserInfo": {
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "dinesh",
+        "ModifiedDate": "2020-04-23T00:54:16.000Z"
+      },
+      "CategoryInfo": {
+        "CategoryID": 1,
+        "CategoryName": "Shirts",
+        "CategoryCode": "SHIRTS"
+      }
+    }
+  },
+  "accounts.api.rest.business.category.addrootcategory.v1":{
+    "Input" :{
+        "UserInfo": {
+            "ModifiedAuthID": 1,
+            "ModifiedBy": "dinesh",
+            "ModifiedDate" : "2020-04-23T00:54:16.000Z"
+        },
+        "CategoryInfo": {
+            "CategoryID" : 2,
+            "ParentCategoryID": 2,
+            "Description" : " "
+        }
+    }
+    }
+  }
+

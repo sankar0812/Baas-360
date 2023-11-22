@@ -1,0 +1,3361 @@
+{
+	"info": {
+		"_postman_id": "bdf0c752-b7ce-45fc-a200-b2623ed9ee3b",
+		"name": "BaaS Accounts Rest Business",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28591472"
+	},
+	"item": [
+		{
+			"name": "Invoice",
+			"item": [
+				{
+					"name": "Download Invoice",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"InvoiceID\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/invoice/v1/download",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"invoice",
+								"v1",
+								"download"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Invoice",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserInfo\": {\n        \"MerchantID\": 1,\n        \"TenantID\": 1,\n        \"CreatedAuthID\": 1,\n        \"CreatedBy\": \"dinesh\",\n        \"ModifiedAuthID\": 1,\n        \"ModifiedBy\": \"dinesh\"\n    },\n    \"InvoiceInfo\": {\n        \"ProjectID\": 1,\n        \"CustomerID\": 1,\n        \"CurrencyID\": 1,\n        \"AppSettingNetTermID\": 1,\n        \"CustomerAccountID\": 1,\n        \"InvoiceNumber\": \"ALS-RYD-4\",\n        \"InvoiceDate\": \"2023-08-06T10:52:02.932Z\",\n        \"ProductCharges\": 175.35,\n        \"BackupCharges\": 0,\n        \"InvoiceAmount\": 175.35,\n        \"BalanceDue\": 175.35,\n        \"DueDate\": \"2023-11-04T09:37:01.317Z\",\n        \"SubTotal\": 0\n    },\n    \"InvoiceItemInfo\": [\n        {\n            \"ProductID\": 1,\n            \"Qty\": 10,\n            \"Rate\": 0.35,\n            \"TotalAmount\": 3.5,\n            \"Description\": null\n        },\n        {\n            \"ProductID\": 2,\n            \"Qty\": 50,\n            \"Rate\": 0.250,\n            \"TotalAmount\": 3.500,\n            \"Description\": null\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/invoice/v1/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"invoice",
+								"v1",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Number",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"CustomerID\":3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/invoice/v1/generatenumber",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"invoice",
+								"v1",
+								"generatenumber"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Status Open",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userInfo\": {\n        \"MerchantID\": 1,\n        \"TenantID\": 1,\n        \"CurrencyID\": 1,\n        \"CreatedAuthID\": 1,\n        \"CreatedBy\": \"Dinesh\",\n        \"ModifiedAuthID\": 1,\n        \"ModifiedBy\": \"dinesh\"\n    },\n    \"StatusOpenInput\": {\n        \"InvoiceID\": 1,\n        \"InternalCode\": \"OPEN\",\n        \"CustomerAccountID\": 2,\n        \"CustomerID\": 1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/invoice/v1/changetoopen",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"invoice",
+								"v1",
+								"changetoopen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Status Void",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userInfo\": {\n        \"MerchantID\": 1,\n        \"TenantID\": 1,\n        \"CurrencyID\": 1,\n        \"CreatedAuthID\": 1,\n        \"CreatedBy\": \"Dinesh\",\n        \"ModifiedAuthID\": 1,\n        \"ModifiedBy\": \"dinesh\"\n    },\n    \"StatusOpenInput\": {\n        \"InvoiceID\": 1,\n        \"InternalCode\": \"OPEN\",\n        \"CustomerID\" : 1,\n        \"CustomerAccountID\" : 1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/invoice/v1/changetovoid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"invoice",
+								"v1",
+								"changetovoid"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Add Category",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserInfo\": {\n        \"CreatedAuthID\": 1,\n        \"CreatedBy\": \"dinesh\",\n        \"ModifiedAuthID\": 1,\n        \"ModifiedBy\": \"dinesh\"\n    },\n    \"CategoryInfo\": {\n        \"ParentCategoryID\": \" \",\n        \"CategoryName\": \"Jeans\",\n        \"CategoryCode\": \"TROUSWRRRRT\",\n        \"Description\": \"one of the Category \"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/category/v1/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"category",
+								"v1",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Category",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserInfo\": {\n        \"ModifiedAuthID\": 1,\n        \"ModifiedBy\": \"dinesh\",\n        \"ModifiedDate\": \"2020-04-23T00:54:16.000Z\"\n    },\n    \"CategoryInfo\": {\n        \"CategoryID\": 10232,\n        \"CategoryName\": \"Jeans\",\n        \"CategoryCode\": \"PHANT\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/category/v1/change",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"category",
+								"v1",
+								"change"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Root Category",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserInfo\": {\n        \"ModifiedAuthID\": 1,\n        \"ModifiedBy\": \"dinesh\",\n        \"ModifiedDate\" : \"2020-04-23T00:54:16.000Z\"\n    },\n    \"CategoryInfo\": {\n        \"CategoryID\" : 1,\n        \"ParentCategoryID\": 1,\n        \"Description\" : \" \"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/category/v1/addrootcategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"category",
+								"v1",
+								"addrootcategory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PriceList",
+			"item": [
+				{
+					"name": "Add PriceList",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserInfo\": {\n        \"MerchantID\": 1,\n        \"TenantID\": 1,\n        \"CreatedAuthID\": 1,\n        \"CreatedBy\": \"Dinesh\",\n        \"ModifiedAuthID\": 1,\n        \"ModifiedBy\": \"Dinesh\"\n    },\n    \"PricelistInfo\": {\n        \"StartDate\": \"2023-11-15T06:00:00.000Z\",\n        \"DisplayName\": \"Penske 1018\",\n        \"PriceListCode\": \"Penske 1018   \",\n        \"EndDate\": \"2023-11-15T06:00:00.000Z\",\n        \"PriceListStatusID\": 1\n    },\n    \"PriceItemInfo\": [\n        {\n            \"ProductID\": 17,\n            \"Rate\": 200\n        },\n        {\n            \"ProductID\": 1,\n            \"Rate\": 200\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/pricelist/v1/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"pricelist",
+								"v1",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Price List",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"CustomerAccountID\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/pricelist/v1/getpricelist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"pricelist",
+								"v1",
+								"getpricelist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change PriceList",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"PriceListID\": 10,\n    \"DisplayName\": \"Penske 1000\",\n    \"PriceListCode\": \"Penske 1000\",\n    \"StartDate\": \"2023-11-15T00:00:00.000Z\",\n    \"EndDate\": \"2023-11-15T00:00:00.000Z\",\n    \"Remarks\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/pricelist/v1/change",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"pricelist",
+								"v1",
+								"change"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Status Change",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"PriceListID\": 1,\n    \"PriceListStatusID\": 2,\n    \"ModifiedAuthID\": 1,\n    \"ModifiedBy\": \"Dinesh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/pricelist/v1/statuschange",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"pricelist",
+								"v1",
+								"statuschange"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Product",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserInfo\": {\n        \"MerchantID\": 1,\n        \"TenantID\": 1,\n        \"CreatedAuthID\": 1,\n        \"CreatedBy\": \"Dinesh\"\n    },\n    \"PriceListItemInfo\": {\n        \"ProductID\": 39,\n        \"PriceListID\": 58,\n        \"Rate\": 500\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/pricelist/v1/addproduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"pricelist",
+								"v1",
+								"addproduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Product",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"PriceListID\": 70,\n    \"ProductID\": 40,\n    \"PriceListItemID\": 148,\n    \"ModifiedAuthID\": 1,\n    \"ModifiedBy\": \"Dinesh\",\n    \"DeletedAuthID\": 1,\n    \"DeletedBy\": \"Dinesh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/pricelist/v1/removeproduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"pricelist",
+								"v1",
+								"removeproduct"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Store",
+			"item": [
+				{
+					"name": "Add",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserInfo\": {\n        \"MerchantID\": 1,\n        \"TenantID\": 1,\n        \"CreatedAuthID\": 1,\n        \"CreatedBy\": \"dinesh\",\n        \"ModifiedAuthID\": 1,\n        \"ModifiedBy\": \"dinesh\"\n    },\n    \"StoreInfo\": {\n        \"StoreTypeID\": 1,\n        \"StoreName\": \"Finance\",\n        \"StoreCode\": \"FINANCE\",\n        \"StartDate\": \"2023-11-09T12:25:30.673Z\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/store/v1/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"store",
+								"v1",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserInfo\": {\n        \"MerchantID\": 1,\n        \"TenantID\": 1,\n        \"CreatedAuthID\": 1,\n        \"CreatedBy\": \"dinesh\",\n        \"ModifiedAuthID\": 1,\n        \"ModifiedBy\": \"dinesh\"\n    },\n    \"StoreInfo\": {\n        \"StoreTypeID\": 1,\n        \"StoreID\": 1,\n        \"StoreName\": \"Bank\",\n        \"StoreCode\": \"BANK\",\n        \"Description\" :\"\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/store/v1/change",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"store",
+								"v1",
+								"change"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Effective Date",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n\n      \"UserInfo\": {\n        \"MerchantID\": 1,\n        \"TenantID\": 1,\n        \"ModifiedAuthID\": 1,\n        \"ModifiedBy\": \"dinesh\",\n        \"DeletedAuthID\": 1,\n        \"DeletedBy\": \"dinesh\",\n        \"DeletedDate\": \"2020-04-23T00:54:16.000Z\"\n      },\n      \"PricelistInfo\": {\n        \"StoreID\": 3\n      }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/store/v1/changeeffectivedate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"store",
+								"v1",
+								"changeeffectivedate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Price List",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{      \"UserInfo\": {\n        \"CreatedAuthID\": 1,\n        \"CreatedBy\": \"dinesh\",\n        \"ModifiedAuthID\": 1,\n        \"ModifiedBy\": \"dinesh\"\n      },\n      \"PricelistInfo\": {\n        \"PriceListID\": 1,\n        \"StoreID\": 1,\n        \"IsEnabled\": true\n      }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/store/v1/removepricelist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"store",
+								"v1",
+								"removepricelist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Price List",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserInfo\": {\n        \"CreatedAuthID\": 1,\n        \"CreatedBy\": \"dinesh\",\n        \"ModifiedAuthID\": 1,\n        \"ModifiedBy\": \"dinesh\"\n    },\n    \"PricelistInfo\": {\n        \"PriceListID\": 1,\n        \"StoreID\": 1,\n        \"IsEnabled\": true\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/store/v1/addpricelist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"store",
+								"v1",
+								"addpricelist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enable",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"StoreID\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/store/v1/enable",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"store",
+								"v1",
+								"enable"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Remove Product",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"PriceListItemID\": 1,\n    \"ProductID\": 1,\n    \"ModifiedAuthID\": 1,\n    \"ModifiedBy\": \"Dinesh\",\n    \"DeletedAuthID\": 1,\n    \"DeletedBy\": \"Dinesh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/product/v1/removeproduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"product",
+								"v1",
+								"removeproduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Category",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserInfo\": {\n        \"CreatedAuthID\": 1,\n        \"CreatedBy\": \"dinesh\",\n        \"ModifiedAuthID\": 1,\n        \"ModifiedBy\": \"dinesh\"\n    },\n    \"CategoryInfo\": [\n        {\n            \"ProductID\": 8,\n            \"CategoryID\": 3,\n            \"Remarks\": \" \"\n        },\n        {\n            \"ProductID\": 9,\n            \"CategoryID\": 3,\n            \"Remarks\": \" \"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/product/v1/addcategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"product",
+								"v1",
+								"addcategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Package",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserInfo\": {\n        \"CreatedAuthID\": 1,\n        \"CreatedBy\": \"Dinesh\",\n        \"ModifiedAuthID\": 1,\n        \"ModifiedBy\": \"Dinesh\"\n    },\n    \"PackageInfo\": {\n        \"ProductID\": 10,\n        \"PackageTypeID\": 1,\n        \"Length\": \"5\",\n        \"LengthUom\": \"cm\",\n        \"Width\": \"5\",\n        \"WidthUom\": \"cm\",\n        \"Height\": \"5\",\n        \"HeightUom\": \"cm\",\n        \"Weight\": \"10\",\n        \"WeightUom\": \"kg\",\n        \"PackageCount\": \"10\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/product/v1/addpackage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"product",
+								"v1",
+								"addpackage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Bulk Discount",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserInfo\": {\n        \"CreatedAuthID\": 1,\n        \"CreatedBy\": \"dinesh\",\n        \"ModifiedAuthID\": 1,\n        \"ModifiedBy\": \"dinesh\",\n        \"MerchantID\": 1,\n\n        \"TenantID\": 1,\n        \"CurrencyID\": 1,\n        \"ProductID\": 1\n    },\n    \"BlukDiscountInfo\": [\n        {\n            \"RangeMin\": 1,\n            \"RangeMax\": 10,\n            \"DiscountPeriod\": \"Month\",\n            \"DiscountType\": \"Percentage\",\n            \"DiscountPercent\": 10.4\n        },\n        {\n            \"RangeMin\": 10,\n            \"RangeMax\": 100,\n            \"DiscountPeriod\": \"Quarterly\",\n            \"DiscountType\": \"Rate\",\n            \"DiscountRate\": 10,\n            \"Description\": \"Sample\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/product/v1/addblukdiscount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"product",
+								"v1",
+								"addblukdiscount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ProductID\": 2,\n    \"ProductName\": \"Vektorr Data Capture DOT Lane\",\n    \"ProductCode\": \"NTC-DOTLANE-DATA-CAP-CHG\",\n    \"ComparisionSaleRate\": \"250\",\n    \"ProductUPC\": \"Vektorr Data Capture DOT Lane\",\n    \"ProductSKU\": \"NTC-DOTLANE-DATA-CAP-CHG\",\n    \"BaseSaleRate\": \"200\",\n    \"CurrencyID\": 1,\n    \"AppSettingUomID\": 1,\n    \"IsGoods\": null,\n    \"IsService\": null,\n    \"StockLimit\": \"\",\n    \"ModifiedAuthID\": 1,\n    \"ModifiedBy\": \"Dinesh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{baseUrldev}}:4004/api/rest/accounts/business/1.0.0/product/v1/update",
+							"protocol": "http",
+							"host": [
+								"{{baseUrldev}}"
+							],
+							"port": "4004",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"product",
+								"v1",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserInfo\": {\n        \"CreatedAuthID\": 1,\n        \"CurrencyID\": 1,\n        \"CreatedBy\": \"dinesh\",\n        \"ModifiedAuthID\": 1,\n        \"ModifiedBy\": \"dinesh\"\n    },\n    \"ProductInfo\": {\n        \"ProductName\": \"Toll Agency Toll Charges20\",\n        \"ProductCode\": \"TA-TOLL-CHG20\",\n        \"ParentProductID\": null,\n        \"AppSettingUomID\": 1,\n        \"BaseSaleRate\": \"200\",\n        \"ComparisionSaleRate\": \"\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/product/v1/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"product",
+								"v1",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Package",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ProductPackageID\": 1,\n    \"ModifiedAuthID\": 1,\n    \"ModifiedBy\": \"Dinesh\",\n    \"IsEnabled\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/product/v1/changepackage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"product",
+								"v1",
+								"changepackage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Package",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ProductPackageID\": 4,\n    \"ModifiedAuthID\": 1,\n    \"ModifiedBy\": \"Dinesh\",\n    \"DeletedAuthID\": 1,\n    \"DeletedBy\": \"Dinesh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{baseUrldev}}:4004/api/rest/accounts/business/1.0.0/product/v1/removepackage",
+							"protocol": "http",
+							"host": [
+								"{{baseUrldev}}"
+							],
+							"port": "4004",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"product",
+								"v1",
+								"removepackage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Parent Product",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ProductID\": 1,\n    \"ParentProductID\": 3,\n    \"ModifiedAuthID\": 1,\n    \"ModifiedBy\": \"Dinesh\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/product/v1/changeparentproduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"product",
+								"v1",
+								"changeparentproduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Category",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ProductCategoryID\": 5,\n    \"ModifiedAuthID\": 1,\n    \"ModifiedBy\": \"Dinesh\",\n    \"DeletedAuthID\": 1,\n    \"DeletedBy\": \"Dinesh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/product/v1/removecategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"product",
+								"v1",
+								"removecategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enable Product Sale",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ProductID\": 1,\n    \"ModifiedAuthID\": 1,\n    \"ModifiedBy\": \"Dinesh\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/product/v1/enablesale",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"product",
+								"v1",
+								"enablesale"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Disable Product Sale",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ProductID\": 1,\n    \"ModifiedAuthID\": 1,\n    \"ModifiedBy\": \"Dinesh\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/product/v1/disablesale",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"product",
+								"v1",
+								"disablesale"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enable Product Purchase",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ProductID\": 1,\n    \"ModifiedAuthID\": 1,\n    \"ModifiedBy\": \"Dinesh\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/product/v1/enablepurchase",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"product",
+								"v1",
+								"enablepurchase"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Disable Product Purchase",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ProductID\": 1,\n    \"ModifiedAuthID\": 1,\n    \"ModifiedBy\": \"Dinesh\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/product/v1/disablepurchase",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"product",
+								"v1",
+								"disablepurchase"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Bulk Discount",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ProductBulkDiscountID\": 5,\n    \"ModifiedAuthID\": 1,\n    \"ModifiedBy\": \"Dinesh\",\n    \"DeletedAuthID\": 1,\n    \"DeletedBy\": \"Dinesh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/product/v1/removebulkdiscount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"product",
+								"v1",
+								"removebulkdiscount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Disable Product",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"UserInfo\": {\n        \"ModifiedAuthID\": 1,\n        \"ModifiedBy\": \"dinesh\",\n        \"ModifiedDate\": \"2020-04-23T00:54:16.000Z\"\n\n    },\n    \"ProductInfo\": {\n        \"ProductID\" : 42,\n        \"IsEnabled\" : false\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/product/v1/disableavailability",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"product",
+								"v1",
+								"disableavailability"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enable Product",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"UserInfo\": {\n        \"ModifiedAuthID\": 1,\n        \"ModifiedBy\": \"dinesh\",\n        \"ModifiedDate\": \"2020-04-23T00:54:16.000Z\"\n\n    },\n    \"ProductInfo\": {\n        \"ProductID\" : 2,\n        \"IsEnabled\" : true\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/product/v1/enableavailability",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"product",
+								"v1",
+								"enableavailability"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ProductInfo\": {\n        \"ProductUPC\": \"\",\n        \"ProductSKU\": \"\",\n        \"ProductCode\": \"book\",\n        \"ParentProductID\": \"\",\n        \"IsGoods\": false,\n        \"IsService\": false\n    },\n    \"CategoryInfo\": {\n        \"CategoryID\": {\n            \"in\": []\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/product/v1/filter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"product",
+								"v1",
+								"filter"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Add Customer Account",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserInfo\": {\n        \"MerchantID\": 1,\n        \"TenantID\": 1,\n        \"CustomerID\": 1,\n        \"CurrencyID\": 1,\n        \"CreatedAuthID\": 1,\n        \"CreatedBy\": \"dinesh\"\n    },\n    \"CustomerAccountInfo\": {\n        \"AccountNumber\": \"PENSKE-ALITA-018\",\n        \"AccountCode\": \"PNAL-08\",\n        \"DisplayName\": \"Penske Tolling\",\n        \"OpenedDate\": \"2020-04-23T00:54:16.000Z\",\n        \"AppSettingNetTermID\" : 1,\n        \"Username\": \"Penske\",\n        \"Password\": \"PENSKE\",\n        \"AutoReplenishAmount\": 0,\n        \"LowBalanceThreshold\": 0,\n        \"CreatedAuthID\": 1,\n        \"CreatedBy\": \"Dinesh\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/customer/v1/addcustomeraccount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"customer",
+								"v1",
+								"addcustomeraccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Customer Payment",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userInfo\": {\r\n        \"MerchantID\": 1,\r\n        \"TenantID\": 1,\r\n        \"CreatedAuthID\": 1,\r\n        \"CreatedBy\": \"Dinesh\",\r\n        \"ModifiedAuthID\": 1,\r\n        \"ModifiedBy\": \"Dinesh\"\r\n    },\r\n    \"CustomerPayment\": {\r\n        \"BankAccountID\": 1,\r\n        \"CustomerID\": 1,\r\n        \"PaymentMethodID\": 3,\r\n        \"CurrencyID\": 1,\r\n        \"CustomerAccountID\": 1,\r\n        \"PaidDate\": \"2023-11-20T06:00:00.000Z\",\r\n        \"PaidAmount\": 12265,\r\n        \"CurrencyCode\": \"USD\",\r\n        \"PaymentConfirmation\": \"346889\",\r\n        \"BankDepositedDate\": \"2023-11-20T06:00:00.000Z\",\r\n        \"BankPostedDate\": \"2023-11-20T06:00:00.000Z\",\r\n        \"Remarks\": \"\"\r\n    },\r\n    \"CustomerPaymentItem\": [\r\n        {\r\n            \"InvoiceID\": 8,\r\n            \"ReferenceCode\": \"346889\",\r\n            \"Description\": \"\",\r\n            \"InvoicePaidAmount\": 12265\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/customer/v1/addpayment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"customer",
+								"v1",
+								"addpayment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddPriceList",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "TenantKey",
+								"value": "TENANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "MerchantKey",
+								"value": "MERCHANT-KEY-001",
+								"type": "text"
+							},
+							{
+								"key": "AuthKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ContactPersonKey",
+								"value": "NULL",
+								"type": "text"
+							},
+							{
+								"key": "ApplicationKey",
+								"value": "APPLICATION-KEY",
+								"type": "text"
+							},
+							{
+								"key": "InstanceKey",
+								"value": "INSTANCE-KEY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserInfo\": {\n        \"MerchantID\": 1,\n        \"TenantID\": 1,\n        \"CreatedAuthID\": 1,\n        \"CreatedBy\": \"Dinesh\",\n        \"ModifiedAuthID\": 1,\n        \"ModifiedBy\": \"Dinesh\"\n    },\n    \"PriceItmeInfo\": {\n        \"PriceListID\": 1,\n        \"CustomerAccountID\": 1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/rest/accounts/business/1.0.0/customer/v1/addpricelist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"rest",
+								"accounts",
+								"business",
+								"1.0.0",
+								"customer",
+								"v1",
+								"addpricelist"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

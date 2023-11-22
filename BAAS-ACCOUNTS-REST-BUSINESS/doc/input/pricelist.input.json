@@ -1,0 +1,78 @@
+{
+    "accounts.api.rest.business.pricelist.add.v1": {
+        "Input": {
+            "UserInfo": {
+                "MerchantID": 1,
+                "TenantID": 1,
+                "CreatedAuthID": 1,
+                "CreatedBy": "dinesh",
+                "ModifiedAuthID": 1,
+                "ModifiedBy": "dinesh"
+            },
+            "PricelistInfo": {
+                "PriceListCode": "PEN-PRO89",
+                "PriceListStatusID": 1,
+                "StartDate": "2023-01-01T00:00:00.000Z",
+                "EndDate": "2023-01-01T00:00:00.000Z",
+                "DisplayName": "PENSKE-PRODUCT-89"
+            },
+            "PriceItemInfo": [
+                {
+                    "ProductID": 1,
+                    "Rate": 10
+                },
+                {
+                    "ProductID": 2,
+                    "Rate": 10
+                }
+            ]
+        }
+    },
+    "accounts.api.rest.business.pricelist.getpricelistitems.v1": {
+        "Input": {
+            "CustomerAccountID": 3
+        }
+    },
+    "accounts.api.rest.business.pricelist.change.v1": {
+        "Input": {
+            "PriceListID": 21,
+            "DisplayName": "Penske 10",
+            "PriceListCode": "Penske 1003",
+            "StartDate": "2023-11-15T00:00:00.000Z",
+            "EndDate": "2023-11-15T00:00:00.000Z",
+            "Remarks": ""
+        }
+    },
+    "accounts.api.rest.business.pricelist.statuschange.v1": {
+        "Input": {
+            "PriceListID": 1,
+            "PriceListStatusID": 1,
+            "ModifiedAuthID": 1,
+            "ModifiedBy": "Dinesh"
+        }
+    },
+    "accounts.api.rest.business.pricelist.addproduct.v1": {
+        "Input": {
+            "UserInfo": {
+                "MerchantID": 1,
+                "TenantID": 1,
+                "CreatedAuthID": 1,
+                "CreatedBy": "Dinesh"
+            },
+            "PriceListItemInfo": {
+                "PriceListID": 2,
+                "ProductID": 4
+            }
+        }
+    },
+    "accounts.api.rest.business.pricelist.removeproduct.v1": {
+        "Input": {
+            "PriceListItemID": 1,
+            "ProductID": 1,
+            "ModifiedAuthID": 1,
+            "ModifiedBy": "Dinesh",
+            "DeletedAuthID": 1,
+            "DeletedBy": "Dinesh"
+        }
+    }
+}

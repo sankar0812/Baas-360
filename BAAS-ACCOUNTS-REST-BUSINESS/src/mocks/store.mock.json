@@ -1,0 +1,50 @@
+{
+    "accounts.api.rest.business.store.add.v1": {
+        "data": {
+            "MerchantID": 1,
+            "TenantID": 1,
+            "StoreName": "ABC",
+            "StoreCode": "abc",
+            "IsEnabled": true,
+            "Description": "",
+            "StartDate": "",
+            "CreatedAuthID": 1,
+            "CreatedBy": "Dinesh",
+            "CreatedDate": "2023-10-19T06:00:29.558Z",
+            "ModifiedAuthID": 1,
+            "ModifiedBy": "Dinesh",
+            "ModifiedDate": "2023-10-19T06:00:29.558Z",
+            "IsDeleted": false,
+            "DeletedAuthID": null,
+            "DeletedBy": null,
+            "DeletedDate": null
+        },
+        "status": 200,
+        "message": "[MOCK] 'Add' has been setup successfully"
+    },
+    "accounts.api.rest.business.store.change.v1": {
+        "data": {},
+        "status": 200,
+        "message": "[MOCK] 'Change' has been setup successfully"
+    },
+    "accounts.api.rest.business.store.addpricelist.v1": {
+        "data": {},
+        "status": 200,
+        "message": "[MOCK] 'ADD PRICE LIST' has been setup successfully"
+    },
+    "accounts.api.rest.business.store.removepricelist.v1": {
+        "data": {},
+        "status": 200,
+        "message": "[MOCK] 'REMOVE PRICE LIST' has been setup successfully"
+    },
+    "accounts.api.rest.business.store.changeeffectivedate.v1": {
+        "data": {},
+        "status": 200,
+        "message": "[MOCK] 'CHANGE EFFECTIVE DATE' has been setup successfully"
+    },
+    "accounts.api.rest.business.store.enable.v1": {
+        "data": {},
+        "status": 200,
+        "message": "[MOCK] 'Successfully updated the Enable Store"
+    }
+}

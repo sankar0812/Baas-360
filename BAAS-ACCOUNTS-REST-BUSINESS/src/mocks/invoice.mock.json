@@ -1,0 +1,273 @@
+{
+    "accounts.api.rest.business.invoice.downloadinvoice.v1": {
+        "data": {
+            "outputResponse": {
+                "InvoiceInfo": {
+                    "MerchantTenantInfo": {
+                        "TenantName": "Alita System SSL",
+                        "TenantAddress": "1009 Whittington Place",
+                        "TenantCity": "SouthLake",
+                        "TenantState": "Texas",
+                        "TenantCountry": "USA",
+                        "TenantZipCode": "76092"
+                    },
+                    "CustomerInfo": {
+                        "CustomerName": "Ryder",
+                        "CustomerAddress": "1009 Whittington Place",
+                        "CustomerCity": "Miami",
+                        "CustomerState": "Miami",
+                        "CustomerCountry": "USA",
+                        "CustomerZipCode": "76092"
+                    },
+                    "InvoiceInfo": {
+                        "InvoiceNo.": "ALS-RYD-140",
+                        "BalanceDue": "USD$328.30",
+                        "InvoiceDate": "24 SEP 2023",
+                        "Terms": "Due on Reciept",
+                        "DueDate": "29 SEP 2023"
+                    },
+                    "InvoiceItemInfo": [
+                        {
+                            "InvocieItem&Description": "Vektorr Data Capture",
+                            "InvoiceItemQty": 7.00,
+                            "InvoiceItemRate": 0.35,
+                            "InvoiceItemAmt": 2.45,
+                            "InvocieItemBalAmt": "USD$328.30"
+                        }
+                    ]
+                }
+            }
+        },
+        "status": 200,
+        "message": "[MOCK] Fetched invoice information for download "
+    },
+    "accounts.api.rest.business.invoice.add.v1": {
+        "data": {
+            "outputResponse": {
+                "InvoiceData": {
+                    "MerchantID": 1,
+                    "TenantID": 1,
+                    "ProjectID": 1,
+                    "CustomerID": 1,
+                    "CurrencyID": 1,
+                    "InvoiceNumber": "ABC-001",
+                    "InvoiceDate": "10-11-2023",
+                    "InvoiceStatus": "Draft",
+                    "ProductCharges": 0.01,
+                    "BackupCharges": 10.0,
+                    "InvoiceAmount": 15.5,
+                    "BalanceDue": 15.5,
+                    "Remarks": "",
+                    "CreatedAuthID": 1,
+                    "CreatedBy": "dinesh",
+                    "ModifiedAuthID": 1,
+                    "ModifiedBy": "dinesh"
+                },
+                "InvoiceItemDate": [
+                    {
+                        "InvoiceID": 1,
+                        "MerchantID": 1,
+                        "TenantID": 1,
+                        "ProductID": 1,
+                        "Qty": 10,
+                        "Rate": 15,
+                        "TotalAmount": 150,
+                        "Description": "",
+                        "CreatedAuthID": 1,
+                        "CreatedBy": "dinesh",
+                        "ModifiedAuthID": 1,
+                        "ModifiedBy": "dinesh"
+                    }
+                ]
+            }
+        },
+        "status": 200,
+        "message": "[MOCK] Invoice and Invoice Item Added Successfully"
+    },
+    "accounts.api.rest.business.customer.getpricelistitems.v1": {
+        "data": {
+            "CustomerID": 1,
+            "ProductInfo": [
+                {
+                    "ProductID": 1,
+                    "ProductName": "Toll Agency Toll Charges",
+                    "ProductCode": "TA-TOLL-CHG",
+                    "UoM": "NULL",
+                    "Rate": 0,
+                    "Remarks": null
+                },
+                {
+                    "ProductID": 2,
+                    "ProductName": "Toll Payment Serice Chargers",
+                    "ProductCode": "TOLL-SRV-CHG",
+                    "UoM": "NULL",
+                    "Rate": 0,
+                    "Remarks": null
+                }
+            ]
+        },
+        "status": 200,
+        "message": "[MOCK] 'Get Product Info' has been setup successfully"
+    },
+    "accounts.api.rest.business.invoice.generatenumber.v1": {
+        "data": {
+            "InvoiceNumber": "ALY-RDY-001"
+        },
+        "status": 200,
+        "message": "[MOCK] 'Generate Number' has been setup successfully"
+    },
+    "accounts.api.rest.business.customer.addcustomeraccount.v1": {
+        "data": {
+            "CustomerAccountData": {
+                "CustomerAccountID": 2,
+                "CustomerID": 1,
+                "CurrencyID": 1,
+                "AccountNumber": "PENSKE-ALITA-01",
+                "AccountCode": null,
+                "DisplayName": "Penske Tolling",
+                "OpenedDate": "2020-04-23T00:54:16.000Z",
+                "Username": null,
+                "Password": null,
+                "CreatedAuthID": 1,
+                "CreatedBy": "Dinesh",
+                "CreatedDate": "2023-10-19T05:51:18.198Z",
+                "ModifiedAuthID": 1,
+                "ModifiedBy": "Dinesh",
+                "ModifiedDate": "2023-10-19T05:51:18.198Z",
+                "IsDeleted": false,
+                "DeletedAuthID": null,
+                "DeletedBy": null,
+                "DeletedDate": null,
+                "CustomerContactID": null
+            },
+            "CustomerAccountBalanceData": {
+                "CustomerAccountBalanceID": 1,
+                "MerchantID": 1,
+                "TenantID": 1,
+                "CustomerAccountID": 1,
+                "CustomerID": 1,
+                "PostedDate": "10/18/2023",
+                "AccountBalance": 0,
+                "CurrencyID": 1,
+                "CreatedAuthID": 1,
+                "CreatedBy": "Dinesh",
+                "CreatedDate": "10/18/2023",
+                "ModifiedAuthID": null,
+                "ModifiedBy": null,
+                "ModifiedDate": null,
+                "IsDeleted": false,
+                "DeletedAuthID": null,
+                "DeletedBy": null,
+                "DeletedDate": null
+            }
+        },
+        "status": 200,
+        "message": "[MOCK] 'Customer Account and Customer Account Balance' has been setup successfully"
+    },
+    "accounts.api.rest.business.invoice.statustoopen.v1": {
+        "data": {
+            "InvoiceStatus": {
+                "count": 1
+            },
+            "CustomerAccountBalanceData": {
+                "CustomerAccountBalanceID": 1,
+                "MerchantID": 1,
+                "TenantID": 1,
+                "CustomerAccountID": 1,
+                "CustomerID": 1,
+                "PostedDate": "10/18/2023",
+                "AccountBalance": 25,
+                "CurrencyID": 1,
+                "CreatedAuthID": 1,
+                "CreatedBy": "Dinesh",
+                "CreatedDate": "10/18/2023",
+                "ModifiedAuthID": null,
+                "ModifiedBy": null,
+                "ModifiedDate": null,
+                "IsDeleted": false,
+                "DeletedAuthID": null,
+                "DeletedBy": null,
+                "DeletedDate": null
+            },
+            "CustomerAccountTransaction": {
+                "CustomerAccountTransactionID": 1,
+                "CustomerID": 1,
+                "CustomerAccountID": 1,
+                "MerchantID": 1,
+                "TenantID": 1,
+                "CurrencyID": 1,
+                "CreditDebitFlag": "D",
+                "TransactionType": "",
+                "TransactionNumber": "",
+                "PostedDateTime": "2023-10-19T06:03:28.799Z",
+                "Amount": 100,
+                "RunningAccountBalance": 25,
+                "CreatedAuthID": 1,
+                "CreatedBy": "Dinesh",
+                "CreatedDate": "2023-10-19T06:03:28.799Z",
+                "ModifiedAuthID": 1,
+                "ModifiedBy": "Dinesh",
+                "ModifiedDate": "2023-10-19T06:03:28.799Z",
+                "IsDeleted": false,
+                "DeletedAuthID": null,
+                "DeletedBy": null,
+                "DeletedDate": null
+            }
+        },
+        "status": 200,
+        "message": "[MOCK] 'Invoice Status '  successfully Updated"
+    },
+    "accounts.api.rest.business.invoice.statustovoid.v1": {
+        "data": {
+            "InvoiceStatus": {
+                "count": 1
+            },
+            "CustomerAccountBalanceData": {
+                "CustomerAccountBalanceID": 1,
+                "MerchantID": 1,
+                "TenantID": 1,
+                "CustomerAccountID": 1,
+                "CustomerID": 1,
+                "PostedDate": "10/18/2023",
+                "AccountBalance": 25,
+                "CurrencyID": 1,
+                "CreatedAuthID": 1,
+                "CreatedBy": "Dinesh",
+                "CreatedDate": "10/18/2023",
+                "ModifiedAuthID": null,
+                "ModifiedBy": null,
+                "ModifiedDate": null,
+                "IsDeleted": false,
+                "DeletedAuthID": null,
+                "DeletedBy": null,
+                "DeletedDate": null
+            },
+            "CustomerAccountTransaction": {
+                "CustomerAccountTransactionID": 1,
+                "CustomerID": 1,
+                "CustomerAccountID": 1,
+                "MerchantID": 1,
+                "TenantID": 1,
+                "CurrencyID": 1,
+                "CreditDebitFlag": "C",
+                "TransactionType": "",
+                "TransactionNumber": "",
+                "PostedDateTime": "2023-10-19T06:03:28.799Z",
+                "Amount": 100,
+                "RunningAccountBalance": 25,
+                "CreatedAuthID": 1,
+                "CreatedBy": "Dinesh",
+                "CreatedDate": "2023-10-19T06:03:28.799Z",
+                "ModifiedAuthID": 1,
+                "ModifiedBy": "Dinesh",
+                "ModifiedDate": "2023-10-19T06:03:28.799Z",
+                "IsDeleted": false,
+                "DeletedAuthID": null,
+                "DeletedBy": null,
+                "DeletedDate": null
+            }
+        },
+        "status": 200,
+        "message": "[MOCK] 'Invoice Status '  successfully Updated"
+    }
+}

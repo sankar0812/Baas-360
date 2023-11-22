@@ -1,0 +1,46 @@
+{
+  "accounts.api.rest.business.category.add.v1": {
+    "data": {
+      "CategoryID": 4,
+      "ParentCategoryID": null,
+      "CategoryName": "Shirt",
+      "CategoryCode": "SHIRTs",
+      "Description": "one of the Category ",
+      "CreatedAuthID": 1,
+      "CreatedBy": "dinesh",
+      "CreatedDate": "2023-11-09T04:23:24.439Z",
+      "ModifiedAuthID": 1,
+      "ModifiedBy": "dinesh",
+      "ModifiedDate": "2023-11-09T04:23:24.439Z",
+      "IsDeleted": false,
+      "DeletedAuthID": null,
+      "DeletedBy": null,
+      "DeletedDate": null
+    },
+    "status": 200,
+    "message": "[MOCK] 'Add' has been setup successfully"
+  },
+  "accounts.api.rest.business.category.change.v1": {
+    "data": {
+      "count": 1
+    },
+    "status": 200,
+    "message": "[MOCK] 'Add' has been setup successfully"
+  },
+  "accounts.api.rest.business.category.addrootcategory.v1": {
+    "data": {
+      "UserInfo": {
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "dinesh",
+        "ModifiedDate": "2020-04-23T00:54:16.000Z"
+      },
+      "CategoryInfo": {
+        "CategoryID": 1,
+        "ParentCategoryID": 1,
+        "Description": " "
+      }
+    },
+    "status": 200,
+    "message": "[MOCK] 'Add' has been setup successfully"
+  }
+}

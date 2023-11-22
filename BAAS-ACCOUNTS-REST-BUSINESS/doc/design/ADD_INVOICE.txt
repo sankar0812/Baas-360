@@ -1,0 +1,64 @@
+API Name - 
+  i) Add Invoice
+  
+Header 
+
+  MerchantKey:BASE-MERCHANT-KEY
+  TenantKey:BASE-TENANT-KEY
+  UserKey:BASE-USER-KEY
+ 
+Method - post
+
+Authorization - Basic Auth
+
+i)AddInvoice
+
+Tables Affected : Invoice, InvoiceItem, CustomerProductUsage, CustomerProductUsageLog
+
+Endpoint - /api/rest/accounts/business/1.0.0/invoice/v1/addinvoice
+
+Read Invoice and InvoiceItem Table
+Request Body: 
+ Input -  
+data: {
+ 
+"InvoiceData": {
+    "MerchantID": 1,
+    "TenantID": 1,
+    "ProjectID": 1,
+    "CustomerID": 1,
+    "CurrencyID": 1,
+    "InvoiceNumber": "ABC-001",
+    "InvoiceDate": "10-11-2023",
+    "InvoiceStatus": "Draft",
+    "ProductCharges": 0.01,
+    "BackupCharges": 10.0,
+    "InvoiceAmount": 15.5,
+    "BalanceDue": 15.5,
+    "Remarks": "",
+    "CreatedAuthID": 1,
+    "CreatedBy": "dinesh",
+    "ModifiedAuthID": 1,
+    "ModifiedBy": "dinesh",
+},
+  
+  "InvoiceItemDate": [
+    {
+        "InvoiceID": 1,
+        "MerchantID": 1,
+        "TenantID": 1,
+        "ProductID": 1,
+        "Qty": 10,
+        "Rate": 15,
+        "TotalAmount": 150,
+        "Description": "",
+        "CreatedAuthID": 1,
+        "CreatedBy": "dinesh",
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "dinesh",
+    }
+]
+}
+
+ 
+

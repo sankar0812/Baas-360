@@ -1,0 +1,176 @@
+{
+  "accounts.api.rest.business.pricelist.add.v1": {
+    "data": {
+      "PriceListInfo": {
+        "PriceListID": 1,
+        "MerchantID": 1,
+        "TenantID": 1,
+        "CustomerID": 1,
+        "StartDate": "2023-01-01T00:00:00.000Z",
+        "EndDate": null,
+        "DisplayName": "PENSKE-PRODUCTS-2023",
+        "IsActive": true,
+        "ActiveDate": null,
+        "InactiveDate": null,
+        "Remarks": null,
+        "CreatedAuthID": 1,
+        "CreatedBy": "Dinesh",
+        "CreatedDate": "2023-10-19T06:00:29.558Z",
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "Dinesh",
+        "ModifiedDate": "2023-10-19T06:00:29.558Z",
+        "IsDeleted": false,
+        "DeletedAuthID": null,
+        "DeletedBy": null,
+        "DeletedDate": null
+      },
+      "PriceListItemInfo": {
+        "PriceListItemID": 1,
+        "PriceListID": 2,
+        "MerchantID": 1,
+        "TenantID": 1,
+        "CustomerID": 3,
+        "ProductID": 20,
+        "Rate": 10,
+        "Remarks": null,
+        "CreatedAuthID": 1,
+        "CreatedBy": "Dinesh",
+        "CreatedDate": "2023-10-19T06:00:51.017Z",
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "Dinesh",
+        "ModifiedDate": "2023-10-19T06:00:51.017Z",
+        "IsDeleted": false,
+        "DeletedAuthID": null,
+        "DeletedBy": null,
+        "DeletedDate": null
+      },
+      "PriceListItemBulkDiscount": {
+        "PriceListItemBulkDiscountID": 2,
+        "PriceListItemID": 1,
+        "PriceListID": 4,
+        "MerchantID": 1,
+        "TenantID": 1,
+        "ProductID": 20,
+        "CurrencyID": 1,
+        "RangeMin": 1,
+        "RangeMax": 10000000,
+        "DiscountPeriod": "MONTHLY",
+        "DiscountType": "RATE",
+        "DiscountPercent": null,
+        "DiscountRate": 3.99,
+        "Description": null,
+        "CreatedAuthID": 1,
+        "CreatedBy": "Dinesh",
+        "CreatedDate": "2023-10-19T06:03:28.799Z",
+        "ModifiedAuthID": 1,
+        "ModifiedBy": "Dinesh",
+        "ModifiedDate": "2023-10-19T06:03:28.799Z",
+        "IsDeleted": false,
+        "DeletedAuthID": null,
+        "DeletedBy": null,
+        "DeletedDate": null
+      }
+    },
+    "status": 200,
+    "message": "[MOCK] 'Get Product Info' has been setup successfully"
+  },
+  "accounts.api.rest.business.pricelist.getpricelistitems.v1": {
+    "data": {
+      "CustomerID": 1,
+      "ProductInfo": [
+        {
+          "ProductID": 1,
+          "ProductName": "Toll Agency Toll Charges",
+          "ProductCode": "TA-TOLL-CHG",
+          "UoM": "NULL",
+          "Rate": 0,
+          "Remarks": null
+        },
+        {
+          "ProductID": 2,
+          "ProductName": "Toll Payment Serice Chargers",
+          "ProductCode": "TOLL-SRV-CHG",
+          "UoM": "NULL",
+          "Rate": 0,
+          "Remarks": null
+        }
+      ]
+    },
+    "status": 200,
+    "message": "[MOCK] 'Get Product Info' has been setup successfully"
+  },
+  "accounts.api.rest.business.pricelist.change.v1": {
+    "data": {
+      "Count": 1
+    },
+    "status": 200,
+    "message": "[MOCK] 'PriceList' has been updated successfully"
+  },
+  "accounts.api.rest.business.pricelist.statuschange.v1": {
+    "data": {
+      "Count": 1
+    },
+    "status": 200,
+    "message": "[MOCK] 'Price List Status' has been updated successfully"
+  },
+  "accounts.api.rest.business.pricelist.addproduct.v1": {
+    "data": {
+      "PriceListItem": {
+        "PriceListItemID": 1,
+        "PriceListID": 1,
+        "MerchantID": 1,
+        "TenantID": 1,
+        "ProductID": 2,
+        "Rate": 10,
+        "Remarks": null,
+        "CreatedAuthID": 1,
+        "CreatedBy": "Dinesh",
+        "CreatedDate": "2023-11-09T12:24:44.998Z",
+        "ModifiedAuthID": null,
+        "ModifiedBy": null,
+        "ModifiedDate": "2023-11-09T12:24:44.998Z",
+        "IsDeleted": false,
+        "DeletedAuthID": null,
+        "DeletedBy": null,
+        "DeletedDate": null
+      },
+      "PriceListItemBulkDiscount": [
+        {
+          "PriceListItemBulkDiscountID": 1,
+          "PriceListItemID": 1,
+          "PriceListID": 1,
+          "MerchantID": 1,
+          "TenantID": 1,
+          "ProductID": 1,
+          "CurrencyID": 1,
+          "RangeMin": null,
+          "RangeMax": null,
+          "DiscountPeriod": null,
+          "DiscountType": null,
+          "DiscountPercent": null,
+          "DiscountRate": null,
+          "Description": null,
+          "CreatedAuthID": 1,
+          "CreatedBy": "Dinesh",
+          "CreatedDate": "2023-11-09T12:24:55.926Z",
+          "ModifiedAuthID": null,
+          "ModifiedBy": null,
+          "ModifiedDate": "2023-11-09T12:24:55.926Z",
+          "IsDeleted": false,
+          "DeletedAuthID": null,
+          "DeletedBy": null,
+          "DeletedDate": null
+        }
+      ]
+    },
+    "status": 200,
+    "message": "[MOCK] 'Product Added to the PriceList' has been added successfully"
+  },
+  "accounts.api.rest.business.pricelist.removeproduct.v1": {
+    "data": {
+      "Count": 1
+    },
+    "status": 200,
+    "message": "[MOCK] 'Price List Status' has been updated successfully"
+  }
+}

@@ -1,0 +1,330 @@
+{
+  "accounts.api.rest.business.invoice.downloadinvoice.v1": {
+    "ID": 1,
+    "Name": "DOWNLOAD INVOICE",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/invoice/v1/download",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.invoice.add.v1": {
+    "ID": 2,
+    "Name": "ADD INVOICE",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/invoice/v1/add",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.pricelist.getpricelistitems.v1": {
+    "ID": 3,
+    "Name": "GET PRICE LIST",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/pricelist/v1/getpricelist",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.invoice.generatenumber.v1": {
+    "ID": 4,
+    "Name": "GENERATE NUMBER",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/invoice/v1/generatenumber",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.customer.addcustomeraccount.v1": {
+    "ID": 5,
+    "Name": "ADD CUSTOMER ACCOUNT",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/customer/v1/addcustomeraccount",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.customer.addpayment.v1": {
+    "ID": 6,
+    "Name": "CREATE CUSTOMER PAYMENT",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/customer/v1/addpayment",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.invoice.changetoopen.v1": {
+    "ID": 7,
+    "Name": "INVOICE STATUS CHANGE",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/invoice/v1/changetoopen",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.pricelist.add.v1": {
+    "ID": 8,
+    "Name": "ADD PRICELIST",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/pricelist/v1/add",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.invoice.changetovoid.v1": {
+    "ID": 9,
+    "Name": "INVOICE STATUS CHANGE",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/invoice/v1/changetovoid",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.store.add.v1": {
+    "ID": 10,
+    "Name": "ADD STORE",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/store/v1/add",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.category.add.v1": {
+    "ID": 11,
+    "Name": "ADD CATEGORY",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/category/v1/add",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.category.change.v1": {
+    "ID": 12,
+    "Name": "CHANGE CATEGORY",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/category/v1/change",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.category.addrootcategory.v1": {
+    "ID": 13,
+    "Name": "ADD ROOT CATEGORY",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/category/v1/addrootcategory",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.product.addproduct.v1": {
+    "ID": 14,
+    "Name": "ADD PRODUCT",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/product/v1/addcategory",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.product.removeproduct.v1": {
+    "ID": 15,
+    "Name": "REMOVE PRODUCT",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/product/v1/removeproduct",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.product.add.v1": {
+    "ID": 16,
+    "Name": "ADD PRODUCT",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/product/v1/add",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.store.change.v1": {
+    "ID": 17,
+    "Name": "CHANGE",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/store/v1/change",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.product.addpackage.v1": {
+    "ID": 18,
+    "Name": "ADD PACKAGE",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/product/v1/addpackage",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.product.addblukdiscount.v1": {
+    "ID": 19,
+    "Name": "ADD BULK DISCOUNT",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/product/v1/addblukdiscount",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.product.update.v1": {
+    "ID": 20,
+    "Name": "UPDATE PRODUCT",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/product/v1/update",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.store.removepricelist.v1": {
+    "ID": 21,
+    "Name": "REMOVE PRICE LIST STORE",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/store/v1/removepricelist",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.store.addpricelist.v1": {
+    "ID": 22,
+    "Name": "ADD PRICE LIST STORE",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/store/v1/addpricelist",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.store.changeeffectivedate.v1": {
+    "ID": 23,
+    "Name": "CHANGE EFFECTIVE DATE",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/store/v1/changeeffectivedate",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.product.changepackage.v1": {
+    "ID": 24,
+    "Name": "CHANGE PRODUCT PACKAGE",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/product/v1/changepackage",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.product.enableavailability.v1": {
+    "ID": 25,
+    "Name": "ENABLE AVAILABLITY",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/product/v1/enableavailability",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.product.disableavailability.v1": {
+    "ID": 26,
+    "Name": "DISABLE AVAILABLITY",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/product/v1/disableavailability",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.product.removepackage.v1": {
+    "ID": 27,
+    "Name": "REMOVE PRODUCT PACKAGE",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/product/v1/removepackage",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.product.changeparentproduct.v1": {
+    "ID": 28,
+    "Name": "CHANGE PARENT PRODUCT",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/product/v1/changeparentproduct",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.product.removecategory.v1": {
+    "ID": 29,
+    "Name": "REMOVE PRODUCT CATEGORY",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/product/v1/removecategory",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.product.enablesale.v1": {
+    "ID": 30,
+    "Name": "PRODUCT ENABLE SALE",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/product/v1/enablesale",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.product.disablesale.v1": {
+    "ID": 31,
+    "Name": "PRODUCT DISABLE SALE",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/product/v1/disablesale",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.product.enablepurchase.v1": {
+    "ID": 32,
+    "Name": "PRODUCT ENABLE PURCHASE",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/product/v1/enablepurchase",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.product.disablepurchase.v1": {
+    "ID": 33,
+    "Name": "PRODUCT DISABLE PURCHASE",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/product/v1/disablepurchase",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.product.removebulkdiscount.v1": {
+    "ID": 34,
+    "Name": "REMOVE BULK DISCOUNT",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/product/v1/removebulkdiscount",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.pricelist.change.v1": {
+    "ID": 35,
+    "Name": "CHANGE PRICELIST",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/pricelist/v1/change",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.pricelist.statuschange.v1": {
+    "ID": 36,
+    "Name": "PRICELIST STATUS CHANGE",
+    "Method": "PATCH",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/pricelist/v1/statuschange",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.pricelist.addproduct.v1": {
+    "ID": 37,
+    "Name": "ADD PRODUCT PRICELIST",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/pricelist/v1/addproduct",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.pricelist.removeproduct.v1": {
+    "ID": 38,
+    "Name": "REMOVE PRODUCT PRICELIST",
+    "Method": "PATCH",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/pricelist/v1/removeproduct",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.product.filter.v1": {
+    "ID": 39,
+    "Name": "FILTER",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/product/v1/filter",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.customer.addpricelist.v1": {
+    "ID": 40,
+    "Name": "ADD CUSTOMER PRICELIST",
+    "Method": "POST",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/customer/v1/addpricelist",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  },
+  "accounts.api.rest.business.store.enable.v1": {
+    "ID": 41,
+    "Name": "ENABLE STORE",
+    "Method": "PATCH",
+    "Endpoint": "/api/rest/accounts/business/1.0.0/store/v1/enable",
+    "IsAvailable": true,
+    "IsMockEnabled": false
+  }
+}

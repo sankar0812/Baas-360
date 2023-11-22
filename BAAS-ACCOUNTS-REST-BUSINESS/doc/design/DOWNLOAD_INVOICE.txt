@@ -1,0 +1,58 @@
+API Name - 
+  i) Download Invoice
+  
+Header 
+
+  MerchantKey:BASE-MERCHANT-KEY
+  TenantKey:BASE-TENANT-KEY
+  UserKey:BASE-USER-KEY
+ 
+Method - post
+
+Authorization - Basic Auth
+
+i)DownloadInvoiceInfo
+
+Endpoint - /api/rest/accounts/business/1.0.0/invoice/v1/download
+
+Read Invoice and InvoiceItem Table
+Request Body: 
+ Input - InvoiceID
+Response :
+ Output - Multiple RoleID's from Instance Group Role Table
+  "InvoiceInfo": {
+                    "MerchantTenantInfo": {
+                        "TenantName": "Alita System SSL",
+                        "TenantAddress": "1009 Whittington Place",
+                        "TenantCity": "SouthLake",
+                        "TenantState": "Texas",
+                        "TenantCountry": "USA",
+                        "TenantZipCode": "76092"
+                    },
+                    "CustomerInfo": {
+                        "CustomerName": "Ryder",
+                        "CustomerAddress": "1009 Whittington Place",
+                        "CustomerCity": "Miami",
+                        "CustomerState": "Miami",
+                        "CustomerCountry": "USA",
+                        "CustomerZipCode": "76092"
+                    },
+                    "InvoiceInfo": {
+                        "InvoiceNo.": "ALS-RYD-140",
+                        "BalanceDue": "USD$328.30",
+                        "InvoiceDate": "24 SEP 2023",
+                        "Terms": "Due on Reciept",
+                        "DueDate": "29 SEP 2023"
+                    },
+                    "InvoiceItemInfo": [
+                        {
+                            "InvocieItem&Description": "Vektorr Data Capture",
+                            "InvoiceItemQty": 7.00,
+                            "InvoiceItemRate": 0.35,
+                            "InvoiceItemAmt": 2.45,
+                            "InvocieItemBalAmt": "USD$328.30"
+                        }
+                    ]
+  }
+
+

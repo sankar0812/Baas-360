@@ -1,0 +1,65 @@
+{
+    "accounts.api.rest.business.customer.getpricelistitems.v1": {
+        "Input": {
+            "CustomerID": 3
+        }
+    },
+    "accounts.api.rest.business.customer.addcustomeraccount.v1": {
+        "Input": {
+            "UserInfo": {
+                "MerchantID": 1,
+                "TenantID": 1,
+                "CustomerID": 1,
+                "CurrencyID": 1,
+                "CreatedAuthID": 1,
+                "CreatedBy": "dinesh"
+            },
+            "CustomerAccountInfo": {
+                "AccountNumber": "PENSKE-ALITA-017",
+                "AccountCode": "PNAL-08",
+                "DisplayName": "Penske Tolling",
+                "OpenedDate": "2020-04-23T00:54:16.000Z",
+                "Username": "Penske",
+                "Password": "PENSKE",
+                "AutoReplenishAmount": 0,
+                "LowBalanceThreshold": 0,
+                "CreatedAuthID": 1,
+                "CreatedBy": "Dinesh"
+            }
+        }
+    },
+    "accounts.api.rest.business.customer.payment.v1": {
+        "Input": {
+            "userInfo": {
+                "MerchantID": 2,
+                "TenantID": 1,
+                "CreatedAuthID": 1,
+                "CreatedBy": "dinesh",
+                "ModifiedAuthID": 1,
+                "ModifiedBy": "dinesh"
+            },
+            "CustomerPayment": {
+                "BankAccountID": 1,
+                "CustomerID": 1,
+                "PaymentMethodID": 2,
+                "CurrencyID": 1,
+                "CustomerAccountID": 2,
+                "PaidDate": "2023-10-06T00:00:00.000Z",
+                "PaidAmount": 175.35,
+                "CurrencyCode": "USD",
+                "PaymentConfirmation": "asdfghjkl",
+                "BankDepositedDate": null,
+                "BankPostedDate": null,
+                "Remarks": null
+            },
+            "CustomerPaymentItem": [
+                {
+                    "InvoiceID": 57,
+                    "ReferenceCode": "5878hv5669gd",
+                    "Description": null,
+                    "InvoicePaidAmount": 175.35
+                }
+            ]
+        }
+    }
+}

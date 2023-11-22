@@ -1,0 +1,60 @@
+{
+    "accounts.api.rest.business.customer.addcustomeraccount.v1": {
+        "data": {
+            "CustomerAccountData": {
+                "CustomerAccountID": 2,
+                "CustomerID": 1,
+                "CurrencyID": 1,
+                "AccountNumber": "PENSKE-ALITA-01",
+                "AccountCode": null,
+                "DisplayName": "Penske Tolling",
+                "OpenedDate": "2020-04-23T00:54:16.000Z",
+                "Username": null,
+                "Password": null,
+                "CreatedAuthID": 1,
+                "CreatedBy": "Dinesh",
+                "CreatedDate": "2023-10-19T05:51:18.198Z",
+                "ModifiedAuthID": 1,
+                "ModifiedBy": "Dinesh",
+                "ModifiedDate": "2023-10-19T05:51:18.198Z",
+                "IsDeleted": false,
+                "DeletedAuthID": null,
+                "DeletedBy": null,
+                "DeletedDate": null,
+                "CustomerContactID": null
+            },
+            "CustomerAccountBalanceData": {
+                "CustomerAccountBalanceID": 1,
+                "MerchantID": 1,
+                "TenantID": 1,
+                "CustomerAccountID": 1,
+                "CustomerID": 1,
+                "PostedDate": "10/18/2023",
+                "AccountBalance": 0,
+                "CurrencyID": 1,
+                "CreatedAuthID": 1,
+                "CreatedBy": "Dinesh",
+                "CreatedDate": "10/18/2023",
+                "ModifiedAuthID": null,
+                "ModifiedBy": null,
+                "ModifiedDate": null,
+                "IsDeleted": false,
+                "DeletedAuthID": null,
+                "DeletedBy": null,
+                "DeletedDate": null
+            }
+        },
+        "status": 200,
+        "message": "[MOCK] 'Customer Account and Customer Account Balance' has been setup successfully"
+    },
+    "accounts.api.rest.business.customer.addpayment.v1": {
+        "data": {},
+        "status": 200,
+        "message": "CUSTOMER PAYMENT EXCUTED SUCCESSFULLY"
+    },
+    "accounts.api.rest.business.customer.addpricelist.v1": {
+        "data": {},
+        "status": 200,
+        "message": "CUSTOMER ADD PRICELIST EXECUTED SUCESSFULLY"
+    }
+}
